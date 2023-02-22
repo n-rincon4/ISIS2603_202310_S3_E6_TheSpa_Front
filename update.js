@@ -23,6 +23,13 @@ const config = {
   jenkinsServer: "jenkins-isis2603",
 };
 
+/*const config = {
+  organization: "MISW-4104-Web",
+  gitKey: "277a9d46-cf19-4119-afd9-4054a7d35151",
+  sonarServer: "sonar-misovirtual",
+  jenkinsServer: "jenkins-misovirtual",
+};*/
+
 const createRepos = async () => {
   let out;
   try {
