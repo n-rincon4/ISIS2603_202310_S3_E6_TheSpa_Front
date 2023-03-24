@@ -5,30 +5,61 @@ const execShPromise = require("exec-sh").promise;
 let fs = require("fs");
 
 const projects = [
-  { name: "ISIS3710_202310_S2_E1_Back" },
-  { name: "ISIS3710_202310_S2_E2_Back" },
-  { name: "ISIS3710_202310_S2_E3_Back" },
-  { name: "ISIS3710_202310_S2_E4_Back" },
-  { name: "ISIS3710_202310_S2_E5_Back" },
-  { name: "ISIS3710_202310_S2_E6_Back" },
-  { name: "ISIS3710_202310_S2_E7_Back" },
-  { name: "ISIS3710_202310_S2_E8_Back" },
-  { name: "ISIS3710_202310_S2_E9_Back" },
+  { name: "MISW4104_202312_E01" },
+  { name: "MISW4104_202312_E02" },
+  { name: "MISW4104_202312_E03" },
+  { name: "MISW4104_202312_E04" },
+  { name: "MISW4104_202312_E05" },
+  { name: "MISW4104_202312_E06" },
+  { name: "MISW4104_202312_E07" },
+  { name: "MISW4104_202312_E08" },
+  { name: "MISW4104_202312_E09" },
+  { name: "MISW4104_202312_E10" },
+  { name: "MISW4104_202312_E11" },
+  { name: "MISW4104_202312_E12" },
+  { name: "MISW4104_202312_E13" },
+  { name: "MISW4104_202312_E14" },
+  { name: "MISW4104_202312_E15" },
+  { name: "MISW4104_202312_E16" },
+  { name: "MISW4104_202312_E17" },
+  { name: "MISW4104_202312_E18" },
+  { name: "MISW4104_202312_E19" },
+  { name: "MISW4104_202312_E20" },
+  { name: "MISW4104_202312_E21" },
+  { name: "MISW4104_202312_E22" },
+  { name: "MISW4104_202312_E23" },
+  { name: "MISW4104_202312_E24" },
+  { name: "MISW4104_202312_E25" },
+  { name: "MISW4104_202312_E26" },
+  { name: "MISW4104_202312_E27" },
+  { name: "MISW4104_202312_E28" },
+  { name: "MISW4104_202312_E29" },
+  { name: "MISW4104_202312_E30" },
+  { name: "MISW4104_202312_E31" },
+  { name: "MISW4104_202312_E32" },
+  { name: "MISW4104_202312_E33" },
+  { name: "MISW4104_202312_E34" },
+  { name: "MISW4104_202312_E35" },
+  { name: "MISW4104_202312_E36" },
+  { name: "MISW4104_202312_E37" },
+  { name: "MISW4104_202312_E38" },
+  { name: "MISW4104_202312_E39" },
+  { name: "MISW4104_202312_E40" },
 ];
 
-const config = {
+/*const config = {
   organization: "Uniandes-isis2603",
   gitKey: "de5cd571-10da-4034-8ba8-af99beef4b14",
   sonarServer: "sonar-isis2603",
   jenkinsServer: "jenkins-isis2603",
-};
+};*/
 
-/*const config = {
+const config = {
   organization: "MISW-4104-Web",
   gitKey: "277a9d46-cf19-4119-afd9-4054a7d35151",
   sonarServer: "sonar-misovirtual",
   jenkinsServer: "jenkins-misovirtual",
-};*/
+};
 
 const createRepos = async () => {
   let out;
