@@ -5,61 +5,45 @@ const execShPromise = require("exec-sh").promise;
 let fs = require("fs");
 
 const projects = [
-  //{ name: "MISW4104_202312_E01" },
-  //{ name: "MISW4104_202312_E02" },
-  { name: "MISW4104_202312_E03" },
-  { name: "MISW4104_202312_E04" },
-  { name: "MISW4104_202312_E05" },
-  { name: "MISW4104_202312_E06" },
-  { name: "MISW4104_202312_E07" },
-  { name: "MISW4104_202312_E08" },
-  { name: "MISW4104_202312_E09" },
-  { name: "MISW4104_202312_E10" },
-  { name: "MISW4104_202312_E11" },
-  { name: "MISW4104_202312_E12" },
-  { name: "MISW4104_202312_E13" },
-  { name: "MISW4104_202312_E14" },
-  { name: "MISW4104_202312_E15" },
-  { name: "MISW4104_202312_E16" },
-  { name: "MISW4104_202312_E17" },
-  { name: "MISW4104_202312_E18" },
-  { name: "MISW4104_202312_E19" },
-  { name: "MISW4104_202312_E20" },
-  { name: "MISW4104_202312_E21" },
-  { name: "MISW4104_202312_E22" },
-  { name: "MISW4104_202312_E23" },
-  { name: "MISW4104_202312_E24" },
-  { name: "MISW4104_202312_E25" },
-  { name: "MISW4104_202312_E26" },
-  { name: "MISW4104_202312_E27" },
-  { name: "MISW4104_202312_E28" },
-  { name: "MISW4104_202312_E29" },
-  { name: "MISW4104_202312_E30" },
-  { name: "MISW4104_202312_E31" },
-  { name: "MISW4104_202312_E32" },
-  { name: "MISW4104_202312_E33" },
-  { name: "MISW4104_202312_E34" },
-  { name: "MISW4104_202312_E35" },
-  { name: "MISW4104_202312_E36" },
-  { name: "MISW4104_202312_E37" },
-  { name: "MISW4104_202312_E38" },
-  { name: "MISW4104_202312_E39" },
-  { name: "MISW4104_202312_E40" },
+  { name: "ISIS2603_202310_S1_E1_Mundiales_Front" },
+  { name: "ISIS2603_202310_S1_E2_LigaAjedrez_Front" },
+  { name: "ISIS2603_202310_S1_E3_Trekking_Front" },
+  { name: "ISIS2603_202310_S1_E4_CarMotor_Front" },
+  { name: "ISIS2603_202310_S1_E5_TiendaJuegos_Front" },
+
+  { name: "ISIS2603_202310_S2_E1_Cine_Front" },
+  { name: "ISIS2603_202310_S2_E2_Caminatas_Front" },
+  { name: "ISIS2603_202310_S2_E3_Bandas_Front" },
+  { name: "ISIS2603_202310_S2_E4_Gym_Front" },
+
+  { name: "ISIS2603_202310_S3_E1_LabXR_Front" },
+  { name: "ISIS2603_202310_S3_E2_AdopcionMascotas_Front" },
+  { name: "ISIS2603_202310_S3_E3_Outfits_Front" },
+  { name: "ISIS2603_202310_S3_E4_ViviendaUniversitaria_Front" },
+  { name: "ISIS2603_202310_S3_E5_OrganizacionEventos_Front" },
+  { name: "ISIS2603_202310_S3_E6_TheSpa_Front" },
+
+  { name: "ISIS2603_202310_S4_E1_ESports_Front" },
+  { name: "ISIS2603_202310_S4_E2_CulturasGastronomicas_Front" },
+  { name: "ISIS2603_202310_S4_E3_CreaTuPC_Front" },
+  { name: "ISIS2603_202310_S4_E4_Series_Front" },
+  { name: "ISIS2603_202310_S4_E5_Autos_Front" },
+  { name: "ISIS2603_202310_S4_E6_Streaming_Front" },
 ];
 
-/*const config = {
+const config = {
   organization: "Uniandes-isis2603",
   gitKey: "de5cd571-10da-4034-8ba8-af99beef4b14",
   sonarServer: "sonar-isis2603",
   jenkinsServer: "jenkins-isis2603",
-};*/
+};
 
-const config = {
+/*const config = {
   organization: "MISW-4104-Web",
   gitKey: "277a9d46-cf19-4119-afd9-4054a7d35151",
   sonarServer: "sonar-misovirtual",
   jenkinsServer: "jenkins-misovirtual",
-};
+};*/
 
 const createRepos = async () => {
   let out;

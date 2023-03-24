@@ -1,9 +1,9 @@
 pipeline {
     agent any
     environment {
-       GIT_REPO = 'MISW4104_202312_E02'
-       GIT_CREDENTIAL_ID = '277a9d46-cf19-4119-afd9-4054a7d35151'
-       SONARQUBE_URL = 'http://172.24.100.52:8082/sonar-misovirtual'
+       GIT_REPO = 'ISIS2603_202310_S1_E1_Mundiales_Front'
+       GIT_CREDENTIAL_ID = 'de5cd571-10da-4034-8ba8-af99beef4b14'
+       SONARQUBE_URL = 'http://172.24.100.52:8082/sonar-isis2603'
     }
     stages {
        stage('Checkout') {
@@ -11,7 +11,7 @@ pipeline {
              scmSkip(deleteBuild: true, skipPattern:'.*\\[ci-skip\\].*')
              git branch: 'master',
                 credentialsId: env.GIT_CREDENTIAL_ID,
-                url: 'https://github.com/MISW-4104-Web/' + env.GIT_REPO
+                url: 'https://github.com/Uniandes-isis2603/' + env.GIT_REPO
           }
        }
        stage('Build') {
@@ -62,3 +62,4 @@ pipeline {
       }
     }
   }
+  
