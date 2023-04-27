@@ -1,3 +1,32 @@
-<p>
-  servicio-list works!
-</p>
+<!-- Tabla Listado de servicios -->
+
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">nombre</th>
+            <th scope="col">desc</th>
+            <th scope="col">precio</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <!-- Iteracion de servicio -->
+
+          <tr *ngFor="let servicio of servicios; let i = index">
+            <th class="table-secondary">{{servicio.id}}</th>
+            <td class="table-secondary">{{servicio.nombre}}</td>
+            <td class="table-secondary">{{servicio.descripcion}}</td>
+            <td class="table-secondary">{{servicio.precio}}</td>
+          </tr>
+
+        </tbody>
+
+      </table>
+
+    </div>
+  </div>
+</div>

@@ -6,16 +6,15 @@ import { AppComponent } from './app.component';
 import { SedeComponent } from './sede/sede.component';
 import { TrabajadorComponent } from './trabajador/trabajador.component';
 import { PackComponent } from './pack/pack.component';
-import { TrabajadorComponent } from './trabajador/trabajador.component';
 
 @NgModule({
-  declarations: [				
+  declarations: [
     AppComponent,
-      SedeComponent,
-      TrabajadorComponent,
-      PackComponent,
-      TrabajadorComponent
-   ],
+    SedeComponent,
+    TrabajadorComponent,
+    PackComponent,
+    TrabajadorComponent
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule
