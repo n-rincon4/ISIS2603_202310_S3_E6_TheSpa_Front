@@ -8,5 +8,6 @@ import { ServicioDetailComponent } from './servicio-detail/servicio-detail.compo
     CommonModule
   ],
   declarations: [ServicioListComponent, ServicioDetailComponent],
+  exports: [ServicioListComponent, ServicioDetailComponent]
 })
 export class ServicioModule { }

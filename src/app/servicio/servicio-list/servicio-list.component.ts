@@ -25,6 +25,7 @@ export class ServicioListComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.getServices();
   }
 
 }
