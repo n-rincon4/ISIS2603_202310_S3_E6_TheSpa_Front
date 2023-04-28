@@ -43,7 +43,7 @@
     color: #212529;
 }
 
-.gallery-block.cards-gallery a:hover {
+.gallery-block.cards-gallery a {
     text-decoration: none;
 }
 
@@ -53,6 +53,8 @@
     margin-right: 30px;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
 }
+
+
 
 @media (min-width: 576px) {
 
