@@ -11,11 +11,7 @@ import { SedeModule } from './sede/sede.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    SedeComponent,
-    TrabajadorComponent,
-    PackComponent,
-    TrabajadorComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,

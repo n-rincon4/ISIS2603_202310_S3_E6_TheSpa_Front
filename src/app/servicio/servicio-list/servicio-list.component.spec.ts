@@ -40,8 +40,8 @@ describe('ServicioListComponent', () => {
         faker.datatype.boolean(),
         faker.lorem.words(10),
         undefined as any,
-        undefined as any,
-        undefined as any
+        [],
+        []
       );
     }
 

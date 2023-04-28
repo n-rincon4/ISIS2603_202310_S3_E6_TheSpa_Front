@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SedeDetail } from '../sede-detail';
 import { SedeService } from '../sede.service';
-
 @Component({
   selector: 'app-sede-list',
   templateUrl: './sede-list.component.html',
@@ -25,7 +24,9 @@ export class SedeListComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.getSedes;
+
+    this.getSedes();
+
   }
 
 }

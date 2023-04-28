@@ -15,6 +15,7 @@ export class SedeService {
 
   getSedes(): Observable<SedeDetail[]> {
     return this.http.get<SedeDetail[]>(this.apiUrl);
+
   }
 
   getSede(id: string): Observable<SedeDetail> {
