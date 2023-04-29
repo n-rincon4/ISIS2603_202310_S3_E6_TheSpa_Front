@@ -1,3 +1,28 @@
-<p>
-  servicio-detail works!
-</p>
+<section class="gallery-block cards-gallery">
+    <div class="heading">
+        <h2>Menu detallado de un servicio</h2>
+    </div>
+</section>
+
+
+
+
+<main class="container">
+    <div class="p-4 p-md-5 mb-4 text-white rounded spa-bg"
+        style="background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(20, 20, 20, 0.5)) ,url('{{servicioDetail.imagen}}');">
+        <div class="col-md-6 px-0">
+            <h1 class="display-4 fst-italic">{{servicioDetail.nombre}}</h1>
+
+            <p class="lead my-3">{{servicioDetail.descripcion}} </p>
+
+            <p class="lead my-3">Precio: ${{servicioDetail.precio}}</p>
+
+            <!-- Crea un margen superior de 4 unidades|-->
+
+            <div class="mt-5"></div>
+
+            <p class="lead mb-0"><a href="#" class="fw-bold">Comprar ahora</a></p>
+            <div class="mt-3"></div>
+        </div>
+    </div>
+</main>

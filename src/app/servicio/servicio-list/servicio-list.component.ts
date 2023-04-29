@@ -19,7 +19,7 @@ export class ServicioListComponent implements OnInit {
     this.servicioService.getServices().subscribe(servicios => this.servicios = servicios);
   }
 
-  selectService(servicio: ServicioDetail): void {
+  selectService(servicio: ServicioDetail) {
     this.selected = true;
     this.selectedService = servicio;
   }
