@@ -10,6 +10,15 @@
     text-align: center;
 }
 
+.img {
+    opacity: 0.5;
+    background-color: black;
+}
+
+.ul {
+    background-color: black;
+}
+
 .gallery-block .heading h2 {
     font-weight: bold;
     font-size: 1.4rem;

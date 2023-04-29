@@ -8,11 +8,14 @@
 
 
 <main class="container">
-    <div class="p-4 p-md-5 mb-4 text-white rounded spa-bg" style="background-image: url('{{servicioDetail.imagen}}');">
+    <div class="p-4 p-md-5 mb-4 text-white rounded spa-bg"
+        style="background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(20, 20, 20, 0.5)) ,url('{{servicioDetail.imagen}}');">
         <div class="col-md-6 px-0">
             <h1 class="display-4 fst-italic">{{servicioDetail.nombre}}</h1>
 
             <p class="lead my-3">{{servicioDetail.descripcion}} </p>
+
+            <p class="lead my-3">Precio: ${{servicioDetail.precio}}</p>
 
             <!-- Crea un margen superior de 4 unidades|-->
 
