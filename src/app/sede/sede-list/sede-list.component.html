@@ -6,9 +6,7 @@
   <div class="row">
     <div class="col-4" *ngFor="let sede of sedes; let i = index">
       <div class="card border-0 transform-on-hover">
-        <a class="lightbox" href={{sede.imagen}}>
-          <img src={{sede.imagen}} alt="Card Image" class="card-img-top">
-        </a>
+        <img src={{sede.imagen}} alt="Card Image" class="card-img-top">
         <div class="card-body">
           <h6><a href="#">{{sede.nombre}}</a></h6>
         </div>

@@ -11,7 +11,7 @@ import { ServicioService } from '../servicio.service';
 export class ServicioDetailComponent implements OnInit {
 
 
-  authorId!: string;
+  servicioId!: string;
   @Input() servicioDetail!: ServicioDetail;
 
   constructor(
@@ -19,19 +19,21 @@ export class ServicioDetailComponent implements OnInit {
     private servicioService: ServicioService
   ) { }
 
-  getAuthor() {
-    this.servicioService.getService(this.authorId).subscribe(servicio => {
+  getServicio() {
+    this.servicioService.getService(this.servicioId).subscribe(servicio => {
       this.servicioDetail = servicio;
     })
   }
 
   ngOnInit() {
     if (this.servicioDetail === undefined) {
-      this.authorId = this.route.snapshot.paramMap.get('id')!
-      if (this.authorId) {
-        this.getAuthor();
+      this.servicioId = this.route.snapshot.paramMap.get('id')!
+      if (this.servicioId) {
+        this.getServicio();
+
       }
     }
+
   }
 
 }
