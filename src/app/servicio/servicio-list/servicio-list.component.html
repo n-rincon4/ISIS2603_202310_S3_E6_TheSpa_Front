@@ -3,12 +3,14 @@
     <h2>Listado de Servicios</h2>
   </div>
 
+  <div class="col" *ngIf="selected">
+    <app-servicio-detail [servicioDetail]="selectedService"></app-servicio-detail>
+  </div>
+
   <div class="row">
     <div class="col-4" *ngFor="let servicio of servicios; let i = index">
-      <div class="card border-0 transform-on-hover">
-        <a class="lightbox" href={{servicio.imagen}}>
-          <img src={{servicio.imagen}} alt="Card Image" class="card-img-top">
-        </a>
+      <div class="card border-0 transform-on-hover" (click)="selectService(servicio)">
+        <img src={{servicio.imagen}} alt="Card Image" class="card-img-top">
         <div class="card-body">
           <h6><a href="#">{{servicio.nombre}}</a></h6>
           <p class="text-muted card-text">{{servicio.descripcion}}

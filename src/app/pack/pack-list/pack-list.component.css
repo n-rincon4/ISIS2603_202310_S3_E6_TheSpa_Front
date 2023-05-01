@@ -10,15 +10,6 @@
     text-align: center;
 }
 
-.img {
-    opacity: 0.5;
-    background-color: black;
-}
-
-.ul {
-    background-color: black;
-}
-
 .gallery-block .heading h2 {
     font-weight: bold;
     font-size: 1.4rem;
@@ -37,6 +28,7 @@
 
 .gallery-block.cards-gallery .card img {
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
+
 
 }
 

@@ -1,6 +1,5 @@
 /* tslint:disable:no-unused-variable */
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 import { faker } from '@faker-js/faker';
 
@@ -40,8 +39,8 @@ describe('ServicioListComponent', () => {
         faker.datatype.boolean(),
         faker.lorem.words(10),
         undefined as any,
-        undefined as any,
-        undefined as any
+        [],
+        []
       );
     }
 
