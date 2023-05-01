@@ -7,16 +7,23 @@ import { TrabajadorComponent } from './trabajador/trabajador.component';
 import { PackModule } from './pack/pack.module';
 import { ServicioModule } from './servicio/servicio.module';
 import { HttpClientModule } from '@angular/common/http';
+import { ArticuloModule } from './articulo/articulo.module';
 import { SedeModule } from './sede/sede.module';
 
 @NgModule({
   declarations: [
-    AppComponent
-  ],
+    AppComponent,
+    SedeComponent,
+    TrabajadorComponent,
+    PackComponent,
+    TrabajadorComponent
+   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ServicioModule,
+    ArticuloModule,
+    HttpClientModule
     PackModule,
     HttpClientModule,
     SedeModule
