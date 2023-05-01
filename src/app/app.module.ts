@@ -8,6 +8,7 @@ import { TrabajadorComponent } from './trabajador/trabajador.component';
 import { PackComponent } from './pack/pack.component';
 import { ServicioModule } from './servicio/servicio.module';
 import { HttpClientModule } from '@angular/common/http';
+import { ArticuloModule } from './articulo/articulo.module';
 
 @NgModule({
   declarations: [
@@ -16,11 +17,12 @@ import { HttpClientModule } from '@angular/common/http';
     TrabajadorComponent,
     PackComponent,
     TrabajadorComponent
-  ],
+   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ServicioModule,
+    ArticuloModule,
     HttpClientModule
   ],
   providers: [],
