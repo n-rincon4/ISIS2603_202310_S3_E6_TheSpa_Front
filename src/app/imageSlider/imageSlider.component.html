@@ -2,17 +2,17 @@
   <div>
     <div (click)="goToPrevious()" class="leftArrow">❰</div>
     <div (click)="goToNext()" class="rightArrow">❱</div>
+    <div class="bg"></div>
+    <div class="text"></div>
   </div>
-  <div
-    class="slide"
-    [ngStyle]="{ 'background-image': getCurrentSlideUrl() }"
-  ></div>
+  <div class="slide" [ngStyle]="{ 'background-image': getCurrentSlideUrl()}"> </div>
+  <div class="card text-center">
+    <div class="card-body">
+      <h5 class="card-title">{{getCurrentSlideTitle()}}</h5>
+    </div>
+  </div>
   <div class="dotsContainer">
-    <div
-      *ngFor="let slide of slides; let slideIndex = index"
-      class="dot"
-      (click)="goToSlide(slideIndex)"
-    >
+    <div *ngFor="let slide of slides; let slideIndex = index" class="dot" (click)="goToSlide(slideIndex)">
       ●
     </div>
   </div>

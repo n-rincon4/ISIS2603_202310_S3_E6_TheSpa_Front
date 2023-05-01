@@ -6,6 +6,24 @@
   background-position: center;
 }
 
+.text {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.bg{
+  background-color: black;
+  opacity: 0.5;
+}
+
+
 .rightArrow {
   position: absolute;
   top: 50%;

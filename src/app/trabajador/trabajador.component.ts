@@ -30,13 +30,19 @@ export class TrabajadorComponent implements OnInit {
 
   setSlides(): void {
     this.slides = [];
-    for (let i = 0; i < this.trabajadores.length; i++) {
-      this.slides.push({url: this.trabajadores[i].foto, title: this.trabajadores[i].nombre});
+    this.trabajadorService.getTrabajadores().subscribe(trabajadores => {
+      for (let i = 0; i < trabajadores.length; i++) {
+        if (trabajadores[i].enHallOfFame){
+          this.slides.push({url: trabajadores[i].foto, title: trabajadores[i].nombre});
+        }
+      }
     }
+    );
   }
 
   ngOnInit() {
     this.getTrabajadores();
+    this.setSlides();
   }
 
 }
