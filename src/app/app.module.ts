@@ -7,14 +7,14 @@ import { TrabajadorModule } from './trabajador/trabajador.module';
 import { PackModule } from './pack/pack.module';
 import { ServicioModule } from './servicio/servicio.module';
 import { HttpClientModule } from '@angular/common/http';
-import { ArticuloModule } from './articulo/articulo.module';
 import { SedeModule } from './sede/sede.module';
+import { ArticuloModule } from './articulo/articulo.module';
 import { ImageSliderModule } from './imageSlider/imageSlider.module';
 
 @NgModule({
   declarations: [
     AppComponent
-   ],
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -25,7 +25,11 @@ import { ImageSliderModule } from './imageSlider/imageSlider.module';
     HttpClientModule,
     SedeModule,
     ImageSliderModule,
-    TrabajadorModule
+    TrabajadorModule,
+    PackModule,
+    HttpClientModule,
+    SedeModule,
+    ArticuloModule
   ],
   providers: [],
   bootstrap: [AppComponent]
