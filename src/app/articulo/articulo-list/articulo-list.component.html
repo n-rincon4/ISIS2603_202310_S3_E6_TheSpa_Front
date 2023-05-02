@@ -3,9 +3,13 @@
     <h2>Listado de Artículos de Ropa</h2>
   </div>
 
+  <div class="col" *ngIf="selected">
+    <app-articulo-detail [articuloDetail]="selectedArticulo"></app-articulo-detail>
+  </div>
+
   <div class="row">
     <div class="col-4" *ngFor="let articulo of articulosDeRopa; let i = index">
-      <div class="card border-0 transform-on-hover">
+      <div class="card border-0 transform-on-hover" (click)="selectArticulo(articulo)">
         <img src={{articulo.imagen}} alt="Card Image" class="card-img-top">
         <div class="card-body">
           <h6><a href="#">{{articulo.nombre}}</a></h6>

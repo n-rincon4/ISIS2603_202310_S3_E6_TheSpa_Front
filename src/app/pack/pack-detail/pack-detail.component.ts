@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { PackDetail } from '../pack-detail';
+import { PackService } from '../pack.service';
 
 @Component({
   selector: 'app-pack-detail',
@@ -7,9 +10,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PackDetailComponent implements OnInit {
 
-  constructor() { }
+  pakId!: string;
+  @Input() packDetail!: PackDetail;
+
+  constructor(private rout: ActivatedRoute, private packService: PackService) { }
+
+  getPack() {
+    this.packService.getPack(this.pakId).subscribe(pack => {this.packDetail = pack;})
+  }
 
   ngOnInit() {
+    if (this.packDetail === undefined) {
+      this.pakId = this.rout.snapshot.paramMap.get('id')!
+      if (this.pakId) {
+        this.getPack();
+      }
+    }
   }
 
 }

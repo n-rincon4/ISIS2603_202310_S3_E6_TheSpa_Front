@@ -30,10 +30,8 @@ export class ServicioDetailComponent implements OnInit {
       this.servicioId = this.route.snapshot.paramMap.get('id')!
       if (this.servicioId) {
         this.getServicio();
-
       }
     }
 
   }
-
 }

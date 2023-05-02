@@ -3,13 +3,17 @@
     <h2>Listado de Paquetes</h2>
   </div>
 
+  <div class="col" *ngIf="selected">
+    <app-pack-detail [packDetail]="selectedPack"></app-pack-detail>
+  </div>
+
   <div class="row">
     <div class="col-4" *ngFor="let pack of packs; let i = index">
-      <div class="card border-0 transform-on-hover">
+      <div class="card border-0 transform-on-hover" (click)="selectPack(pack)">
         <img src={{pack.imagen}} alt="Card Image" class="card-img-top">
         <div class="card-body">
           <h6><a href="#">{{pack.nombre}}</a></h6>
-          <p class="text-muted card-text">{{pack.descuento}} % de descuento
+          <p class="text-muted card-text">{{pack.descuento}}% de descuento
           </p>
         </div>
       </div>

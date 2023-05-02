@@ -1,0 +1,10 @@
+.heading {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.heading h2 {
+  font-weight: bold;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
