@@ -15,4 +15,8 @@ export class ArticuloService {
   getArticulosDeRopa(): Observable<Articulo[]> {
     return this.http.get<Articulo[]>(this.apiUrl);
   }
+
+  getArticuloxID(id: string): Observable<Articulo> {
+    return this.http.get<Articulo>(this.apiUrl + "/" + id);
+  }
 }
