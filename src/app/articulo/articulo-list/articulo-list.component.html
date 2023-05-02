@@ -1,20 +1,26 @@
-<div class="container-fluid">
-  <div class="row">
-    <div class="col mb-2" *ngFor="let articulo of articulosDeRopa">
-      <div class="card p-2" style="width: 15rem; height: 25rem">
-        <img
-          class="card-img-top"
-          src="{{ articulo.imagen }}"
-          alt="{{ articulo.nombre }}"
-        />
-        <div class="card-body">
-          <h5 class="card-title" style="text-align: center">
-            {{ articulo.nombre }}
-          </h5>
-          <p class="card-text" style="font-weight: bold; text-align: center">
-            ${{ articulo.precio }} COP
-          </p>
-          <p class="card-text">{{ articulo.descripcion }}</p>
+<div>
+  <div class="heading">
+    <h2>Listado de Artículos</h2>
+  </div>
+
+  <div class="gallery-block cards-gallery">
+    <div class="row">
+      <div class="col mb-2" *ngFor="let articulo of articulosDeRopa">
+        <div class="card border-0 transform-on-hover" style="width: 15rem; height: 25rem">
+          <img
+            class="card-img-top"
+            src="{{ articulo.imagen }}"
+            alt="{{ articulo.nombre }}"
+          />
+          <div class="card-body">
+            <h5 class="card-title" style="text-align: center">
+              {{ articulo.nombre }}
+            </h5>
+            <p class="card-text" style="font-weight: bold; text-align: center">
+              ${{ articulo.precio }} COP
+            </p>
+            <p class="card-text">{{ articulo.descripcion }}</p>
+          </div>
         </div>
       </div>
     </div>

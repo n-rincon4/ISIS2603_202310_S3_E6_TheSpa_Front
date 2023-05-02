@@ -13,18 +13,14 @@ import { ImageSliderModule } from './imageSlider/imageSlider.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    SedeComponent,
-    TrabajadorComponent,
-    PackComponent,
-    TrabajadorComponent
+    AppComponent
    ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ServicioModule,
     ArticuloModule,
-    HttpClientModule
+    HttpClientModule,
     PackModule,
     HttpClientModule,
     SedeModule,
