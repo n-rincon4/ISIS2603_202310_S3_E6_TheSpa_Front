@@ -18,7 +18,7 @@ export class SedeListComponent implements OnInit {
     this.sedeService.getSedes().subscribe(sedes => this.sedes = sedes);
   }
 
-  selectService(sede: SedeDetail): void {
+  selectSede(sede: SedeDetail) {
     this.selected = true;
     this.selectedSede = sede;
   }
