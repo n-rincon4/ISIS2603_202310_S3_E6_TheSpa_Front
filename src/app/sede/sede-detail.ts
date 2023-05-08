@@ -24,7 +24,9 @@ export class SedeDetail extends Sede {
     this.packsDeServicios = packsDeServicios;
     this.ubicacion = ubicacion;
 
+
   }
+
 
 
 }
