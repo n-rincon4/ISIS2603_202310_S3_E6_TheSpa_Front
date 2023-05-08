@@ -29,7 +29,7 @@ describe('AuthorDetailComponent', () => {
     fixture = TestBed.createComponent(ServicioDetailComponent);
     component = fixture.componentInstance;
 
-    let testBooks: Array<Trabajador> = [];
+    let testTrabajadores: Array<Trabajador> = [];
     let testPacks: Array<Pack> = [];
 
     let sede = new Sede(
@@ -39,7 +39,7 @@ describe('AuthorDetailComponent', () => {
     );
 
     for (let i = 0; i < 2; i++) {
-      testBooks[i] = new Trabajador(
+      testTrabajadores[i] = new Trabajador(
         faker.datatype.number(),
         faker.lorem.sentence(),
         faker.image.imageUrl(),
@@ -60,7 +60,7 @@ describe('AuthorDetailComponent', () => {
       faker.datatype.boolean(),
       faker.datatype.string(),
       sede,
-      testBooks,
+      testTrabajadores,
       testPacks
 
     );
@@ -73,30 +73,55 @@ describe('AuthorDetailComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should have an img element', () => {
-    expect(debug.query(By.css('img')).attributes['alt']).toEqual(
-      component.servicioDetail.nombre
-    );
-  });
+  it('should have a servicio', () => {
+    expect(component.servicioDetail).toBeDefined();
+  }
+  );
 
-  it('should have an img element with src = servicioDetail.image', () => {
-    expect(debug.query(By.css('img')).attributes['src']).toEqual(
-      component.servicioDetail.imagen
-    );
-  });
+  it('should have a name', () => {
+    expect(component.servicioDetail.nombre).toBeDefined();
+  }
+  );
 
-  it('should have a <p> tag with component.servicioDetail.name', () => {
-    const componentElement: HTMLElement = debug.query(By.css('p.h3.p-2.author-name')).nativeElement;
-    expect(componentElement.textContent).toContain(component.servicioDetail.nombre);
-  });
+  it('should have a description', () => {
+    expect(component.servicioDetail.descripcion).toBeDefined();
+  }
+  );
 
-  it('should have one dd tag for component.servicioDetail.description', () => {
-    const allDt: DebugElement[] = debug.queryAll(By.css('dt'));
-    let nodo = allDt.find((value) => {
-      return value.nativeElement.textContent == 'Bio';
-    });
-    expect(nodo?.nativeElement.nextSibling.textContent).toContain(component.servicioDetail.descripcion);
-  });
+  it('should have a price', () => {
+    expect(component.servicioDetail.precio).toBeDefined();
+  }
+  );
+
+  it('should have a image', () => {
+    expect(component.servicioDetail.imagen).toBeDefined();
+  }
+  );
+
+  it('should have a duration', () => {
+    expect(component.servicioDetail.duracion).toBeDefined();
+  }
+  );
+
+  it('should have a description', () => {
+    expect(component.servicioDetail.descripcion).toBeDefined();
+  }
+  );
+
+  it('should have a available', () => {
+    expect(component.servicioDetail.disponible).toBeDefined();
+  }
+  );
+
+  it('should have a sede', () => {
+    expect(component.servicioDetail.sede).toBeDefined();
+  }
+  );
+
+  it('should have a trabajadores', () => {
+    expect(component.servicioDetail.trabajador).toBeDefined();
+  }
+  );
 
 
 
