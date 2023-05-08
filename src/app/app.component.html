@@ -4,7 +4,7 @@
     <header class="blog-header py-3">
         <div class="row flex-nowrap justify-content-between align-items-center">
             <div class="col-4 pt-1">
-                <a class="link-secondary" href="#">Suscribirse</a>
+                <a class="link-secondary" href="#"></a>
             </div>
             <div class="col-4 text-center">
                 <a class="blog-header-logo text-dark" href="#">The Spa</a>
@@ -26,46 +26,14 @@
 
     <div class="nav-scroller py-1 mb-2">
         <nav class="nav d-flex">
-            <a class="p-2 link-secondary" href="#">Sedes </a>
-            <a class="p-2 link-secondary" href="#">Productos </a>
-            <a class="p-2 link-secondary" href="#">Paquetes </a>
-            <a class="p-2 link-secondary" href="#">Hall of Fame </a>
+            <a class="p-2 link-secondary" routerLink="/sedes/list">Sedes </a>
+            <a class="p-2 link-secondary" routerLink="/servicios/list">Servicios </a>
+            <a class="p-2 link-secondary" routerLink="/articulos/list">Productos </a>
+            <a class="p-2 link-secondary" routerLink="/packs/list">Paquetes </a>
+            <a class="p-2 link-secondary" routerLink="/trabajadores/list">Hall of Fame </a>
             <a class="p-2 link-secondary" href="#">Información </a>
         </nav>
     </div>
 </div>
 
-<main class="container">
-    <div class="p-4 p-md-5 mb-4 text-white rounded spa-bg">
-        <div class="col-md-6 px-0">
-            <h1 class="display-4 fst-italic">Bienvenido a The Spa</h1>
-
-            <p class="lead my-3">Debido al gran interés de las personas por su bienestar físico y emocional, un
-                grupo de
-                emprendedores ha creado The Spa, un Spa hecho para ti. </p>
-
-            <!-- Crea un margen superior de 4 unidades|-->
-
-            <div class="mt-5"></div>
-
-            <p class="lead mb-0"><a href="#" class="text-white fw-bold">Mas Información...</a></p>
-            <div class="mt-3"></div>
-        </div>
-    </div>
-</main>
-
-
-<!-- Listado de servicios-->
-<app-servicio-list> </app-servicio-list>
-
-<!-- Listado de paquetes-->
-<app-pack-list></app-pack-list>
-
-<!-- Listado de sedes-->
-<app-sede-list></app-sede-list>
-
-<!-- Listado de artículos de ropa-->
-<app-articulo-list></app-articulo-list>
-
-<!-- Listado de trabajadores-->
-<app-trabajador></app-trabajador>
+<router-outlet></router-outlet>
