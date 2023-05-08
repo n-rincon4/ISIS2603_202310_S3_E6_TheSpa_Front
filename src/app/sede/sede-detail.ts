@@ -2,7 +2,7 @@ import { Pack } from "../pack/pack";
 import { Servicio } from "../servicio/servicio";
 import { servicioExtra } from "../servicioExtra/servicioExtra";
 import { Trabajador } from "../trabajador/trabajador";
-import { ubicacion } from "../ubicacion/ubicacion";
+import { Ubicacion } from "../ubicacion/ubicacion";
 import { Sede } from "./sede";
 import { Articulo } from "../articulo/articulo";
 
@@ -13,9 +13,9 @@ export class SedeDetail extends Sede {
   articulosDeRopa: Array<Articulo>;
   servicios: Array<Servicio>;
   packsDeServicios: Array<Pack>;
-  ubicacion: ubicacion;
+  ubicacion: Ubicacion;
 
-  constructor(id: number, nombre: string, imagen: string, trabajadores: Array<Trabajador>, serviciosExtra: Array<servicioExtra>, articulosDeRopa: Array<Articulo>, servicios: Array<Servicio>, packsDeServicios: Array<Pack>, ubicacion: ubicacion) {
+  constructor(id: number, nombre: string, imagen: string, trabajadores: Array<Trabajador>, serviciosExtra: Array<servicioExtra>, articulosDeRopa: Array<Articulo>, servicios: Array<Servicio>, packsDeServicios: Array<Pack>, ubicacion: Ubicacion) {
     super(id, nombre, imagen);
     this.trabajadores = trabajadores;
     this.serviciosExtra = serviciosExtra;
