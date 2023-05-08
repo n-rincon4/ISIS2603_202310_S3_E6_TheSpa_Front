@@ -9,11 +9,11 @@ describe('SedeDetailComponent', () => {
   let component: SedeDetailComponent;
   let fixture: ComponentFixture<SedeDetailComponent>;
 
-  beforeEach(async(() => {
+  beforeEach((() => {
     TestBed.configureTestingModule({
-      declarations: [ SedeDetailComponent ]
+      declarations: [SedeDetailComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

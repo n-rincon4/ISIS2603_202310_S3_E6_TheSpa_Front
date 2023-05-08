@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { SedeDetail } from '../sede-detail';
+import { SedeService } from '../sede.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-sede-detail',
@@ -7,9 +10,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SedeDetailComponent implements OnInit {
 
-  constructor() { }
+  sedeId!: string;
+  @Input() sedeDetail!: SedeDetail;
+
+
+  constructor(
+    private route: ActivatedRoute,
+    private sedeService: SedeService) {}
+
+  getSede() {
+    this.sedeService.getSede(this.sedeId).subscribe(sede => {
+      this.sedeDetail = sede;
+    })
+  }
 
   ngOnInit() {
+    if (this.sedeDetail === undefined) {
+      this.sedeId = this.route.snapshot.paramMap.get('id')!
+      if (this.sedeId) {
+        this.getSede();
+      }
+    }
+
   }
+
 
 }

@@ -3,9 +3,13 @@
     <h2>Listado de sedes</h2>
   </div>
 
+  <div class="col" *ngIf="selected">
+    <app-sede-detail [sedeDetail]="selectedSede"></app-sede-detail>
+  </div>
+
   <div class="row">
     <div class="col-4" *ngFor="let sede of sedes; let i = index">
-      <div class="card border-0 transform-on-hover">
+      <div class="card border-0 transform-on-hover" (click)="selectSede(sede)">
         <img src={{sede.imagen}} alt="Card Image" class="card-img-top">
         <div class="card-body">
           <h6 class="display-4 fst-italic"><a href="#">🌼{{sede.nombre}}🌼</a></h6>
@@ -13,5 +17,6 @@
       </div>
     </div>
   </div>
+
 
 </section>
