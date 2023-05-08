@@ -8,11 +8,11 @@ import { ServicioDetailComponent } from './servicio-detail.component';
 import { RouterTestingModule } from '@angular/router/testing';
 import { HttpClientModule } from '@angular/common/http';
 import { ServicioDetail } from '../servicio-detail';
-import { SedeDetail } from 'src/app/sede/sede-detail';
-import { PackDetail } from 'src/app/pack/pack-detail';
-import { TrabajadorDetail } from 'src/app/trabajador/trabajador-detail';
+import { Sede } from 'src/app/sede/sede';
+import { Trabajador } from 'src/app/trabajador/trabajador';
+import { Pack } from 'src/app/pack/pack';
 
-describe('ServicioDetailComponent', () => {
+describe('AuthorDetailComponent', () => {
   let component: ServicioDetailComponent;
   let fixture: ComponentFixture<ServicioDetailComponent>;
   let debug: DebugElement;
@@ -29,35 +29,45 @@ describe('ServicioDetailComponent', () => {
     fixture = TestBed.createComponent(ServicioDetailComponent);
     component = fixture.componentInstance;
 
-    let testTrabajadores: TrabajadorDetail[] = [];
+    let testBooks: Array<Trabajador> = [];
+    let testPacks: Array<Pack> = [];
 
-    let testPacks: PackDetail[] = [];
+    let sede = new Sede(
+      faker.datatype.number(),
+      faker.lorem.sentence(),
+      faker.image.imageUrl()
+    );
 
-    for (let i = 0; i < 3; i++) {
-      testTrabajadores.push(new TrabajadorDetail(
+    for (let i = 0; i < 2; i++) {
+      testBooks[i] = new Trabajador(
         faker.datatype.number(),
-        faker.name.firstName(),
+        faker.lorem.sentence(),
         faker.image.imageUrl(),
         faker.datatype.number(),
-        faker.datatype.boolean(),
-        [],
-        []
-      ));
+        faker.datatype.boolean()
 
+      );
+    }
 
-      component.servicioDetail = new ServicioDetail(
-        faker.datatype.number(),
-        faker.name.firstName(),
-        faker.image.imageUrl(),
-        faker.datatype.number(),
-        faker.datatype.string(),
-        faker.datatype.number(),
-        
+    component.servicioDetail = new ServicioDetail(
+      faker.datatype.number(),
+      faker.lorem.sentence(),
+      faker.lorem.paragraph(),
+      faker.datatype.number(),
+      faker.image.imageUrl(),
+      faker.datatype.number(),
+      faker.lorem.paragraph(),
+      faker.datatype.boolean(),
+      faker.datatype.string(),
+      sede,
+      testBooks,
+      testPacks
 
+    );
 
-      fixture.detectChanges();
-      debug = fixture.debugElement;
-    });
+    fixture.detectChanges();
+    debug = fixture.debugElement;
+  });
 
   it('should create', () => {
     expect(component).toBeTruthy();
@@ -65,19 +75,19 @@ describe('ServicioDetailComponent', () => {
 
   it('should have an img element', () => {
     expect(debug.query(By.css('img')).attributes['alt']).toEqual(
-      component.servicioDetail.name
+      component.servicioDetail.nombre
     );
   });
 
   it('should have an img element with src = servicioDetail.image', () => {
     expect(debug.query(By.css('img')).attributes['src']).toEqual(
-      component.servicioDetail.image
+      component.servicioDetail.imagen
     );
   });
 
   it('should have a <p> tag with component.servicioDetail.name', () => {
-    const componentElement: HTMLElement = debug.query(By.css('p.h3.p-2.servicio-name')).nativeElement;
-    expect(componentElement.textContent).toContain(component.servicioDetail.name);
+    const componentElement: HTMLElement = debug.query(By.css('p.h3.p-2.author-name')).nativeElement;
+    expect(componentElement.textContent).toContain(component.servicioDetail.nombre);
   });
 
   it('should have one dd tag for component.servicioDetail.description', () => {
@@ -85,22 +95,9 @@ describe('ServicioDetailComponent', () => {
     let nodo = allDt.find((value) => {
       return value.nativeElement.textContent == 'Bio';
     });
-    expect(nodo?.nativeElement.nextSibling.textContent).toContain(component.servicioDetail.description);
+    expect(nodo?.nativeElement.nextSibling.textContent).toContain(component.servicioDetail.descripcion);
   });
 
-  it('should have one dd tag for component.servicioDetail.birthDate', () => {
-    const allDt: DebugElement[] = debug.queryAll(By.css('dt'));
-    let nodo = allDt.find((value) => {
-      return value.nativeElement.textContent == 'BirthDay';
-    });
-    expect(nodo?.nativeElement.nextSibling.textContent).toContain(component.servicioDetail.birthDate);
-  });
 
-  it('should have a tag with component.servicioDetail.books[i].name', () => {
-    for (let i = 0; i < component.servicioDetail.books.length; i++) {
-      const componentElement: HTMLElement = debug.queryAll(By.css('ul > li'))[i].nativeElement;
-      expect(componentElement.textContent).toContain(component.servicioDetail.books[i].name);
-    }
-  });
 
 });
