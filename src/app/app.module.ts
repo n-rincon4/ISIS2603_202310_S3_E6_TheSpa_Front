@@ -12,9 +12,10 @@ import { SedeModule } from './sede/sede.module';
 import { ArticuloModule } from './articulo/articulo.module';
 import { ImageSliderModule } from './imageSlider/imageSlider.module';
 import { HomeComponent } from './home/home.component';
+import { ServicioExtraModule } from './servicioExtra/servicioExtra.module';
 
 @NgModule({
-  declarations: [	
+  declarations: [
     AppComponent,
       HomeComponent
    ],
@@ -33,7 +34,7 @@ import { HomeComponent } from './home/home.component';
     PackModule,
     HttpClientModule,
     SedeModule,
-    ArticuloModule
+    ServicioExtraModule
   ],
   providers: [],
   bootstrap: [AppComponent]
