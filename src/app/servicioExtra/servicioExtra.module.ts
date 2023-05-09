@@ -1,11 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ServicioExtraComponent } from './servicioExtra.component';
+import { RouterModule } from '@angular/router';
+import { ServicioExtraRoutingModule } from './servicioExtra-routing.module';
+import { ServicioExtraListComponent } from './servicioExtra-list/servicioExtra-list.component';
 
 @NgModule({
   imports: [
     CommonModule
+    , RouterModule
+    , ServicioExtraRoutingModule
   ],
-  declarations: [ServicioExtraComponent]
+  declarations: [ServicioExtraListComponent],
+  exports: [ServicioExtraListComponent]
 })
-export class ServicioExtraModule { }
+
+export class ServicioModule { }
