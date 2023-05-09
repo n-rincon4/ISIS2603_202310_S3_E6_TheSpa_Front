@@ -1,3 +1,19 @@
-<p>
-  servicioExtra-list works!
-</p>
+<section class="gallery-block cards-gallery">
+  <div class="heading">
+    <h2>Listado de Servicios Extra</h2>
+  </div>
+
+  <div class="row">
+    <div class="col-4" *ngFor="let servicioExtra of serviciosExtra; let i = index">
+      <div class="card border-0 transform-on-hover">
+        <img src={{servicioExtra.imagen}} alt="Card Image" class="card-img-top">
+        <div class="card-body">
+          <h6><a routerLink="/serviciosExtra/{{servicioExtra.id}}">{{servicioExtra.nombre}}</a></h6>
+          <p class="text-muted card-text">{{servicioExtra.descripcion}}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
