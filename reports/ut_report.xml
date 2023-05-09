@@ -1,6 +1,6 @@
 <testExecutions version="1">
   <file path="src/app/app.component.spec.ts">
-    <testCase name="AppComponent should render title" duration="1718">
+    <testCase name="AppComponent should render title" duration="149">
       <failure message="Error">Error: Expected undefined to contain 'base-project app is running!'.
     at &lt;Jasmine&gt;
     at UserContext.&lt;anonymous&gt; (src/app/app.component.spec.ts:29:66)
@@ -8,95 +8,68 @@
     at ProxyZoneSpec.onInvoke (node_modules/zone.js/fesm2015/zone-testing.js:287:1)
 </failure>
     </testCase>
-    <testCase name="AppComponent should create the app" duration="56"/>
     <testCase name="AppComponent should have as title 'base-project'" duration="27"/>
-  </file>
-  <file path="src/app/sede/sede-list/sede-list.component.spec.ts">
-    <testCase name="SedeListComponent should create" duration="100"/>
-    <testCase name="SedeListComponent should have a list of sedes" duration="36"/>
+    <testCase name="AppComponent should create the app" duration="21"/>
   </file>
   <file path="src/app/articulo/articulo-list/articulo-list.component.spec.ts">
-    <testCase name="ArticuloListComponent should create" duration="91"/>
-    <testCase name="ArticuloListComponent should have a list of articulos de ropa" duration="48"/>
+    <testCase name="ArticuloListComponent should have a list of articulos de ropa" duration="112"/>
+    <testCase name="ArticuloListComponent should create" duration="48"/>
   </file>
   <file path="src/app/articulo/articulo-detail/articulo-detail.component.spec.ts">
-    <testCase name="ArticuloDetailComponent should have an articulo numDisponible" duration="100"/>
-    <testCase name="ArticuloDetailComponent should have a sede" duration="55"/>
-    <testCase name="ArticuloDetailComponent should have an articulo color" duration="59"/>
-    <testCase name="ArticuloDetailComponent should have an articulo imagen" duration="52"/>
-    <testCase name="ArticuloDetailComponent should have an articulo description" duration="13"/>
-    <testCase name="ArticuloDetailComponent should have an articulo precio" duration="12"/>
-    <testCase name="ArticuloDetailComponent should have an articulo" duration="12"/>
-    <testCase name="ArticuloDetailComponent should have an articulo name" duration="15"/>
-    <testCase name="ArticuloDetailComponent should create" duration="19"/>
-    <testCase name="ArticuloDetailComponent should have an articulo talla" duration="18"/>
-  </file>
-  <file path="src/app/servicio/servicio.service.spec.ts">
-    <testCase name="Service: Servicio should ..." duration="12"/>
+    <testCase name="ArticuloDetailComponent should have an articulo precio" duration="65"/>
+    <testCase name="ArticuloDetailComponent should have an articulo description" duration="15"/>
+    <testCase name="ArticuloDetailComponent should have an articulo talla" duration="16"/>
+    <testCase name="ArticuloDetailComponent should have an articulo imagen" duration="16"/>
+    <testCase name="ArticuloDetailComponent should create" duration="16"/>
+    <testCase name="ArticuloDetailComponent should have a sede" duration="16"/>
+    <testCase name="ArticuloDetailComponent should have an articulo name" duration="11"/>
+    <testCase name="ArticuloDetailComponent should have an articulo numDisponible" duration="14"/>
+    <testCase name="ArticuloDetailComponent should have an articulo" duration="20"/>
+    <testCase name="ArticuloDetailComponent should have an articulo color" duration="10"/>
   </file>
   <file path="src/app/home/home.component.spec.ts">
-    <testCase name="HomeComponent should create" duration="33"/>
+    <testCase name="HomeComponent should create" duration="46"/>
   </file>
-  <file path="src/app/articulo/articulo.service.spec.ts">
-    <testCase name="Service: Articulo should ..." duration="33">
-      <failure message="Error">NullInjectorError: R3InjectorError(DynamicTestModule)[ArticuloService -&gt; HttpClient -&gt; HttpClient]: 
-  NullInjectorError: No provider for HttpClient!
-error properties: Object({ ngTempTokenPath: null, ngTokenPath: [ 'ArticuloService', 'HttpClient', 'HttpClient' ] })
-NullInjectorError: R3InjectorError(DynamicTestModule)[ArticuloService -&gt; HttpClient -&gt; HttpClient]: 
-  NullInjectorError: No provider for HttpClient!
-    at NullInjector.get (node_modules/@angular/core/fesm2015/core.mjs:11120:1)
-    at R3Injector.get (node_modules/@angular/core/fesm2015/core.mjs:11287:1)
-    at R3Injector.get (node_modules/@angular/core/fesm2015/core.mjs:11287:1)
-    at injectInjectorOnly (node_modules/@angular/core/fesm2015/core.mjs:4765:1)
-    at ɵɵinject (node_modules/@angular/core/fesm2015/core.mjs:4769:1)
-    at Object.ArticuloService_Factory [as factory] (ng:///ArticuloService/ɵfac.js:4:43)
-    at R3Injector.hydrate (node_modules/@angular/core/fesm2015/core.mjs:11457:1)
-    at R3Injector.get (node_modules/@angular/core/fesm2015/core.mjs:11276:1)
-    at NgModuleRef.get (node_modules/@angular/core/fesm2015/core.mjs:21832:1)
-    at TestBedRender3.inject (node_modules/@angular/core/fesm2015/testing.mjs:1719:1)
-</failure>
-    </testCase>
-  </file>
-  <file path="src/app/pack/pack.service.spec.ts">
-    <testCase name="Service: Pack should ..." duration="33"/>
+  <file path="src/app/sede/sede-list/sede-list.component.spec.ts">
+    <testCase name="SedeListComponent should create" duration="54"/>
+    <testCase name="SedeListComponent should have a list of sedes" duration="36"/>
   </file>
   <file path="src/app/servicio/servicio-detail/servicio-detail.component.spec.ts">
-    <testCase name="AuthorDetailComponent should have a sede" duration="41"/>
-    <testCase name="AuthorDetailComponent should create" duration="18"/>
-    <testCase name="AuthorDetailComponent should have a trabajadores" duration="16"/>
-    <testCase name="AuthorDetailComponent should have a available" duration="21"/>
-    <testCase name="AuthorDetailComponent should have a image" duration="15"/>
-    <testCase name="AuthorDetailComponent should have a description" duration="16"/>
-    <testCase name="AuthorDetailComponent should have a duration" duration="13"/>
-    <testCase name="AuthorDetailComponent should have a servicio" duration="18"/>
-    <testCase name="AuthorDetailComponent should have a price" duration="33"/>
-    <testCase name="AuthorDetailComponent should have a description" duration="8"/>
-    <testCase name="AuthorDetailComponent should have a name" duration="22"/>
+    <testCase name="AuthorDetailComponent should have a servicio" duration="47"/>
+    <testCase name="AuthorDetailComponent should have a name" duration="24"/>
+    <testCase name="AuthorDetailComponent should create" duration="19"/>
+    <testCase name="AuthorDetailComponent should have a duration" duration="12"/>
+    <testCase name="AuthorDetailComponent should have a image" duration="16"/>
+    <testCase name="AuthorDetailComponent should have a price" duration="14"/>
+    <testCase name="AuthorDetailComponent should have a description" duration="27"/>
+    <testCase name="AuthorDetailComponent should have a description" duration="14"/>
+    <testCase name="AuthorDetailComponent should have a sede" duration="13"/>
+    <testCase name="AuthorDetailComponent should have a trabajadores" duration="26"/>
+    <testCase name="AuthorDetailComponent should have a available" duration="15"/>
   </file>
-  <file path="src/app/pack/pack-list/pack-list.component.spec.ts">
-    <testCase name="AuthorListComponent should have 10 packs" duration="68"/>
-    <testCase name="AuthorListComponent a pack should be a packDetail" duration="51"/>
-    <testCase name="AuthorListComponent should create" duration="37"/>
-    <testCase name="AuthorListComponent should have a list of packs" duration="33"/>
-  </file>
-  <file path="src/app/servicio/servicio-list/servicio-list.component.spec.ts">
-    <testCase name="ServicioListComponent should have a list of servicios" duration="37"/>
-    <testCase name="ServicioListComponent should create" duration="29"/>
+  <file path="src/app/articulo/articulo.service.spec.ts">
+    <testCase name="Service: Articulo should ..." duration="14"/>
   </file>
   <file path="src/app/sede/sede.service.spec.ts">
-    <testCase name="Service: Sede should ..." duration="7"/>
+    <testCase name="Service: Sede should ..." duration="9"/>
+  </file>
+  <file path="src/app/pack/pack-list/pack-list.component.spec.ts">
+    <testCase name="AuthorListComponent should have 10 packs" duration="78"/>
+    <testCase name="AuthorListComponent a pack should be a packDetail" duration="42"/>
+    <testCase name="AuthorListComponent should create" duration="38"/>
+    <testCase name="AuthorListComponent should have a list of packs" duration="24"/>
   </file>
   <file path="src/app/pack/pack-detail/pack-detail.component.spec.ts">
-    <testCase name="PackDetailComponent should have a pack" duration="30"/>
-    <testCase name="PackDetailComponent should create" duration="11"/>
-    <testCase name="PackDetailComponent should have a name" duration="12"/>
-    <testCase name="PackDetailComponent should have an image" duration="17"/>
-    <testCase name="PackDetailComponent should have services" duration="12"/>
-    <testCase name="PackDetailComponent should have a discount" duration="8"/>
-    <testCase name="PackDetailComponent should have a sede" duration="15"/>
+    <testCase name="PackDetailComponent should have a name" duration="35"/>
+    <testCase name="PackDetailComponent should have an image" duration="11"/>
+    <testCase name="PackDetailComponent should have services" duration="11"/>
+    <testCase name="PackDetailComponent should have a sede" duration="10"/>
+    <testCase name="PackDetailComponent should have a pack" duration="6"/>
+    <testCase name="PackDetailComponent should create" duration="12"/>
+    <testCase name="PackDetailComponent should have a discount" duration="10"/>
   </file>
   <file path="src/app/sede/sede-detail/sede-detail.component.spec.ts">
-    <testCase name="SedeDetailComponent should create" duration="47">
+    <testCase name="SedeDetailComponent should create" duration="41">
       <failure message="Error">NullInjectorError: R3InjectorError(DynamicTestModule)[ActivatedRoute -&gt; ActivatedRoute]: 
   NullInjectorError: No provider for ActivatedRoute!
 error properties: Object({ ngTempTokenPath: null, ngTokenPath: [ 'ActivatedRoute', 'ActivatedRoute' ] })
@@ -121,8 +94,22 @@ Error: Expected undefined to be truthy.
 </failure>
     </testCase>
   </file>
+  <file path="src/app/pack/pack.service.spec.ts">
+    <testCase name="Service: Pack should ..." duration="6"/>
+  </file>
+  <file path="src/app/trabajador/trabajador.component.spec.ts">
+    <testCase name="TrabajadorComponent a trabajador should be a TrabajadorDetail" duration="39"/>
+    <testCase name="TrabajadorComponent should have a list of trabajadores" duration="38"/>
+    <testCase name="TrabajadorComponent should create" duration="30"/>
+    <testCase name="TrabajadorComponent should have a list of sedes" duration="41"/>
+    <testCase name="TrabajadorComponent should have a servicios" duration="28"/>
+  </file>
+  <file path="src/app/servicio/servicio-list/servicio-list.component.spec.ts">
+    <testCase name="ServicioListComponent should have a list of servicios" duration="48"/>
+    <testCase name="ServicioListComponent should create" duration="20"/>
+  </file>
   <file path="src/app/trabajador/trabajador.service.spec.ts">
-    <testCase name="Service: Trabajador should ..." duration="25">
+    <testCase name="Service: Trabajador should ..." duration="18">
       <failure message="Error">NullInjectorError: R3InjectorError(DynamicTestModule)[TrabajadorService -&gt; HttpClient -&gt; HttpClient]: 
   NullInjectorError: No provider for HttpClient!
 error properties: Object({ ngTempTokenPath: null, ngTokenPath: [ 'TrabajadorService', 'HttpClient', 'HttpClient' ] })
@@ -141,11 +128,7 @@ NullInjectorError: R3InjectorError(DynamicTestModule)[TrabajadorService -&gt; Ht
 </failure>
     </testCase>
   </file>
-  <file path="src/app/trabajador/trabajador.component.spec.ts">
-    <testCase name="TrabajadorComponent should have a list of sedes" duration="48"/>
-    <testCase name="TrabajadorComponent should have a servicios" duration="47"/>
-    <testCase name="TrabajadorComponent should create" duration="42"/>
-    <testCase name="TrabajadorComponent should have a list of trabajadores" duration="56"/>
-    <testCase name="TrabajadorComponent a trabajador should be a TrabajadorDetail" duration="58"/>
+  <file path="src/app/servicio/servicio.service.spec.ts">
+    <testCase name="Service: Servicio should ..." duration="23"/>
   </file>
 </testExecutions>
