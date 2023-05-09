@@ -35,7 +35,7 @@ import { ServicioExtraModule } from './servicioExtra/servicioExtra.module';
     PackModule,
     HttpClientModule,
     SedeModule,
-    ArticuloModule
+    ServicioExtraModule
   ],
   providers: [],
   bootstrap: [AppComponent]

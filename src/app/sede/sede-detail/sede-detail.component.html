@@ -18,6 +18,22 @@
 </main>
 
 <main class="container">
+  <p class="lead my-3 font1">Artículos de Ropa: </p>
+  <div class="row">
+    <div class="col-4" *ngFor="let articulo of sedeDetail.articulosDeRopa; let i = index">
+      <div class="card border-0 transform-on-hover">
+        <img src={{articulo.imagen}} alt="Card Image" class="card-img-top">
+        <div class="card-body">
+          <h6><a routerLink="/servicios/{{articulo.id}}">{{articulo.nombre}}</a></h6>
+          <p class="text-muted card-text">$ {{articulo.precio}}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<main class="container">
   <p class="lead my-3 font1">Servicios: </p>
   <div class="row">
     <div class="col-4" *ngFor="let servicio of sedeDetail.servicios; let i = index">
@@ -59,6 +75,22 @@
         <div class="card-body">
           <h6><a routerLink="/trabajadores/{{trabajador.id}}">{{trabajador.nombre}}</a></h6>
           <p class="text-muted card-text">puntos de calificacion: {{trabajador.calificacion}}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<main class="container">
+  <p class="lead my-3 font1">Servicios Extra:</p>
+  <div class="row">
+    <div class="col-4" *ngFor="let servicioExtra of sedeDetail.serviciosExtra; let i = index">
+      <div class="card border-0 transform-on-hover">
+        <img src={{servicioExtra.imagen}} alt="Card Image" class="card-img-top">
+        <div class="card-body">
+          <h6><a routerLink="/packs/{{servicioExtra.id}}">{{servicioExtra.nombre}}</a></h6>
+          <p class="text-muted card-text"> ${{servicioExtra.precio}}
           </p>
         </div>
       </div>
