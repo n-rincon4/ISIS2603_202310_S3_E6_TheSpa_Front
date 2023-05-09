@@ -1,5 +1,4 @@
 import { Producto } from '../producto/producto';
-import { Sede } from '../sede/sede';
 
 export class ServicioExtra extends Producto {
   disponible: boolean;

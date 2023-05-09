@@ -15,4 +15,4 @@ import { ServicioExtraDetailComponent } from './servicioExtra-detail/servicioExt
   exports: [ServicioExtraListComponent, ServicioExtraDetailComponent]
 })
 
-export class ServicioModule { }
+export class ServicioExtraModule { }
