@@ -7,7 +7,7 @@
 
 .blog-header-logo {
   font-family: "Playfair Display", Georgia, "Times New Roman", serif
-      /*rtl:Amiri, Georgia, "Times New Roman", serif*/
+    /*rtl:Amiri, Georgia, "Times New Roman", serif*/
   ;
   font-size: 2.25rem;
 }
@@ -23,7 +23,7 @@ h4,
 h5,
 h6 {
   font-family: "Playfair Display", Georgia, "Times New Roman", serif
-      /*rtl:Amiri, Georgia, "Times New Roman", serif*/
+    /*rtl:Amiri, Georgia, "Times New Roman", serif*/
   ;
   color: #e5e5e5;
   ;
@@ -35,7 +35,7 @@ h6 {
 
 @media (min-width: 768px) {
   .display-4 {
-      font-size: 3rem;
+    font-size: 3rem;
   }
 }
 
@@ -80,7 +80,7 @@ h6 {
 
 @media (min-width: 768px) {
   .h-md-250 {
-      height: 250px;
+    height: 250px;
   }
 }
 
@@ -125,28 +125,27 @@ h6 {
   margin-bottom: 0;
 }
 
+.white {
+  color: #e5e5e5;
+}
+
 a:link {
   text-decoration: none;
-  color: #e5e5e5;
-
 
 }
 
 a:visited {
   text-decoration: none;
-  color: #e5e5e5;
 
 }
 
 a:hover {
   text-decoration: none;
-  color: #e5e5e5;
 
 }
 
 a:active {
   text-decoration: none;
-  color: #e5e5e5;
 
 }
 
@@ -225,8 +224,14 @@ a:active {
 @media (min-width: 576px) {
 
   .gallery-block .transform-on-hover:hover {
-      transform: translateY(-10px) scale(1.02);
-      box-shadow: 0px 10px 10px #e5e5e5 !important;
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0px 10px 10px #e5e5e5 !important;
 
   }
+
+
+}
+
+.link {
+  color: #212529;
 }
