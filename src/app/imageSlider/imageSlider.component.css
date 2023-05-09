@@ -18,7 +18,7 @@
   text-align: center;
 }
 
-.bg{
+.bg {
   background-color: black;
   opacity: 0.5;
 }
@@ -48,7 +48,15 @@
 
 .slider {
   position: relative;
+  height: 300px;
+  width: 70%;
+
+}
+
+.image {
+  width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 
 .dotsContainer {
@@ -61,4 +69,3 @@
   cursor: pointer;
   font-size: 20px;
 }
-
