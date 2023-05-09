@@ -35,8 +35,7 @@ describe('ServicioExtraListComponent', () => {
         faker.lorem.words(10),
         faker.datatype.number(),
         faker.lorem.words(5),
-        faker.datatype.boolean(),
-        undefined as any
+        faker.datatype.boolean()
       );
     }
 
