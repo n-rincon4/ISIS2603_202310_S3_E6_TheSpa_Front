@@ -16,14 +16,13 @@ export class SedeDetailComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private sedeService: SedeService) {}
+    private sedeService: SedeService) { }
 
   getSede() {
 
     this.sedeService.getSede(this.sedeId).subscribe(sede => {
       this.sedeDetail = sede;
-      console.log(this.sedeDetail)
-    })
+    });
   }
 
   ngOnInit() {
