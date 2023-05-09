@@ -1,0 +1,45 @@
+<main class="container">
+  <div class="p-4 p-md-5 mb-4 text-white rounded spa-bg"
+    style="background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(20, 20, 20, 0.5)) ,url('{{servicioExtraDetail.imagen}}');">
+    <div class="col-md-6 px-0">
+      <h1 class="display-4 fst-italic">{{servicioExtraDetail.nombre}}</h1>
+
+      <p class="lead my-3">{{servicioExtraDetail.descripcion}} </p>
+
+      <p class="lead my-3">Precio: ${{servicioExtraDetail.precio}}</p>
+
+
+      <!-- Crea un margen superior de 4 unidades|-->
+
+      <div class="mt-5"></div>
+
+      <p class=" whiteColour lead mb-0"><a href="#" class="whiteColour fw-bold">Comprar
+          ahora</a></p>
+      <div class="mt-3"></div>
+    </div>
+  </div>
+
+  <p class="lead my-3 link">disponibille {{servicioExtraDetail.disponible}}</p>
+
+
+
+  <p class="lead my-3 link">Sede en la que está disponible:</p>
+
+  <div class="row">
+    <div class="col-4">
+      <div class="card border-0 transform-on-hover">
+        <img src={{servicioExtraDetail.sede.imagen}} alt="Card Image" class="card-img-top">
+        <div class="card-body">
+          <h6><a class="link"
+              routerLink="/sedes/{{servicioExtraDetail.sede.id}}">{{servicioExtraDetail.sede.nombre}}</a>
+          </h6>
+          <p class="text-muted card-text">
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<!--- Sede en la que está disponible-->

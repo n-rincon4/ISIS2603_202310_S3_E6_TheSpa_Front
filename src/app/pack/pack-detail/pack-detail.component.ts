@@ -17,7 +17,6 @@ export class PackDetailComponent implements OnInit {
 
   getPack() {
     this.packService.getPack(this.pakId).subscribe(pack => { this.packDetail = pack; })
-    console.log(this.packDetail);
   }
 
   ngOnInit() {

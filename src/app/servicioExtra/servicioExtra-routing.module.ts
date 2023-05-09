@@ -1,8 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ServicioExtraListComponent } from './servicioExtra-list/servicioExtra-list.component';
-import { ServicioExtraComponent } from './servicioExtra.component';
-
+import { ServicioExtraDetailComponent } from './servicioExtra-detail/servicioExtra-detail.component';
 const routes: Routes = [{
     path: 'serviciosExtra',
     children: [
@@ -12,7 +11,7 @@ const routes: Routes = [{
         },
         {
             path: ':id',
-            component: ServicioExtraComponent
+            component: ServicioExtraDetailComponent
         },
     ]
 }];
