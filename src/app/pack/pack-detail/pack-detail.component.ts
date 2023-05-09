@@ -16,7 +16,8 @@ export class PackDetailComponent implements OnInit {
   constructor(private rout: ActivatedRoute, private packService: PackService) { }
 
   getPack() {
-    this.packService.getPack(this.pakId).subscribe(pack => {this.packDetail = pack;})
+    this.packService.getPack(this.pakId).subscribe(pack => { this.packDetail = pack; })
+    console.log(this.packDetail);
   }
 
   ngOnInit() {

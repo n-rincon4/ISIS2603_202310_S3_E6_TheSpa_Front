@@ -127,26 +127,22 @@ h6 {
 
 a:link {
     text-decoration: none;
-    color: #e5e5e5;
 
 
 }
 
 a:visited {
     text-decoration: none;
-    color: #e5e5e5;
 
 }
 
 a:hover {
     text-decoration: none;
-    color: #e5e5e5;
 
 }
 
 a:active {
     text-decoration: none;
-    color: #e5e5e5;
 
 }
 
@@ -155,6 +151,9 @@ a:active {
 
 }
 
+.whiteColour {
+    color: #e5e5e5;
+}
 
 
 
@@ -231,4 +230,8 @@ a:active {
     }
 
 
+}
+
+.link {
+    color: #212529;
 }
