@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { ServicioExtraRoutingModule } from './servicioExtra-routing.module';
 import { ServicioExtraListComponent } from './servicioExtra-list/servicioExtra-list.component';
+import { ServicioExtraDetailComponent } from './servicioExtra-detail/servicioExtra-detail.component';
 
 @NgModule({
   imports: [
@@ -10,8 +11,8 @@ import { ServicioExtraListComponent } from './servicioExtra-list/servicioExtra-l
     , RouterModule
     , ServicioExtraRoutingModule
   ],
-  declarations: [ServicioExtraListComponent],
-  exports: [ServicioExtraListComponent]
+  declarations: [ServicioExtraListComponent, ServicioExtraDetailComponent],
+  exports: [ServicioExtraListComponent, ServicioExtraDetailComponent]
 })
 
 export class ServicioModule { }
