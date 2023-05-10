@@ -1,116 +1,119 @@
 <testExecutions version="1">
+  <file path="src/app/articulo/articulo.service.spec.ts">
+    <testCase name="Service: Articulo should ..." duration="10"/>
+  </file>
   <file path="src/app/sede/sede.service.spec.ts">
-    <testCase name="Service: Sede should ..." duration="28"/>
+    <testCase name="Service: Sede should ..." duration="3"/>
   </file>
-  <file path="src/app/servicioExtra/servicioExtra.service.spec.ts">
-    <testCase name="Service: ServicioExtra should ..." duration="12"/>
-  </file>
-  <file path="src/app/pack/pack-detail/pack-detail.component.spec.ts">
-    <testCase name="PackDetailComponent should have a discount" duration="94"/>
-    <testCase name="PackDetailComponent should have a sede" duration="18"/>
-    <testCase name="PackDetailComponent should have a name" duration="13"/>
-    <testCase name="PackDetailComponent should have an image" duration="10"/>
-    <testCase name="PackDetailComponent should have a pack" duration="15"/>
-    <testCase name="PackDetailComponent should create" duration="13"/>
-    <testCase name="PackDetailComponent should have services" duration="12"/>
-  </file>
-  <file path="src/app/sede/sede-list/sede-list.component.spec.ts">
-    <testCase name="SedeListComponent should have a list of sedes" duration="23"/>
-    <testCase name="SedeListComponent should create" duration="31"/>
-  </file>
-  <file path="src/app/servicioExtra/servicioExtra-list/servicioExtra-list.component.spec.ts">
-    <testCase name="ServicioExtraListComponent should create" duration="31"/>
-    <testCase name="ServicioExtraListComponent should have a list of serviciosExtra" duration="14"/>
-  </file>
-  <file path="src/app/articulo/articulo-detail/articulo-detail.component.spec.ts">
-    <testCase name="ArticuloDetailComponent should have a sede" duration="62"/>
-    <testCase name="ArticuloDetailComponent should have an articulo numDisponible" duration="14"/>
-    <testCase name="ArticuloDetailComponent should have an articulo" duration="9"/>
-    <testCase name="ArticuloDetailComponent should create" duration="5"/>
-    <testCase name="ArticuloDetailComponent should have an articulo imagen" duration="10"/>
-    <testCase name="ArticuloDetailComponent should have an articulo precio" duration="7"/>
-    <testCase name="ArticuloDetailComponent should have an articulo description" duration="7"/>
-    <testCase name="ArticuloDetailComponent should have an articulo name" duration="9"/>
-    <testCase name="ArticuloDetailComponent should have an articulo color" duration="5"/>
-    <testCase name="ArticuloDetailComponent should have an articulo talla" duration="9"/>
-  </file>
-  <file path="src/app/trabajador/trabajador.component.spec.ts">
-    <testCase name="TrabajadorComponent should have a servicios" duration="22"/>
-    <testCase name="TrabajadorComponent should have a list of trabajadores" duration="27"/>
-    <testCase name="TrabajadorComponent should have a list of sedes" duration="12"/>
-    <testCase name="TrabajadorComponent should create" duration="19"/>
-    <testCase name="TrabajadorComponent a trabajador should be a TrabajadorDetail" duration="14"/>
-  </file>
-  <file path="src/app/app.component.spec.ts">
-    <testCase name="AppComponent should have as title 'base-project'" duration="40"/>
-    <testCase name="AppComponent should create the app" duration="51"/>
-  </file>
-  <file path="src/app/servicio/servicio.service.spec.ts">
-    <testCase name="Service: Servicio should ..." duration="4"/>
-  </file>
-  <file path="src/app/sede/sede-detail/sede-detail.component.spec.ts">
-    <testCase name="SedeDetailComponent should create" duration="92">
-      <failure message="Error">NullInjectorError: R3InjectorError(DynamicTestModule)[ActivatedRoute -&gt; ActivatedRoute]: 
-  NullInjectorError: No provider for ActivatedRoute!
-error properties: Object({ ngTempTokenPath: null, ngTokenPath: [ 'ActivatedRoute', 'ActivatedRoute' ] })
-NullInjectorError: R3InjectorError(DynamicTestModule)[ActivatedRoute -&gt; ActivatedRoute]: 
-  NullInjectorError: No provider for ActivatedRoute!
-    at NullInjector.get (node_modules/@angular/core/fesm2015/core.mjs:11120:1)
-    at R3Injector.get (node_modules/@angular/core/fesm2015/core.mjs:11287:1)
-    at R3Injector.get (node_modules/@angular/core/fesm2015/core.mjs:11287:1)
-    at NgModuleRef.get (node_modules/@angular/core/fesm2015/core.mjs:21832:1)
-    at Object.get (node_modules/@angular/core/fesm2015/core.mjs:21509:1)
-    at lookupTokenUsingModuleInjector (node_modules/@angular/core/fesm2015/core.mjs:3358:1)
-    at getOrCreateInjectable (node_modules/@angular/core/fesm2015/core.mjs:3470:1)
-    at ɵɵdirectiveInject (node_modules/@angular/core/fesm2015/core.mjs:14396:1)
-    at NodeInjectorFactory.SedeDetailComponent_Factory [as factory] (ng:///SedeDetailComponent/ɵfac.js:4:47)
-    at getNodeInjectable (node_modules/@angular/core/fesm2015/core.mjs:3565:1)
-
-Error: Expected undefined to be truthy.
-    at &lt;Jasmine&gt;
-    at UserContext.&lt;anonymous&gt; (src/app/sede/sede-detail/sede-detail.component.spec.ts:26:23)
-    at _ZoneDelegate.invoke (node_modules/zone.js/fesm2015/zone.js:372:1)
-    at ProxyZoneSpec.onInvoke (node_modules/zone.js/fesm2015/zone-testing.js:287:1)
-</failure>
-    </testCase>
-  </file>
-  <file path="src/app/trabajador/trabajador.service.spec.ts">
-    <testCase name="Service: Trabajador should ..." duration="5"/>
+  <file path="src/app/servicioExtra/servicioExtra-detail/servicioExtra-detail.component.spec.ts">
+    <testCase name="AuthorDetailComponent should have a duration" duration="35"/>
+    <testCase name="AuthorDetailComponent should have a available" duration="5"/>
+    <testCase name="AuthorDetailComponent should have a image" duration="5"/>
+    <testCase name="AuthorDetailComponent should have a description" duration="4"/>
+    <testCase name="AuthorDetailComponent should have a trabajadores" duration="3"/>
+    <testCase name="AuthorDetailComponent should have a sede" duration="3"/>
+    <testCase name="AuthorDetailComponent should have a description" duration="7"/>
+    <testCase name="AuthorDetailComponent should have a price" duration="4"/>
+    <testCase name="AuthorDetailComponent should have a name" duration="4"/>
+    <testCase name="AuthorDetailComponent should have a servicio" duration="4"/>
+    <testCase name="AuthorDetailComponent should create" duration="4"/>
   </file>
   <file path="src/app/pack/pack.service.spec.ts">
-    <testCase name="Service: Pack should ..." duration="6"/>
+    <testCase name="Service: Pack should ..." duration="1"/>
   </file>
-  <file path="src/app/pack/pack-list/pack-list.component.spec.ts">
-    <testCase name="AuthorListComponent should have 10 packs" duration="26"/>
-    <testCase name="AuthorListComponent should have a list of packs" duration="24"/>
-    <testCase name="AuthorListComponent should create" duration="19"/>
-    <testCase name="AuthorListComponent a pack should be a packDetail" duration="15"/>
+  <file path="src/app/pack/pack-detail/pack-detail.component.spec.ts">
+    <testCase name="PackDetailComponent should create" duration="13"/>
+    <testCase name="PackDetailComponent should have a pack" duration="3"/>
+    <testCase name="PackDetailComponent should have a name" duration="3"/>
+    <testCase name="PackDetailComponent should have a discount" duration="3"/>
+    <testCase name="PackDetailComponent should have an image" duration="3"/>
+    <testCase name="PackDetailComponent should have a sede" duration="3"/>
+    <testCase name="PackDetailComponent should have services" duration="5"/>
+  </file>
+  <file path="src/app/sede/sede-list/sede-list.component.spec.ts">
+    <testCase name="SedeListComponent should create" duration="12"/>
+    <testCase name="SedeListComponent should have a list of sedes" duration="7"/>
+  </file>
+  <file path="src/app/imageSlider/imageSlider.component.spec.ts">
+    <testCase name="ImageSliderComponent should return the current slide title correctly" duration="23"/>
+    <testCase name="ImageSliderComponent should initialize with default values" duration="3"/>
+    <testCase name="ImageSliderComponent should go to the next slide correctly" duration="10"/>
+    <testCase name="ImageSliderComponent should go to the previous slide correctly" duration="5"/>
+    <testCase name="ImageSliderComponent should create the component" duration="2"/>
+    <testCase name="ImageSliderComponent should go to a specific slide correctly" duration="5"/>
+    <testCase name="ImageSliderComponent should return the current slide URL correctly" duration="6"/>
   </file>
   <file path="src/app/home/home.component.spec.ts">
-    <testCase name="HomeComponent should create" duration="15"/>
+    <testCase name="HomeComponent should create" duration="16"/>
   </file>
-  <file path="src/app/servicio/servicio-detail/servicio-detail.component.spec.ts">
-    <testCase name="AuthorDetailComponent should create" duration="20"/>
-    <testCase name="AuthorDetailComponent should have a image" duration="11"/>
-    <testCase name="AuthorDetailComponent should have a duration" duration="5"/>
-    <testCase name="AuthorDetailComponent should have a servicio" duration="8"/>
-    <testCase name="AuthorDetailComponent should have a description" duration="5"/>
-    <testCase name="AuthorDetailComponent should have a trabajadores" duration="7"/>
-    <testCase name="AuthorDetailComponent should have a price" duration="6"/>
-    <testCase name="AuthorDetailComponent should have a description" duration="7"/>
-    <testCase name="AuthorDetailComponent should have a available" duration="5"/>
-    <testCase name="AuthorDetailComponent should have a name" duration="7"/>
-    <testCase name="AuthorDetailComponent should have a sede" duration="9"/>
+  <file path="src/app/servicioExtra/servicioExtra.service.spec.ts">
+    <testCase name="Service: ServicioExtra should ..." duration="6"/>
   </file>
-  <file path="src/app/articulo/articulo.service.spec.ts">
-    <testCase name="Service: Articulo should ..." duration="4"/>
+  <file path="src/app/servicioExtra/servicioExtra-detail/servicioExtra-detail.component.spec.ts">
+    <testCase name="AuthorDetailComponent should have a precio defined" duration="7"/>
+    <testCase name="AuthorDetailComponent should create" duration="7"/>
+    <testCase name="AuthorDetailComponent should have a activo defined" duration="2"/>
+    <testCase name="AuthorDetailComponent should have a imagen defined" duration="5"/>
+    <testCase name="AuthorDetailComponent should have a descripcion defined" duration="4"/>
+    <testCase name="AuthorDetailComponent should have a name defined" duration="2"/>
+    <testCase name="AuthorDetailComponent should have a servicioExtra defined" duration="2"/>
   </file>
   <file path="src/app/servicio/servicio-list/servicio-list.component.spec.ts">
-    <testCase name="ServicioListComponent should have a list of servicios" duration="24"/>
-    <testCase name="ServicioListComponent should create" duration="13"/>
+    <testCase name="ServicioListComponent should have a list of servicios" duration="10"/>
+    <testCase name="ServicioListComponent should create" duration="14"/>
+  </file>
+  <file path="src/app/servicioExtra/servicioExtra-list/servicioExtra-list.component.spec.ts">
+    <testCase name="ServicioExtraListComponent should create" duration="27"/>
+    <testCase name="ServicioExtraListComponent should have a list of serviciosExtra" duration="4"/>
+  </file>
+  <file path="src/app/servicio/servicio.service.spec.ts">
+    <testCase name="Service: Servicio should ..." duration="1"/>
+  </file>
+  <file path="src/app/trabajador/trabajador.component.spec.ts">
+    <testCase name="TrabajadorComponent should create" duration="8"/>
+    <testCase name="TrabajadorComponent should have a list of sedes" duration="9"/>
+    <testCase name="TrabajadorComponent should have a list of trabajadores" duration="12"/>
+    <testCase name="TrabajadorComponent a trabajador should be a TrabajadorDetail" duration="10"/>
+    <testCase name="TrabajadorComponent should have a servicios" duration="6"/>
+  </file>
+  <file path="src/app/app.component.spec.ts">
+    <testCase name="AppComponent should have as title 'base-project'" duration="14"/>
+    <testCase name="AppComponent should create the app" duration="7"/>
+  </file>
+  <file path="src/app/pack/pack-list/pack-list.component.spec.ts">
+    <testCase name="AuthorListComponent should have 10 packs" duration="27"/>
+    <testCase name="AuthorListComponent a pack should be a packDetail" duration="11"/>
+    <testCase name="AuthorListComponent should create" duration="9"/>
+    <testCase name="AuthorListComponent should have a list of packs" duration="11"/>
+  </file>
+  <file path="src/app/trabajador/trabajador.service.spec.ts">
+    <testCase name="Service: Trabajador should ..." duration="3"/>
+  </file>
+  <file path="src/app/articulo/articulo-detail/articulo-detail.component.spec.ts">
+    <testCase name="ArticuloDetailComponent should create" duration="23"/>
+    <testCase name="ArticuloDetailComponent should have an articulo talla" duration="4"/>
+    <testCase name="ArticuloDetailComponent should have an articulo color" duration="4"/>
+    <testCase name="ArticuloDetailComponent should have an articulo precio" duration="6"/>
+    <testCase name="ArticuloDetailComponent should have an articulo imagen" duration="4"/>
+    <testCase name="ArticuloDetailComponent should have an articulo name" duration="4"/>
+    <testCase name="ArticuloDetailComponent should have an articulo description" duration="2"/>
+    <testCase name="ArticuloDetailComponent should have an articulo" duration="3"/>
+    <testCase name="ArticuloDetailComponent should have a sede" duration="2"/>
+    <testCase name="ArticuloDetailComponent should have an articulo numDisponible" duration="2"/>
   </file>
   <file path="src/app/articulo/articulo-list/articulo-list.component.spec.ts">
-    <testCase name="ArticuloListComponent should have a list of articulos de ropa" duration="19"/>
-    <testCase name="ArticuloListComponent should create" duration="12"/>
+    <testCase name="ArticuloListComponent should have a list of articulos de ropa" duration="6"/>
+    <testCase name="ArticuloListComponent should create" duration="5"/>
+  </file>
+  <file path="src/app/sede/sede-detail/sede-detail.component.spec.ts">
+    <testCase name="SedeDetailComponent should have a list of servicios extra" duration="38"/>
+    <testCase name="SedeDetailComponent should have an image" duration="7"/>
+    <testCase name="SedeDetailComponent should have a list of trabajadores" duration="19"/>
+    <testCase name="SedeDetailComponent should create" duration="7"/>
+    <testCase name="SedeDetailComponent should have a name" duration="13"/>
+    <testCase name="SedeDetailComponent should have a list of packs" duration="10"/>
+    <testCase name="SedeDetailComponent should have a ubicacion" duration="13"/>
+    <testCase name="SedeDetailComponent should have a list of articulos" duration="11"/>
+    <testCase name="SedeDetailComponent should have a list of servicios" duration="8"/>
   </file>
 </testExecutions>
