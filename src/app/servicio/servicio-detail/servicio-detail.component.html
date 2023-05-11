@@ -29,21 +29,20 @@
 
 
         <p class="lead my-3 link">Sede en la que está disponible:</p>
-
-        <div class="row">
-            <div class="col-4">
-                <div class="card border-0 transform-on-hover">
-                    <img src={{servicioDetail.sede.imagen}} alt="Card Image" class="card-img-top">
-                    <div class="card-body">
-                        <h6><a class="link"
-                                routerLink="/sedes/{{servicioDetail.sede.id}}">{{servicioDetail.sede.nombre}}</a>
-                        </h6>
-                        <p class="text-muted card-text">
-                        </p>
+        <section class="gallery-block cards-gallery">
+            <div class="row">
+                <div class="col-4">
+                    <div class="card border-0 transform-on-hover">
+                        <img src={{servicioDetail.sede.imagen}} alt="Card Image" class="card-img-top">
+                        <div class="card-body">
+                            <h6><a class="link"
+                                    routerLink="/sedes/{{servicioDetail.sede.id}}">{{servicioDetail.sede.nombre}}</a>
+                            </h6>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     </ng-container>
 </main>
 
