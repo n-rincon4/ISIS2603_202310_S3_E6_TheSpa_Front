@@ -16,6 +16,7 @@ import { HomeComponent } from './home/home.component';
 import { ServicioExtraModule } from './servicioExtra/servicioExtra.module';
 import { RouterModule } from '@angular/router';
 import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,6 +29,7 @@ import { ToastrModule } from 'ngx-toastr';
       preventDuplicates: true,
     }
     ),
+    BrowserAnimationsModule,
     ServicioRoutingModule,
     BrowserModule,
     RouterModule,
