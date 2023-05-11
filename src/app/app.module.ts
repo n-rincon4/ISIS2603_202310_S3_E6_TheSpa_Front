@@ -13,7 +13,7 @@ import { ArticuloModule } from './articulo/articulo.module';
 import { ImageSliderModule } from './imageSlider/imageSlider.module';
 import { HomeComponent } from './home/home.component';
 import { ServicioExtraModule } from './servicioExtra/servicioExtra.module';
-
+import { RouterModule } from '@angular/router';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,6 +21,7 @@ import { ServicioExtraModule } from './servicioExtra/servicioExtra.module';
   ],
   imports: [
     BrowserModule,
+    RouterModule,
     AppRoutingModule,
     ServicioExtraModule,
     SedeRoutingModule,

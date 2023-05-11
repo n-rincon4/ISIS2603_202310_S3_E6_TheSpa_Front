@@ -3,18 +3,31 @@
     <h2>Listado de Servicios</h2>
   </div>
 
-
-  <div class="row">
-    <div class="col-4" *ngFor="let servicio of servicios; let i = index">
-      <div class="card border-0 transform-on-hover">
-        <img src={{servicio.imagen}} alt="Card Image" class="card-img-top">
-        <div class="card-body">
-          <h6><a routerLink="/servicios/{{servicio.id}}">{{servicio.nombre}}</a></h6>
-          <p class="text-muted card-text">{{servicio.descripcion}}
-          </p>
+  <ng-container *ngIf="servicios">
+    <div class="row">
+      <div class="col-4" *ngFor="let servicio of servicios; let i = index">
+        <div class="card border-0 transform-on-hover">
+          <img src={{servicio.imagen}} alt="Card Image" class="card-img-top">
+          <div class="card-body">
+            <h6><a routerLink="/servicios/{{servicio.id}}">{{servicio.nombre}}</a></h6>
+            <p class="text-muted card-text">{{servicio.descripcion}}
+            </p>
+          </div>
         </div>
       </div>
     </div>
+  </ng-container>
+
+
+
+  <!-- Texto centrado que permite crear un servicio -->
+
+  <div class="text-center">
+    <a routerLink="/servicios/create" class="btn btn-primary">Crear Servicio</a>
+    <script>
+      function logConsole() {
+        console.log("Following are some animal names");
+      } </script>
   </div>
 
 </section>
