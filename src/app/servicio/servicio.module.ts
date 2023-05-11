@@ -6,7 +6,6 @@ import { ServicioCreateComponent } from './servicio-create/servicio-create.compo
 import { RouterModule } from '@angular/router';
 import { ServicioRoutingModule } from './servicio-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
 @NgModule({
   imports: [
     CommonModule

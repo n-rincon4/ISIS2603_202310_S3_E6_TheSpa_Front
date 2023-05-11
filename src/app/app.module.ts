@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { SedeRoutingModule } from './sede/sede-routing.module';
+import { ServicioRoutingModule } from './servicio/servicio-routing.module';
 import { AppComponent } from './app.component';
 import { TrabajadorModule } from './trabajador/trabajador.module';
 import { PackModule } from './pack/pack.module';
@@ -14,12 +15,20 @@ import { ImageSliderModule } from './imageSlider/imageSlider.module';
 import { HomeComponent } from './home/home.component';
 import { ServicioExtraModule } from './servicioExtra/servicioExtra.module';
 import { RouterModule } from '@angular/router';
+import { ToastrModule } from 'ngx-toastr';
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent
   ],
   imports: [
+    ToastrModule.forRoot({
+      timeOut: 10000,
+      positionClass: 'toast-bottom-right',
+      preventDuplicates: true,
+    }
+    ),
+    ServicioRoutingModule,
     BrowserModule,
     RouterModule,
     AppRoutingModule,

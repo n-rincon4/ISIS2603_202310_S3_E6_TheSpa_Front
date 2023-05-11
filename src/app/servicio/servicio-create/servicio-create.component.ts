@@ -37,11 +37,11 @@ export class ServicioCreateComponent implements OnInit {
   }
 
   ngOnInit() {
-    // this.servicioForm = this.formBuilder.group({
-    //   name: ['', [Validators.required, Validators.minLength(2)]],
-    //   image: ['', Validators.required],
-    //   birthDate: ['', Validators.required],
-    //   description: ['', [Validators.required, Validators.maxLength(100)]],
-    // });
+    this.servicioForm = this.formBuilder.group({
+      name: ['', [Validators.required, Validators.minLength(2)]],
+      image: ['', Validators.required],
+      birthDate: ['', Validators.required],
+      description: ['', [Validators.required, Validators.maxLength(100)]],
+    });
   }
 }

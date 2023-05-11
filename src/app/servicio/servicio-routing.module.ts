@@ -13,12 +13,12 @@ const routes: Routes = [{
             component: ServicioListComponent
         },
         {
-            path: ':id',
-            component: ServicioDetailComponent
-        },
-        {
             path: 'create',
             component: ServicioCreateComponent
+        },
+        {
+            path: ':id',
+            component: ServicioDetailComponent
         }
 
 
