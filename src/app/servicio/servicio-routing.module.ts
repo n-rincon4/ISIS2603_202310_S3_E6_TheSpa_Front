@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ServicioListComponent } from './servicio-list/servicio-list.component';
 import { ServicioDetailComponent } from './servicio-detail/servicio-detail.component';
+import { ServicioCreateComponent } from './servicio-create/servicio-create.component';
 
 
 const routes: Routes = [{
@@ -12,9 +13,15 @@ const routes: Routes = [{
             component: ServicioListComponent
         },
         {
+            path: 'create',
+            component: ServicioCreateComponent
+        },
+        {
             path: ':id',
             component: ServicioDetailComponent
-        },
+        }
+
+
     ]
 }];
 

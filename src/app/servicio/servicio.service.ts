@@ -21,7 +21,7 @@ export class ServicioService {
     return this.http.get<ServicioDetail>(this.apiUrl + "/" + id);
   }
 
-  createService(servicio: Servicio): Observable<ServicioDetail> {
+  createService(servicio: ServicioDetail): Observable<ServicioDetail> {
     return this.http.post<ServicioDetail>(this.apiUrl, servicio);
   }
 
