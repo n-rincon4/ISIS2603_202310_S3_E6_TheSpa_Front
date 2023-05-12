@@ -42,27 +42,35 @@ describe('ServicioCreateComponent', () => {
     expect(debug.query(By.css('#submit')).attributes['type']).toEqual('submit');
   });
 
-  it('should have an input with id name and with formControlName name', () => {
-    expect(debug.query(By.css('#name')).attributes['formControlName']).toEqual(
-      'name'
+  it('should have an input with id nombre and with formControlName nombre ', () => {
+    expect(debug.query(By.css('#nombre')).attributes['formControlName']).toEqual(
+      'nombre'
     );
-  });
+  }
+  );
 
-  it('should have an input with id image and with formControlName image', () => {
-    expect(debug.query(By.css('#image')).attributes['formControlName']).toEqual(
-      'image'
+  it('should have an input with id descripcion and with formControlName descripcion ', () => {
+    expect(
+      debug.query(By.css('#descripcion')).attributes['formControlName']
+    ).toEqual('descripcion');
+  }
+  );
+
+  it('should have an input with id precio and with formControlName precio ', () => {
+    expect(debug.query(By.css('#precio')).attributes['formControlName']).toEqual(
+      'precio'
     );
-  });
+  }
+  );
 
-  it('should have an input with id birthDate and with formControlName birthDate', () => {
+  it('should have an input with id duracion and with formControlName duracion ', () => {
     expect(
-      debug.query(By.css('#birthDate')).attributes['formControlName']
-    ).toEqual('birthDate');
-  });
+      debug.query(By.css('#duracion')).attributes['formControlName']
+    ).toEqual('duracion');
+  }
+  );
 
-  it('should have an input with id description and with formControlName description', () => {
-    expect(
-      debug.query(By.css('#description')).attributes['formControlName']
-    ).toEqual('description');
-  });
+
+
+
 });
