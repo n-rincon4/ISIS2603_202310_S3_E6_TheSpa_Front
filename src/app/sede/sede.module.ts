@@ -4,13 +4,15 @@ import { SedeListComponent } from './sede-list/sede-list.component';
 import { SedeDetailComponent } from './sede-detail/sede-detail.component';
 import { RouterModule } from '@angular/router';
 import { SedeRoutingModule } from './sede-routing.module';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
   imports: [
     CommonModule,
     RouterModule,
-    SedeRoutingModule
+    SedeRoutingModule,
+    FormsModule
   ],
   declarations: [SedeListComponent, SedeDetailComponent],
   exports: [SedeListComponent, SedeDetailComponent]

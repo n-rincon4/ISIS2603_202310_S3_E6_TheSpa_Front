@@ -77,8 +77,8 @@ export class ServicioCreateComponent implements OnInit {
       duracion: ['', [Validators.required, Validators.pattern('^[0-9]*$')]],
       // precio checks if the value is numeric, can be decimal
       precio: ['', [Validators.required, Validators.pattern('^[0-9]+(\.[0-9]{1,2})?$')]],
-      // imagen checks if the value is a valid URL, meaning it must start with http:// or https:// and end with an image extension
-      imagen: ['', [Validators.required, Validators.pattern('^(http|https)://.*\.(png|jpg|jpeg|gif)$')]],
+      // imagen checks if the value is a valid URL, meaning it must start with http:// or https://    
+      imagen: ['', [Validators.required, Validators.pattern('^(http|https)://.*$')]],
     });
   }
 }
