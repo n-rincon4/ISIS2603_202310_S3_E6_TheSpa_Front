@@ -72,3 +72,17 @@
 
 
 }
+
+.btn-primary {
+    background-color: #82a065;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.btn-primary:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
