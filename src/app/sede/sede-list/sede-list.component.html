@@ -1,40 +1,170 @@
-<!-- Botón para filtrar sedes, se presenta un cuadro de texto, y se muestran las sedes que contengas ese texto en su nombre -->
-
-<div class="container">
-  <div class="row">
-    <div class="col-md-6 offset-md-3">
-      <form (ngSubmit)="search()">
-        <div class="input-group mb-3">
-          <input type="text" class="form-control" [(ngModel)]="searchText" name="searchText"
-            placeholder="Enter your search term">
-          <div class="input-group-append">
-            <button class="btn btn-primary" type="submit">Search</button>
-          </div>
-        </div>
-      </form>
-    </div>
-  </div>
-</div>
-
-
-
-
 
 <!-- Listado de sedes-->
 
-<section class="gallery-block cards-gallery">
-  <div class="heading">
-    <h2>Listado de sedes</h2>
+<div class="container">
+  <div class="row separate-bot">
+
+    <!-- Pestaña de Busqueda de sedes para filtrar-->
+    <div class="col-3">
+
+      <div class="input-group mb-3">
+        <input type="text" class="form-control rounded my-button spaFont2"
+       [(ngModel)]="searchText" placeholder="Search" aria-label="Search"
+       aria-describedby="basic-addon2">
+        <div class="input-group-append">
+          <span class="input-group-text button-label">
+            <img class="lupa-button" src="https://github.com/JuanCoronel/SisTrans-Group/blob/main/lupa.png?raw=true" alt="Lupa" (click)="search()">
+          </span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Despliegue del titulo 'Sedes' -->
+    <div class="col-8 title-column">
+      <!-- Aquí iría el contenido del título -->
+      <h1 class="spaFont">Sedes</h1>
+    </div>
+
+    <div class="col-2"></div>
+  </div>
+  <div class="row">
+
+
+
+    <!-- Pestaña de Filtros -->
+    <div class="col-3">
+
+      <h3 class="spaFont">FILTROS</h3>
+
+      <div class="accordion spaNewBg">
+
+
+        <h6 class="spaFont align1">Ciudad</h6>
+
+        <div class="accordion-header" (click)="toggleAccordion(0)">
+          <p class="spaFont3">Super1</p>
+          <button class="accordion-btn">{{ isOpen[0] ? '-' : '+' }}</button>
+        </div>
+        <div class="accordion-content" [hidden]="!isOpen[0]">
+          <p class="align2">- Content1</p>
+        </div>
+        <div class="accordion-header" (click)="toggleAccordion(1)">
+          <p class="spaFont3">Super2</p>
+          <button class="accordion-btn">{{ isOpen[1] ? '-' : '+' }}</button>
+        </div>
+        <div class="accordion-content" [hidden]="!isOpen[1]">
+          <p class="align2">- Content2</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-3">
+      <!-- Aquí iría el resto del contenido de la página -->
+
+        <div *ngFor="let sede of sedes; let i = index">
+
+          <div class="card border-0 transform-on-hover custom-border">
+            <img src={{sede.imagen}} alt="Card Image" class="card-img-top">
+            <div class="card-body">
+              <h6 class="spaFont"><a class="link" routerLink="/sedes/{{sede.id}}">{{sede.nombre}}</a></h6>
+              <p class="spaFont2">Ubicacion</p>
+              <div class="rating align4">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+  </div>
   </div>
 
-  <div class="row">
-    <div class="col-4" *ngFor="let sede of sedes; let i = index">
-      <div class="card border-0 transform-on-hover">
-        <img src={{sede.imagen}} alt="Card Image" class="card-img-top">
-        <div class="card-body">
-          <h6 class="display-4 fst-italic"><a routerLink="/sedes/{{sede.id}}">{{sede.nombre}}</a></h6>
+  <div class="row separate-bot separate-top">
+
+    <div class="col-2">
+
+      <div class="accordion spaNewBg">
+
+
+        <h6 class="spaFont align1">Ciudad</h6>
+
+        <div class="accordion-header" (click)="toggleAccordion(3)">
+          <p class="spaFont3">Super1</p>
+          <button class="accordion-btn">{{ isOpen[3] ? '-' : '+' }}</button>
+        </div>
+        <div class="accordion-content" [hidden]="!isOpen[3]">
+          <p class="align2">- Content1</p>
+        </div>
+        <div class="accordion-header" (click)="toggleAccordion(4)">
+          <p class="spaFont3">Super2</p>
+          <button class="accordion-btn">{{ isOpen[4] ? '-' : '+' }}</button>
+        </div>
+        <div class="accordion-content" [hidden]="!isOpen[4]">
+          <p class="align2">- Content2</p>
         </div>
       </div>
     </div>
   </div>
-</section>
+
+  <div class="row separate-bot">
+
+    <div class="col-2">
+
+      <div class="rectangulo">
+        <h5 class="spaFont align4">Calificación</h5>
+        <div class="rating align4">
+          <span class="star">&#9733;</span>
+          <span class="star">&#9733;</span>
+          <span class="star">&#9733;</span>
+          <span class="star">&#9733;</span>
+          <span class="star">&#9733;</span>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
+
+
+
+</div>
+
+<footer class="spaNewBg py-4 align-foot-top-big">
+  <div class="container align-foot-top align-foot-bot">
+    <div class="row">
+      <div class="col-md-3">
+        <h5 class="spaFont textCenter2">The Spa</h5>
+        <p class="spaFont3 textCenter">@2023</p>
+        <img src="https://github.com/JuanCoronel/SisTrans-Group/blob/main/Gold_And_Black_Minimalist_Beauty_And_Spa_Logo-removebg-preview.png?raw=true" alt="Logo" class="logo">
+      </div>
+      <div class="col-md-3">
+        <h5 class="spaFont textCenter2">Informacion</h5>
+        <p>Lunes a Viernes: 9am - 5pm</p>
+        <p>Sábados: 10am - 2pm</p>
+      </div>
+      <div class="col-md-3">
+        <h5 class="spaFont textCenter2">Redes sociales</h5>
+        <ul class="list-unstyled">
+          <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
+          <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+          <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <h5 class="spaFont textCenter2">About</h5>
+        <p>@Universidad de los Andes - Bogota</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+
