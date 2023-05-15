@@ -1,4 +1,3 @@
-
 <!-- Listado de sedes-->
 
 <div class="container">
@@ -8,12 +7,12 @@
     <div class="col-3">
 
       <div class="input-group mb-3">
-        <input type="text" class="form-control rounded my-button spaFont2"
-       [(ngModel)]="searchText" placeholder="Search" aria-label="Search"
-       aria-describedby="basic-addon2">
+        <input type="text" class="form-control rounded my-button spaFont2" [(ngModel)]="searchText" placeholder="Search"
+          aria-label="Search" aria-describedby="basic-addon2">
         <div class="input-group-append">
           <span class="input-group-text button-label">
-            <img class="lupa-button" src="https://github.com/JuanCoronel/SisTrans-Group/blob/main/lupa.png?raw=true" alt="Lupa" (click)="search()">
+            <img class="lupa-button" src="https://github.com/JuanCoronel/SisTrans-Group/blob/main/lupa.png?raw=true"
+              alt="Lupa" (click)="search()">
           </span>
         </div>
       </div>
@@ -21,7 +20,7 @@
     </div>
 
     <!-- Despliegue del titulo 'Sedes' -->
-    <div class="col-8 title-column">
+    <div class="col-8 title-column d-flex justify-content-center">
       <!-- Aquí iría el contenido del título -->
       <h1 class="spaFont">Sedes</h1>
     </div>
@@ -37,7 +36,7 @@
 
       <h3 class="spaFont">FILTROS</h3>
 
-      <div class="accordion spaNewBg">
+      <div class="accordion  font-size: 15px; spaNewBg">
 
 
         <h6 class="spaFont align1">Ciudad</h6>
@@ -62,27 +61,27 @@
     <div class="col-3">
       <!-- Aquí iría el resto del contenido de la página -->
 
-        <div *ngFor="let sede of sedes; let i = index">
+      <div *ngFor="let sede of sedes; let i = index">
 
-          <div class="card border-0 transform-on-hover custom-border">
-            <img src={{sede.imagen}} alt="Card Image" class="card-img-top">
-            <div class="card-body">
-              <h6 class="spaFont"><a class="link" routerLink="/sedes/{{sede.id}}">{{sede.nombre}}</a></h6>
-              <p class="spaFont2">Ubicacion</p>
-              <div class="rating align4">
-                <span class="star">&#9733;</span>
-                <span class="star">&#9733;</span>
-                <span class="star">&#9733;</span>
-                <span class="star">&#9733;</span>
-                <span class="star">&#9733;</span>
-              </div>
-
+        <div class="card border-0 transform-on-hover custom-border">
+          <img src={{sede.imagen}} alt="Card Image" class="card-img-top">
+          <div class="card-body">
+            <h6 class="spaFont"><a class="link" routerLink="/sedes/{{sede.id}}">{{sede.nombre}}</a></h6>
+            <p class="spaFont2">Ubicacion</p>
+            <div class="rating align4">
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
             </div>
 
           </div>
-        </div>
 
-  </div>
+        </div>
+      </div>
+
+    </div>
   </div>
 
   <div class="row separate-bot separate-top">
@@ -142,29 +141,39 @@
       <div class="col-md-3">
         <h5 class="spaFont textCenter2">The Spa</h5>
         <p class="spaFont3 textCenter">@2023</p>
-        <img src="https://github.com/JuanCoronel/SisTrans-Group/blob/main/Gold_And_Black_Minimalist_Beauty_And_Spa_Logo-removebg-preview.png?raw=true" alt="Logo" class="logo">
+        <img
+          src="https://github.com/JuanCoronel/SisTrans-Group/blob/main/Gold_And_Black_Minimalist_Beauty_And_Spa_Logo-removebg-preview.png?raw=true"
+          alt="Logo" class="logo">
       </div>
       <div class="col-md-3">
         <h5 class="spaFont textCenter2">Informacion</h5>
-        <p>Lunes a Viernes: 9am - 5pm</p>
-        <p>Sábados: 10am - 2pm</p>
+        <div class="d-flex justify-content-center">
+          <p>Lunes a Viernes: 9am - 5pm</p>
+        </div>
+        <div class="d-flex justify-content-center">
+          <p>Sábados: 10am - 2pm</p>
+        </div>
       </div>
       <div class="col-md-3">
         <h5 class="spaFont textCenter2">Redes sociales</h5>
         <ul class="list-unstyled">
-          <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
-          <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
-          <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+          <div class="d-flex justify-content-center">
+            <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
+          </div>
+          <div class="d-flex justify-content-center">
+            <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+          </div>
+          <div class="d-flex justify-content-center">
+            <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+          </div>
         </ul>
       </div>
       <div class="col-md-3">
         <h5 class="spaFont textCenter2">About</h5>
-        <p>@Universidad de los Andes - Bogota</p>
+        <div class="d-flex justify-content-center">
+          <p>@Universidad de los Andes - Bogota</p>
+        </div>
       </div>
     </div>
   </div>
 </footer>
-
-
-
-
