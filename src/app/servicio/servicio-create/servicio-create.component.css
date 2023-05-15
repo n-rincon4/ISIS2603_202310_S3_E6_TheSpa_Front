@@ -152,7 +152,7 @@ a:active {
     max-width: 550px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #f7f7f7;
+    background-color: #F4F0EC;
     border: 1px solid #e3e3e3;
     border-radius: 5px;
 }
@@ -190,7 +190,7 @@ label {
 }
 
 .btn-primary {
-    background-color: #82a065;
+    background-color: #CDA274;
     color: #fff;
     border: none;
     padding: 10px 20px;
