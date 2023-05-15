@@ -15,7 +15,9 @@ export class SedeListComponent implements OnInit {
   sedes: SedeDetail[] = [];
   selectedSede: SedeDetail = undefined as any;
   selected = false;
-  searchText: string = ''; // Add the searchText property for filtering
+  searchNombre: string = ''; // Add the searchText property for filtering
+  searchCiudad: string = ''; // Add the searchText property for filtering
+  searchDireccion: string = ''; // Add the searchText property for filtering
 
   constructor(private sedeService: SedeService) { }
 
@@ -24,19 +26,18 @@ export class SedeListComponent implements OnInit {
   getSedes(): void {
     this.sedeService.getSedes().subscribe(sedes => {
       // Apply the filter based on the searchText property
-      this.sedes = sedes.filter(sede => sede.nombre.toLowerCase().includes(this.searchText.toLowerCase()));
+      this.sedes = sedes.filter(sede => sede.nombre.toLowerCase().includes(this.searchNombre.toLowerCase()) && sede.ubicacion.ciudad.toLowerCase().includes(this.searchCiudad.toLowerCase()) && sede.ubicacion.direccion.toLowerCase().includes(this.searchDireccion.toLowerCase()));
     });
   }
 
-  onSearchInput(value: string) {
-    this.searchText = value;
-  }
+
 
   search() {
-    console.log(this.searchText);
     this.getSedes();
 
   }
+
+
 
   selectSede(sede: SedeDetail) {
     this.selected = true;
