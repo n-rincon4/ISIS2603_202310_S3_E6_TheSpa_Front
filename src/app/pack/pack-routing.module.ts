@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { PackListComponent } from './pack-list/pack-list.component';
 import { PackDetailComponent } from './pack-detail/pack-detail.component';
+import { PackCreateComponent } from './pack-create/pack-create.component';
 
 
 const routes: Routes = [{
@@ -10,6 +11,10 @@ const routes: Routes = [{
         {
             path: 'list',
             component: PackListComponent
+        },
+        {
+            path: 'create',
+            component: PackCreateComponent
         },
         {
             path: ':id',

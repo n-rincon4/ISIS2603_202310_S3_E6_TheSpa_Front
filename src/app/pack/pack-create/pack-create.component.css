@@ -199,6 +199,14 @@ label {
     cursor: pointer;
 }
 
+.btn-primary2 {
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
 .btn-primary:disabled {
     opacity: 0.5;
     cursor: not-allowed;
