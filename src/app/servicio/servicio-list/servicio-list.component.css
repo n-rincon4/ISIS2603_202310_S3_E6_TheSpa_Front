@@ -15,9 +15,7 @@
     background-color: black;
 }
 
-.ul {
-    background-color: black;
-}
+
 
 .gallery-block .heading h2 {
     font-weight: bold;
@@ -97,20 +95,6 @@
     cursor: not-allowed;
 }
 
-.btn-danger {
-    background-color: #dc3545;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 3px;
-    cursor: pointer;
-    margin-left: 10px;
-}
-
-.btn-danger:hover {
-    background-color: #c82333;
-}
 
 .text-center {
     text-align: center;
@@ -136,18 +120,6 @@
     text-transform: uppercase;
 }
 
-.textCenter2 {
-    text-align: center;
-    margin-left: 15px;
-}
-
-.logo {
-    width: 150px;
-    height: 150px;
-
-
-    margin-left: 57px;
-}
 
 .my-button {
     background-color: #F4F0EC;
@@ -194,9 +166,6 @@
     border-color: #F4F0EC;
 }
 
-.altura {
-    height: 80px;
-}
 
 .input-group-text {
     margin-left: -2px;
@@ -224,23 +193,6 @@
 .align1 {
     margin-top: 15px;
     margin-left: 20px;
-}
-
-.star {
-    color: orange;
-    font-size: 18px;
-}
-
-.align4 {
-    margin-top: 7px;
-    margin-left: 10px;
-}
-
-.align2 {
-    font-family: 'Jost', sans-serif;
-    font-size: 14px;
-    text-align: right;
-    margin-right: 10px;
 }
 
 
@@ -277,36 +229,11 @@
     margin-bottom: 20px;
 }
 
-.rectangulo {
-    border: 1px solid #F4F0EC;
-    background-color: #F4F0EC;
-    padding: 10px;
-    width: 250px;
-    border-radius: 15px 15px 15px 15px;
-}
 
-.rectangulo h2 {
-    font-size: 20px;
-    margin-top: 0;
-}
 
 .separate-bot {
     margin-bottom: 30px;
 }
-
-.align-foot-top {
-    margin-top: 50px;
-}
-
-.align-foot-top-big {
-    margin-top: 150px;
-}
-
-.spacer {
-    margin-top: 50px;
-
-}
-
 
 
 .accordion-btn:hover {
@@ -324,16 +251,6 @@
     margin: 10px 0;
 }
 
-
-.my-button::placeholder {
-    color: #CDA274;
-    outline: none;
-}
-
-.my-button2::placeholder {
-    color: #CDA274;
-    outline: none;
-}
 
 
 .form-control {
@@ -360,9 +277,6 @@
     padding-left: 10px;
 }
 
-.textCenter {
-    text-align: center;
-}
 
 .spaFont {
     font-family: 'DM Serif Display', serif;

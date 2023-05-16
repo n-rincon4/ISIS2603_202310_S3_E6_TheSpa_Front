@@ -15,10 +15,6 @@
   background-color: black;
 }
 
-.ul {
-  background-color: black;
-}
-
 .gallery-block .heading h2 {
   font-weight: bold;
   font-size: 1.4rem;
@@ -74,8 +70,8 @@
 @media (min-width: 576px) {
 
   .gallery-block .transform-on-hover:hover {
-      transform: translateY(-10px) scale(1.02);
-      box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.15) !important;
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.15) !important;
 
   }
 
