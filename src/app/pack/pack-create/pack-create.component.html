@@ -15,20 +15,6 @@
     </div>
 
 
-    <!-- Description -->
-    <div class="form-group mx-sm-3 mb-2">
-      <label for="descripcion">Description</label>
-      <input novalidate id="descripcion" class="form-control" formControlName="descripcion"
-        placeholder="Pack's short descripcion" />
-      <div class="alert alert-danger alert-dismissible fade show"
-        *ngIf="packForm.get('descripcion')!.hasError('required') && packForm.get('descripcion')!.touched">
-        Description required
-      </div>
-      <div class="alert alert-danger alert-dismissible fade show"
-        *ngIf="packForm.get('descripcion')!.hasError('maxlength')">
-        Description too long
-      </div>
-    </div>
 
     <!-- Sedes -->
 
@@ -45,84 +31,46 @@
       Sede required
     </div>
 
-    <!-- restricciones-->
+
+
+
+    <!-- descuento -->
     <div class="form-group mx-sm-3 mb-2">
-      <label for="restricciones">Restricciones</label>
-      <input novalidate id="restricciones" class="form-control" formControlName="restricciones"
-        placeholder="Pack's short restricciones" />
+      <label for="descuento">descuento</label>
+      <input novalidate id="descuento" class="form-control" formControlName="descuento"
+        placeholder="Pack's short descuento" />
       <div class="alert alert-danger alert-dismissible fade show" *ngIf="
-                  packForm.get('restricciones')!.hasError('required') &&
-                  packForm.get('restricciones')!.touched
+                  packForm.get('descuento')!.hasError('required') &&
+                  packForm.get('descuento')!.touched
                 ">
-        restricciones required
+        descuento required
       </div>
       <div class="alert alert-danger alert-dismissible fade show"
-        *ngIf="packForm.get('restricciones')!.hasError('maxlength')">
-        restricciones too long
+        *ngIf="packForm.get('descuento')!.hasError('maxlength')">
+        descuento too long
+      </div>
+      <!-- descuento must be a valid time-->
+      <div class="alert alert-danger alert-dismissible fade show"
+        *ngIf="packForm.get('descuento')!.hasError('pattern')">
+        descuento must be a valid descuento
       </div>
     </div>
 
-    <!-- Hora de inicio-->
+    <!-- Un paquete tiene una lista de servicios -->
     <div class="form-group mx-sm-3 mb-2">
-      <label for="horaInicio">Hora de inicio (0-23)</label>
-      <input novalidate id="horaInicio" class="form-control" formControlName="horaInicio"
-        placeholder="Pack's short horaInicio" />
-      <div class="alert alert-danger alert-dismissible fade show" *ngIf="
-                  packForm.get('horaInicio')!.hasError('required') &&
-                  packForm.get('horaInicio')!.touched
-                ">
-        horaInicio required
-      </div>
-      <div class="alert alert-danger alert-dismissible fade show"
-        *ngIf="packForm.get('horaInicio')!.hasError('maxlength')">
-        horaInicio too long
-      </div>
-      <!-- Hora de inicio must be a valid time-->
-      <div class="alert alert-danger alert-dismissible fade show"
-        *ngIf="packForm.get('horaInicio')!.hasError('pattern')">
-        horaInicio must be a valid time
+      <label>Servicios (se necesitan al menos dos)</label>
+      <div>
+        <div *ngFor="let a of servicios">
+          <label class="btn2 btn-primary2">
+            <input type="checkbox" [value]="a.id" (change)="onCheckboxChange($event)">
+            {{ a.nombre }}
+          </label>
+        </div>
       </div>
     </div>
 
-    <!-- Duracion-->
-    <div class="form-group mx-sm-3 mb-2">
-      <label for="duracion">Duracion en horas</label>
-      <input novalidate id="duracion" class="form-control" formControlName="duracion"
-        placeholder="Pack's short duracion" />
-      <div class="alert alert-danger alert-dismissible fade show" *ngIf="
-                  packForm.get('duracion')!.hasError('required') &&
-                  packForm.get('duracion')!.touched
-                ">
-        duracion required
-      </div>
-      <div class="alert alert-danger alert-dismissible fade show"
-        *ngIf="packForm.get('duracion')!.hasError('maxlength')">
-        duracion too long
-      </div>
-      <!-- duracion must be a valid time-->
-      <div class="alert alert-danger alert-dismissible fade show" *ngIf="packForm.get('duracion')!.hasError('pattern')">
-        duracion must be a valid time
-      </div>
-    </div>
 
-    <!-- Precio -->
-    <div class="form-group mx-sm-3 mb-2">
-      <label for="precio">Precio en dolares</label>
-      <input novalidate id="precio" class="form-control" formControlName="precio" placeholder="Pack's short precio" />
-      <div class="alert alert-danger alert-dismissible fade show" *ngIf="
-                  packForm.get('precio')!.hasError('required') &&
-                  packForm.get('precio')!.touched
-                ">
-        precio required
-      </div>
-      <div class="alert alert-danger alert-dismissible fade show" *ngIf="packForm.get('precio')!.hasError('maxlength')">
-        precio too long
-      </div>
-      <!-- precio must be a valid time-->
-      <div class="alert alert-danger alert-dismissible fade show" *ngIf="packForm.get('precio')!.hasError('pattern')">
-        precio must be a valid precio
-      </div>
-    </div>
+
 
     <!--Image, which must be a valid url-->
     <div class="form-group mx-sm-3 mb-2">
