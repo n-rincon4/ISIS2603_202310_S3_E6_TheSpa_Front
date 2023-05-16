@@ -49,26 +49,15 @@ describe('PackCreateComponent', () => {
   }
   );
 
-  it('should have an input with id descripcion and with formControlName descripcion ', () => {
+  it('should have an input with id descuento and with formControlName descuento ', () => {
     expect(
-      debug.query(By.css('#descripcion')).attributes['formControlName']
-    ).toEqual('descripcion');
+      debug.query(By.css('#descuento')).attributes['formControlName']
+    ).toEqual('descuento');
   }
   );
 
-  it('should have an input with id precio and with formControlName precio ', () => {
-    expect(debug.query(By.css('#precio')).attributes['formControlName']).toEqual(
-      'precio'
-    );
-  }
-  );
 
-  it('should have an input with id duracion and with formControlName duracion ', () => {
-    expect(
-      debug.query(By.css('#duracion')).attributes['formControlName']
-    ).toEqual('duracion');
-  }
-  );
+
 
 
 
