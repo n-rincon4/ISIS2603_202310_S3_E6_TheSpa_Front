@@ -1,83 +1,66 @@
 .gallery-block {
-    padding-bottom: 20px;
-    padding-top: 20px;
-    padding-left: 60px;
-    padding-right: 60px;
+    padding: 20px
 }
 
 .gallery-block .heading {
     margin-bottom: 50px;
-    text-align: center;
+    text-align: center
 }
 
 .img {
-    opacity: 0.5;
-    background-color: black;
+    opacity: .5;
+    background-color: #000
 }
 
-
-
 .gallery-block .heading h2 {
-    font-weight: bold;
-    font-size: 1.4rem;
-    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.4rem
 }
 
 .gallery-block.cards-gallery h6 {
     font-size: 17px;
-    font-weight: bold;
+    font-weight: 700
 }
 
 .gallery-block.cards-gallery .card {
-    transition: 0.4s ease;
-    ;
+    transition: .4s ease
 }
 
 .gallery-block.cards-gallery .card img {
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
-
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15)
 }
 
 .card-img-top {
     width: 100%;
     height: 15vw;
-    object-fit: cover;
+    object-fit: cover
 }
 
 .gallery-block.cards-gallery .card-body {
-    text-align: center;
+    text-align: center
 }
 
 .gallery-block.cards-gallery .card-body p {
-    font-size: 15px;
+    font-size: 15px
 }
 
 .gallery-block.cards-gallery a {
     color: #212529;
-}
-
-.gallery-block.cards-gallery a {
-    text-decoration: none;
+    text-decoration: none
 }
 
 .gallery-block.cards-gallery .card {
     margin-bottom: 30px;
     margin-left: 30px;
     margin-right: 30px;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15)
 }
 
-
-
 @media (min-width: 576px) {
-
     .gallery-block .transform-on-hover:hover {
         transform: translateY(-10px) scale(1.02);
-        box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.15) !important;
-
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.15) !important
     }
-
-
 }
 
 .btn-primary {
@@ -87,100 +70,64 @@
     padding: 10px 20px;
     font-size: 16px;
     border-radius: 3px;
-    cursor: pointer;
+    cursor: pointer
 }
 
 .btn-primary:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
+    opacity: .5;
+    cursor: not-allowed
 }
-
-.btn-danger {
-    background-color: #dc3545;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 3px;
-    cursor: pointer;
-    margin-left: 10px;
-}
-
 
 .text-center {
-    text-align: center;
+    text-align: center
 }
 
 .gallery-block {
-    padding-bottom: 20px;
-    padding-top: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 20px
 }
 
 .gallery-block .heading {
-    margin-bottom: 50px;
+    margin-bottom: 50px
 }
-
-
-
 
 .gallery-block .heading h2 {
-    font-weight: bold;
+    font-weight: 700;
     font-size: 15px;
-    text-transform: uppercase;
+    text-transform: uppercase
 }
-
 
 .my-button {
     background-color: #F4F0EC;
     font-size: 15px;
     padding: 40px 100px;
-    outline: none;
+    outline: none
 }
 
 .my-button2 {
     background-color: #F4F0EC;
     font-size: 15px;
     max-width: 170px;
-    outline: none;
+    outline: none
 }
-
-
 
 .my-button:focus,
 .my-button:active {
     background-color: #F4F0EC;
-    /* Cambia el color de fondo */
     border-color: #F4F0EC;
-    /* Cambia el color del borde */
-    box-shadow: none;
-    /* Elimina cualquier sombra de foco */
-}
-
-.my-button2:focus,
-.my-button2:active {
-    background-color: #F4F0EC;
-    /* Cambia el color de fondo */
-    border-color: #F4F0EC;
-    /* Cambia el color del borde */
-    box-shadow: none;
-    /* Elimina cualquier sombra de foco */
+    box-shadow: none
 }
 
 .input-group {
-    width: 250px;
+    width: 250px
 }
 
 .button-label {
     background-color: #F4F0EC;
-    border-color: #F4F0EC;
+    border-color: #F4F0EC
 }
 
-
-
 .input-group-text {
-    margin-left: -2px;
+    margin-left: -2px
 }
 
 .lupa-button {
@@ -190,28 +137,23 @@
     height: 20px;
     border: none;
     cursor: pointer;
-    margin-right: 20px;
+    margin-right: 20px
 }
-
-
 
 .accordion {
     width: 250px;
     border: 1px solid #F4F0EC;
     background-color: #F4F0EC;
-    border-radius: 7%;
+    border-radius: 7%
 }
 
 .align1 {
     margin-top: 15px;
-    margin-left: 20px;
+    margin-left: 20px
 }
 
-
-
-
 .spaNewBg {
-    background-color: #F4F0EC;
+    background-color: #F4F0EC
 }
 
 .accordion-header {
@@ -221,76 +163,69 @@
     padding: 10px;
     background-color: #F4F0EC;
     cursor: pointer;
-    border-radius: 100%;
+    border-radius: 100%
 }
 
 .accordion-header h3 {
-    margin: 0;
+    margin: 0
 }
 
 .accordion-btn {
     width: 30px;
     height: 34px;
     font-size: 16px;
-    font-weight: bold;
+    font-weight: 700;
     background-color: #F4F0EC;
     border: none;
     border-radius: 50%;
     cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    margin-bottom: 20px;
+    transition: all .3s ease-in-out;
+    margin-bottom: 20px
 }
 
-
-
+.separate-bot {
+    margin-bottom: 30px
+}
 
 .accordion-btn:hover {
-    background-color: #bbb;
+    background-color: #bbb
 }
 
 .accordion-content {
     padding: 10px;
-    padding-bottom: -10px;
+    padding-bottom: -10px
 }
 
 .accordion-content hr {
     border: none;
-    border-top: 1px solid #000000;
-    margin: 10px 0;
+    border-top: 1px solid #000;
+    margin: 10px 0
 }
-
-
-
 
 .form-control {
     border-color: #F4F0EC;
-    border-radius: 20px;
-
+    border-radius: 20px
 }
 
 .spaFont2 {
     font-family: 'Jost', sans-serif;
     text-align: left;
-    padding-left: 20px;
+    padding-left: 20px
 }
 
-
 .spaFont22 {
-    font-family: 'Jost', sans-serif;
+    font-family: 'Jost', sans-serif
 }
 
 .spaFont3 {
     font-family: 'Jost', sans-serif;
     font-size: 14px;
     text-align: left;
-    padding-left: 10px;
+    padding-left: 10px
 }
 
-
-
 .spaFont {
-    font-family: 'DM Serif Display', serif;
-
+    font-family: 'DM Serif Display', serif
 }
 
 .card-img-top {
@@ -300,82 +235,70 @@
     align-self: center;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
-    overflow: hidden;
+    overflow: hidden
 }
 
 .card:hover {
     background-color: #F4F0EC;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    transform: scale(1.01);
-
+    transform: scale(1.01)
 }
 
 .gallery-block.cards-gallery h6 {
     font-size: 15px;
-    font-weight: bold;
+    font-weight: 700
 }
 
 .gallery-block.cards-gallery .card {
-    transition: 0.4s ease;
-    ;
+    transition: .4s ease
 }
 
 .gallery-block.cards-gallery .card img {
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
-
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15)
 }
 
 .gallery-block.cards-gallery .card-body {
-    text-align: center;
+    text-align: center
 }
 
 p {
-    font-size: 15px;
+    font-size: 15px
 }
 
 .gallery-block.cards-gallery .card-body p {
-    font-size: 15px;
+    font-size: 15px
 }
 
 .gallery-block.cards-gallery a {
     color: #212529;
-}
-
-.gallery-block.cards-gallery a {
-    text-decoration: none;
+    text-decoration: none
 }
 
 .gallery-block.cards-gallery .card {
     margin-bottom: 30px;
     margin-left: 8px;
     margin-right: 8px;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15)
 }
 
 .link {
-    color: black;
-    text-decoration: none;
+    color: #000;
+    text-decoration: none
 }
 
 .custom-border {
-    border: 1px solid rgb(233, 233, 233) !important;
+    border: 1px solid #e9e9e9 !important;
     border-radius: 25px 25px 25px 25px;
     border-top-left-radius: 35px;
     border-top-right-radius: 35px;
-    height: 340px;
+    height: 340px
 }
 
-
-
 @media (min-width: 576px) {
-
     .gallery-block .transform-on-hover:hover {
         transform: translateY(-10px) scale(1.02);
-        box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.15) !important;
-
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.15) !important
     }
-
-
 }
 
 .btn-primary {
@@ -384,10 +307,7 @@ p {
     border: none;
     font-size: 15px;
     border-radius: 3px;
-    cursor: pointer;
-
-
-
+    cursor: pointer
 }
 
 .btn:focus {
@@ -397,36 +317,34 @@ p {
     border-radius: 3px;
     cursor: pointer;
     outline: none;
-    background-color: #F4F0EC !important;
+    background-color: #F4F0EC !important
 }
 
-
-
 .btn-primary:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
+    opacity: .5;
+    cursor: not-allowed
 }
 
 a:link {
     text-decoration: none;
-    color: black;
-    font-size: 15px;
+    color: #212529;
+    font-size: 15px
 }
 
 a:visited {
     text-decoration: none;
-    color: black;
-    font-size: 15px;
+    color: #212529;
+    font-size: 15px
 }
 
 a:hover {
     text-decoration: none;
-    color: black;
-    font-size: 15px;
+    color: #212529;
+    font-size: 15px
 }
 
 a:active {
     text-decoration: none;
     color: #212529;
-    font-size: 15px;
+    font-size: 15px
 }
