@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Articulo } from '../articulo';
 import { ArticuloService } from '../articulo.service';
 import { ArticuloDetail } from '../articulo-detail';
 
