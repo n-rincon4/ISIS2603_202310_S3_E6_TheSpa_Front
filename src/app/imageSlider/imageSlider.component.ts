@@ -1,11 +1,24 @@
 import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { SlideInterface } from './types/slide.interface';
+import { trigger, style, animate, transition } from '@angular/animations';
 
 @Component({
   selector: 'image-slider',
   templateUrl: './imageSlider.component.html',
   styleUrls: ['./imageSlider.component.css'],
+  animations: [
+    trigger('slideAnimation', [
+      transition('void => *', [
+        style({ opacity: 0 }),
+        animate('500ms', style({ opacity: 1 })),
+      ]),
+      transition('* => void', [
+        animate('500ms', style({ opacity: 0 })),
+      ]),
+    ]),
+  ],
 })
+
 export class ImageSliderComponent implements OnInit, OnDestroy {
   @Input() slides: SlideInterface[] = [];
 
