@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-import { Pack } from '../pack';
 import { PackDetail } from '../pack-detail';
 import { PackService } from '../pack.service';
 import { Router } from '@angular/router';
@@ -69,7 +68,7 @@ export class PackCreateComponent implements OnInit {
     console.log(serviciosForm);
 
 
-    this.packService.createPack(pack).subscribe((pack) => {
+    this.packService.createPack(pack).subscribe(() => {
       console.info('The pack was created: ', pack);
       this.toastr.success('Confirmation', 'Pack created');
       this.router.navigate(['/packs/list']);

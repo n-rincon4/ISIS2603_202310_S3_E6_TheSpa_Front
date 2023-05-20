@@ -16,11 +16,13 @@
     </div>
   </div>
 </main>
+
+
 <section class="gallery-block cards-gallery">
   <main class="container">
     <p class="lead my-3 font1">Artículos de Ropa: </p>
     <div class="row">
-      <div class="col-4" *ngFor="let articulo of sedeDetail.articulosDeRopa; let i = index">
+      <div class="col-4" *ngFor="let articulo of sedeDetail.articulos; let i = index">
         <div class="card border-0 transform-on-hover">
           <img src={{articulo.imagen}} alt="Card Image" class="card-img-top">
           <div class="card-body">
