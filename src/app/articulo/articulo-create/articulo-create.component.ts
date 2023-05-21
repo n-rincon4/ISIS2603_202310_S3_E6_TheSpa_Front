@@ -64,12 +64,12 @@ export class ArticuloCreateComponent implements OnInit {
     this.articuloForm = this.formBuilder.group({
       nombre: ['', [Validators.required, Validators.minLength(2)]],
       descripcion: ['', [Validators.required, Validators.minLength(2)]],
-      precio: ['', [Validators.required, Validators.minLength(2)]],
-      sede: ['', [Validators.required, Validators.minLength(2)]],
+      precio: ['', [Validators.required, Validators.pattern('^[0-9]*$')]],
+      sede: ['', [Validators.required]],
       imagen: ['', [Validators.required, Validators.pattern('^(http|https)://.*$')]],
       talla: ['', [Validators.required, Validators.minLength(2)]],
       color: ['', [Validators.required]],
-      numDisponible: ['', [Validators.required, Validators.minLength(2)]]
+      numDisponible: ['', [Validators.required, Validators.pattern('^[0-9]*$')]],
     });
   }
 }

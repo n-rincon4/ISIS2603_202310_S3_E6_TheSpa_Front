@@ -38,8 +38,8 @@
 
 @media (min-width: 576px) {
   .gallery-block .transform-on-hover:hover {
-      transform: translateY(-10px) scale(1.02);
-      box-shadow: 0 10px 10px rgba(0, 0, 0, 0.15) !important
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.15) !important
   }
 }
 
@@ -251,8 +251,8 @@ p {
 
 @media (min-width: 576px) {
   .gallery-block .transform-on-hover:hover {
-      transform: translateY(-10px) scale(1.02);
-      box-shadow: 0 10px 10px rgba(0, 0, 0, 0.15) !important
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.15) !important
   }
 }
 
