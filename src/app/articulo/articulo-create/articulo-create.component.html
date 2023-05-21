@@ -1,5 +1,5 @@
 <div class="container mt-4">
-  <h2 class="text-center">Crear un nuevo artículo</h2>
+  <h2 class="text-center">Create new article</h2>
   <form class="servicio-form" [formGroup]="articuloForm"
     (ngSubmit)="!articuloForm.invalid && createArticulo(articuloForm.value)">
     <div class="form-group mx-sm-3 mb-2">
@@ -29,19 +29,6 @@
       </div>
     </div>
 
-    <div class="form-group mx-sm-3 mb-2">
-      <label for="sedes"> Sede </label>
-      <select class="form-control" id="sedes" rows="3" formControlName="sede">
-        <option value="">Select the sede</option>
-        <option [value]="a.id" *ngFor="let a of sedes">{{ a.nombre }}</option>
-      </select>
-    </div>
-
-    <div class="alert alert-danger alert-dismissible fade show"
-      *ngIf="articuloForm.get('sede')!.hasError('required') && articuloForm.get('sede')!.touched">
-      Sede required
-    </div>
-
     <!--Precio-->
     <div class="form-group mx-sm-3 mb-2">
       <label for="precio">Precio en dólares</label>
@@ -53,6 +40,18 @@
       <div class="alert alert-danger alert-dismissible fade show" *ngIf="articuloForm.get
       ('precio')!.hasError('maxlength')">
         Precio too long
+      </div>
+    </div>
+
+    <div class="form-group mx-sm-3 mb-2">
+      <label for="sedes"> Sede </label>
+      <select class="form-control" id="sedes" rows="3" formControlName="sede">
+        <option value="">Select the sede</option>
+        <option [value]="a.id" *ngFor="let a of sedes">{{ a.nombre }}</option>
+      </select>
+      <div class="alert alert-danger alert-dismissible fade show"
+        *ngIf="articuloForm.get('sede')!.hasError('required') && articuloForm.get('sede')!.touched">
+        Sede required
       </div>
     </div>
 
@@ -121,6 +120,15 @@
           Cantidad Unidades Disponibles must be a valid number
         </div>
       </div>
+    </div>
+
+    <div class="text-center">
+      <button id="submit" type="submit" class="btn btn-primary" [disabled]="!articuloForm.valid">
+        Create
+      </button>
+      <button type="button" class="btn btn-danger ml-3" (click)="cancelCreation()">
+        Cancel
+      </button>
     </div>
 
   </form>

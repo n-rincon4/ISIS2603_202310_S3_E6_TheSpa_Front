@@ -68,7 +68,7 @@ export class ArticuloCreateComponent implements OnInit {
       sede: ['', [Validators.required, Validators.minLength(2)]],
       imagen: ['', [Validators.required, Validators.pattern('^(http|https)://.*$')]],
       talla: ['', [Validators.required, Validators.minLength(2)]],
-      color: ['', [Validators.required, Validators.minLength(2)]],
+      color: ['', [Validators.required]],
       numDisponible: ['', [Validators.required, Validators.minLength(2)]]
     });
   }
