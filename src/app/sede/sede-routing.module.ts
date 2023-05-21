@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { SedeListComponent } from './sede-list/sede-list.component';
 import { SedeDetailComponent } from './sede-detail/sede-detail.component';
+import { SedeCreateComponent } from './sede-create/sede-create.component';
 
 
 const routes: Routes = [{
@@ -10,6 +11,10 @@ const routes: Routes = [{
         {
             path: 'list',
             component: SedeListComponent
+        },
+        {
+            path: 'create',
+            component: SedeCreateComponent
         },
         {
             path: ':id',
