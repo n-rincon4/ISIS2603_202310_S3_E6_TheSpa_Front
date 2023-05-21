@@ -148,7 +148,7 @@ describe('SedeDetailComponent', () => {
   });
 
   it('should have a list of articulos', () => {
-    expect(component.sedeDetail.articulosDeRopa).toBeDefined();
+    expect(component.sedeDetail.articulos).toBeDefined();
   });
 
   it('should have a list of servicios', () => {

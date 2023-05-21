@@ -102,7 +102,7 @@ describe('SedeListComponent', () => {
   );
 
   it('should have a list of articulos', () => {
-    expect(component.sedes[0].articulosDeRopa.length).toEqual(0);
+    expect(component.sedes[0].articulos.length).toEqual(0);
   }
 
   );
