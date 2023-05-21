@@ -67,7 +67,7 @@ export class ArticuloCreateComponent implements OnInit {
       precio: ['', [Validators.required, Validators.pattern('^[0-9]*$')]],
       sede: ['', [Validators.required]],
       imagen: ['', [Validators.required, Validators.pattern('^(http|https)://.*$')]],
-      talla: ['', [Validators.required, Validators.minLength(2)]],
+      talla: ['', [Validators.required, Validators.minLength(1)]],
       color: ['', [Validators.required]],
       numDisponible: ['', [Validators.required, Validators.pattern('^[0-9]*$')]],
     });
