@@ -10,7 +10,7 @@ export class SedeDetail extends Sede {
 
   trabajadores: Array<Trabajador>;
   serviciosExtra: Array<ServicioExtra>;
-  articulosDeRopa: Array<Articulo>;
+  articulos: Array<Articulo>;
   servicios: Array<Servicio>;
   packsDeServicios: Array<Pack>;
   ubicacion: Ubicacion;
@@ -19,7 +19,7 @@ export class SedeDetail extends Sede {
     super(id, nombre, imagen);
     this.trabajadores = trabajadores;
     this.serviciosExtra = serviciosExtra;
-    this.articulosDeRopa = articulosDeRopa;
+    this.articulos = articulosDeRopa;
     this.servicios = servicios;
     this.packsDeServicios = packsDeServicios;
     this.ubicacion = ubicacion;

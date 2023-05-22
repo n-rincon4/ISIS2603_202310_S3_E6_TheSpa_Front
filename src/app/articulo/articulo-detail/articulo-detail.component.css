@@ -12,7 +12,7 @@ h6 {
     /*rtl:Amiri, Georgia, "Times New Roman", serif*/
   ;
   color: #e5e5e5;
-  ;
+
 }
 
 .display-4 {
@@ -77,7 +77,7 @@ a:active {
 
 .gallery-block.cards-gallery .card {
   transition: 0.4s ease;
-  ;
+
 }
 
 .gallery-block.cards-gallery .card img {
@@ -101,9 +101,6 @@ a:active {
 
 .gallery-block.cards-gallery a {
   color: #212529;
-}
-
-.gallery-block.cards-gallery a {
   text-decoration: none;
 }
 

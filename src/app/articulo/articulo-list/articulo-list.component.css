@@ -230,6 +230,7 @@ p {
 }
 
 .gallery-block.cards-gallery .card {
+  transition: 0.4s ease;
   margin-bottom: 30px;
   margin-left: 8px;
   margin-right: 8px;
