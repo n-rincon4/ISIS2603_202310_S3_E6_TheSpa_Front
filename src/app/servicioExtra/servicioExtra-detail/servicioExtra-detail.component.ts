@@ -10,19 +10,21 @@ import { ServicioExtraService } from '../servicioExtra.service';
 })
 export class ServicioExtraDetailComponent implements OnInit {
 
-  pakId!: string;
+  servicioExtraId!: string;
   @Input() servicioExtraDetail!: ServicioExtraDetail;
 
-  constructor(private rout: ActivatedRoute, private servicioExtraService: ServicioExtraService) { }
+  constructor(private route: ActivatedRoute, private servicioExtraService: ServicioExtraService) { }
 
   getServicioExtra() {
-    this.servicioExtraService.getService(this.pakId).subscribe(servicioExtra => { this.servicioExtraDetail = servicioExtra; })
+    this.servicioExtraService.getService(this.servicioExtraId).subscribe(servicioExtra => {
+      this.servicioExtraDetail = servicioExtra;
+    })
   }
 
   ngOnInit() {
     if (this.servicioExtraDetail === undefined) {
-      this.pakId = this.rout.snapshot.paramMap.get('id')!
-      if (this.pakId) {
+      this.servicioExtraId = this.route.snapshot.paramMap.get('id')!
+      if (this.servicioExtraId) {
         this.getServicioExtra();
       }
     }
