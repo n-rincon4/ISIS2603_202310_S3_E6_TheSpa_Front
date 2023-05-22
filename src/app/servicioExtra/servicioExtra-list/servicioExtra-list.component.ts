@@ -35,8 +35,6 @@ export class ServicioExtraListComponent implements OnInit {
         servicioExtra.descripcion.toLowerCase().includes(this.searchDescripcion.toLowerCase()) &&
         servicioExtra.precio <= this.searchPrecioMax);
       });
-
-    this.servicioExtraService.getServices().subscribe(serviciosExtra => this.serviciosExtra = serviciosExtra);
   }
 
   selectServicioExtra(servicioExtra: ServicioExtraDetail) {
