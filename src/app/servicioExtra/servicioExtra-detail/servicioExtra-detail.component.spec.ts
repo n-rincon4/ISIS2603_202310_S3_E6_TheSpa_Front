@@ -61,6 +61,11 @@ describe('AuthorDetailComponent', () => {
   }
   );
 
+  it('should have a id defined', () => {
+    expect(component.servicioExtraDetail.id).toBeDefined();
+  }
+  );
+
   it('should have a name defined', () => {
     expect(component.servicioExtraDetail.nombre).toBeDefined();
   }
@@ -81,8 +86,13 @@ describe('AuthorDetailComponent', () => {
   }
   );
 
-  it('should have a activo defined', () => {
+  it('should have a disponible defined', () => {
     expect(component.servicioExtraDetail.disponible).toBeDefined();
+  }
+  );
+
+  it('should have a sede defined', () => {
+    expect(component.servicioExtraDetail.sede).toBeDefined();
   }
   );
 

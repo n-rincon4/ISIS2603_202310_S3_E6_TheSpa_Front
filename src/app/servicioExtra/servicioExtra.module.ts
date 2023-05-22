@@ -4,15 +4,19 @@ import { RouterModule } from '@angular/router';
 import { ServicioExtraRoutingModule } from './servicioExtra-routing.module';
 import { ServicioExtraListComponent } from './servicioExtra-list/servicioExtra-list.component';
 import { ServicioExtraDetailComponent } from './servicioExtra-detail/servicioExtra-detail.component';
+import { ServicioExtraCreateComponent } from './servicioExtra-create/servicioExtra-create.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
-    CommonModule
-    , RouterModule
-    , ServicioExtraRoutingModule
+    CommonModule,
+    RouterModule,
+    ServicioExtraRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
-  declarations: [ServicioExtraListComponent, ServicioExtraDetailComponent],
-  exports: [ServicioExtraListComponent, ServicioExtraDetailComponent]
+  declarations: [ServicioExtraListComponent, ServicioExtraDetailComponent, ServicioExtraCreateComponent],
+  exports: [ServicioExtraListComponent, ServicioExtraDetailComponent, ServicioExtraCreateComponent]
 })
 
 export class ServicioExtraModule { }
