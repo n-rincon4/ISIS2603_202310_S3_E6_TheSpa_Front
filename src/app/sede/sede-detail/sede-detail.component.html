@@ -1,32 +1,33 @@
 <main class="container">
-  <div class="p-4 p-md-5 mb-4 text-white rounded spa-bg"
-    style="background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(20, 20, 20, 0.5)) ,url('{{sedeDetail.imagen}}');">
-    <div class="col-md-6 px-0">
-      <h1 class="display-4 fst-italic">{{sedeDetail.nombre}}</h1>
+  <div class="col-8 offset-2">
+    <div class="row">
 
-      <p class="lead my-3">Ubicacion: {{sedeDetail.ubicacion.direccion}} </p>
+      <div class="d-flex justify-content-left">
+        <h1 class="spaFont">{{sedeDetail.nombre}}</h1>
+      </div>
 
+      <img class="roundedImg" src={{sedeDetail.imagen}} alt="sede imagen">
 
+      <h3 class="spaFont22 margin1 justify-content-left">{{sedeDetail.ubicacion.ciudad}}</h3>
+      <p class="rating">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+      <p class="spaFont21 justify-content-left">{{sedeDetail.ubicacion.direccion}}</p>
 
-
-      <div class="mt-5"></div>
-
-      <p class="lead mb-0"><a href="#" class="fw-bold">Reservar ahora!</a></p>
-      <div class="mt-3"></div>
     </div>
   </div>
 </main>
 
-
+<!-- RELACIONES DE LA SEDE -->
 <section class="gallery-block cards-gallery">
   <main class="container">
-    <p class="lead my-3 font1">Artículos de Ropa: </p>
+
+    <h2 class="spaFont">Articulos de ropa</h2>
+    <hr>
     <div class="row">
       <div class="col-4" *ngFor="let articulo of sedeDetail.articulos; let i = index">
         <div class="card border-0 transform-on-hover">
           <img src={{articulo.imagen}} alt="Card Image" class="card-img-top">
           <div class="card-body">
-            <h6><a routerLink="/servicios/{{articulo.id}}">{{articulo.nombre}}</a></h6>
+            <h6><a routerLink="/articulos/{{articulo.id}}">{{articulo.nombre}}</a></h6>
             <p class="text-muted card-text">$ {{articulo.precio}}
             </p>
           </div>
@@ -38,7 +39,9 @@
 
 <section class="gallery-block cards-gallery">
   <main class="container">
-    <p class="lead my-3 font1">Servicios: </p>
+
+      <h2 class="spaFont">Servicios</h2>
+      <hr>
     <div class="row">
       <div class="col-4" *ngFor="let servicio of sedeDetail.servicios; let i = index">
         <div class="card border-0 transform-on-hover">
@@ -56,7 +59,9 @@
 
 <section class="gallery-block cards-gallery">
   <main class="container">
-    <p class="lead my-3 font1">Paquetes de servicios:</p>
+
+      <h2 class="spaFont">Paquetes de servicios</h2>
+      <hr>
     <div class="row">
       <div class="col-4" *ngFor="let pack of sedeDetail.packsDeServicios; let i = index">
         <div class="card border-0 transform-on-hover">
@@ -74,7 +79,9 @@
 
 <section class="gallery-block cards-gallery">
   <main class="container">
-    <p class="lead my-3 font1">Trabajadores: </p>
+
+      <h2 class="spaFont">Trabajadores</h2>
+      <hr>
     <div class="row">
       <div class="col-4" *ngFor="let trabajador of sedeDetail.trabajadores; let i = index">
         <div class="card border-0 transform-on-hover">
@@ -92,7 +99,9 @@
 
 <section class="gallery-block cards-gallery">
   <main class="container">
-    <p class="lead my-3 font1">Servicios Extra:</p>
+
+      <h2 class="spaFont">Servicios Extra</h2>
+      <hr>
     <div class="row">
       <div class="col-4" *ngFor="let servicioExtra of sedeDetail.serviciosExtra; let i = index">
         <div class="card border-0 transform-on-hover">

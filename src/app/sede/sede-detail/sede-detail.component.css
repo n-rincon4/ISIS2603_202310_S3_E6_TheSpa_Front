@@ -152,3 +152,35 @@ a:active {
 
 
 }
+
+.margin1{
+  margin-top: 50px;
+}
+
+.spaFont21 {
+  font-family: 'Jost', sans-serif;
+  font-style: normal;
+  color: #CDA274;
+}
+
+.rating {
+  font-size: 20px; /* Ajusta el tamaño de la fuente según tus preferencias */
+  color: gold; /* Cambia el color de las estrellas según tus preferencias */
+}
+
+.spaFont22 {
+  font-family: 'Jost', sans-serif;
+  font-style: normal;
+  color: #2B2929;
+}
+
+.spaFont {
+  font-family: 'DM Serif Display', serif;
+  color: #2B2929;
+}
+
+.roundedImg{
+  border-radius: 55px;
+
+}
+
