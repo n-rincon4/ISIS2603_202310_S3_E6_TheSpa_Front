@@ -7,11 +7,7 @@ h2,
 h3,
 h4,
 h5,
-h6 {
-    font-family: "Playfair Display", Georgia, "Times New Roman", serif
-        /*rtl:Amiri, Georgia, "Times New Roman", serif*/
-    ;
-}
+h6
 
 .display-4 {
     font-size: 2.5rem;
@@ -87,6 +83,54 @@ a:active {
 }
 
 .spa-bg {
-    background-image: url('https://static.wixstatic.com/media/8035b2_fb2ef35ce18c4ddca7daf10e74446e6f~mv2.jpg/v1/fill/w_2500,h_1318,al_c/8035b2_fb2ef35ce18c4ddca7daf10e74446e6f~mv2.jpg');
+    background-image: url('https://www.fourseasons.com/alt/img-opt/~70.1530.0,0000-84,2500-3000,0000-1687,5000/publish/content/dam/fourseasons/images/web/TRI/TRI_186_original.jpg');
     background-size: cover;
+    height: 600px !important;
+    border-bottom-left-radius: 160px;
 }
+
+.texto{
+  text-align: justify;
+  margin-top: 120px;
+  margin-left: 120px;
+}
+
+.spaFont{
+
+  font-family: 'DM Serif Display', serif;
+  font-weight: 20px !important;
+}
+
+.but1{
+  background-color: #ffffff;
+  height: 60px;
+  width: 200px;
+  border-radius: 10px 10px 10px 10px;
+}
+.fontInside{
+  color: #212529;
+  text-align: center;
+  font-family: 'Jost', sans-serif;
+  vertical-align: center;
+  font-weight:500;
+}
+
+.rectangulo {
+  width: 200px;
+  height: 60px;
+  background-color: white;
+  border-radius: 10px;
+  text-align: center;
+  line-height: 60px;
+  font-size: 18px;
+  position: relative;
+  transition: background-color 0.3s, transform 0.3s;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.rectangulo:hover {
+  background-color: #F4F0EC;
+  transform: scale(1.02);
+}
+
