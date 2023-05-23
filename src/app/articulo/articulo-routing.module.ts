@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ArticuloListComponent } from './articulo-list/articulo-list.component';
 import { ArticuloDetailComponent } from './articulo-detail/articulo-detail.component';
+import { ArticuloCreateComponent } from './articulo-create/articulo-create.component';
 
 
 const routes: Routes = [{
@@ -10,6 +11,10 @@ const routes: Routes = [{
         {
             path: 'list',
             component: ArticuloListComponent
+        },
+        {
+            path: 'create',
+            component: ArticuloCreateComponent
         },
         {
             path: ':id',
