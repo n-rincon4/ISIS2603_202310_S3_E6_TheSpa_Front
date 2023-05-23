@@ -43,6 +43,18 @@
   <file path="src/app/servicio/servicio.service.spec.ts">
     <testCase name="Service: Servicio should ..." duration="3"/>
   </file>
+  <file path="src/app/articulo/articulo-detail/articulo-detail.component.spec.ts">
+    <testCase name="ArticuloDetailComponent should have an articulo precio" duration="9"/>
+    <testCase name="ArticuloDetailComponent should have an articulo" duration="5"/>
+    <testCase name="ArticuloDetailComponent should have an articulo talla" duration="3"/>
+    <testCase name="ArticuloDetailComponent should have an articulo numDisponible" duration="2"/>
+    <testCase name="ArticuloDetailComponent should have an articulo description" duration="2"/>
+    <testCase name="ArticuloDetailComponent should have an articulo imagen" duration="3"/>
+    <testCase name="ArticuloDetailComponent should have an articulo color" duration="3"/>
+    <testCase name="ArticuloDetailComponent should have a sede" duration="3"/>
+    <testCase name="ArticuloDetailComponent should create" duration="2"/>
+    <testCase name="ArticuloDetailComponent should have an articulo name" duration="2"/>
+  </file>
   <file path="src/app/app.component.spec.ts">
     <testCase name="AppComponent should create the app" duration="8"/>
     <testCase name="AppComponent should have as title 'base-project'" duration="5"/>
