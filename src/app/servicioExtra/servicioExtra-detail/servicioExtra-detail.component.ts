@@ -30,4 +30,16 @@ export class ServicioExtraDetailComponent implements OnInit {
     }
   }
 
+  deleteServicioExtra() {
+    const confirmacion = confirm('¿Estás seguro de que deseas eliminar?');
+    if (confirmacion === true){
+      this.servicioExtraService.deleteService(this.servicioExtraId).subscribe(() => {
+        this.ngOnInit();
+      });
+    }
+    else{
+      alert('No se eliminó el servicio extra');
+    }
+  }
+
 }
