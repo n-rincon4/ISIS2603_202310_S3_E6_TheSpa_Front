@@ -25,4 +25,8 @@ export class ServicioService {
     return this.http.post<ServicioDetail>(this.apiUrl, servicio);
   }
 
+  deleteService(servicioID: string) {
+    return this.http.delete(this.apiUrl + "/" + servicioID);
+  }
+
 }
