@@ -37,7 +37,7 @@ describe('ServicioListComponent', () => {
         faker.datatype.number(),
         faker.lorem.words(10),
         faker.datatype.boolean(),
-        faker.lorem.words(10),
+        faker.datatype.number(),
         undefined as any,
         [],
         []

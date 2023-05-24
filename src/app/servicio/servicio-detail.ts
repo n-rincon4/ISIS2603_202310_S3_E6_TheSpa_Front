@@ -9,7 +9,7 @@ export class ServicioDetail extends Servicio {
     trabajador: Array<Trabajador>;
     pack: Array<Pack>;
 
-    constructor(id: number, nombre: string, descripcion: string, precio: number, imagen: string, duracion: number, restricciones: string, disponible: boolean, horaInicio: string, sede: Sede, trabajador: Array<Trabajador>, Pack: Array<Pack>) {
+    constructor(id: number, nombre: string, descripcion: string, precio: number, imagen: string, duracion: number, restricciones: string, disponible: boolean, horaInicio: number, sede: Sede, trabajador: Array<Trabajador>, Pack: Array<Pack>) {
         super(id, nombre, descripcion, precio, imagen, duracion, restricciones, disponible, horaInicio);
         this.sede = sede;
         this.trabajador = trabajador;

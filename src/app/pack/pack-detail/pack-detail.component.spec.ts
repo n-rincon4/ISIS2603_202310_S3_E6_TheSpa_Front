@@ -46,7 +46,7 @@ describe('PackDetailComponent', () => {
         faker.datatype.number(),
         faker.lorem.paragraph(),
         faker.datatype.boolean(),
-        faker.lorem.sentence()
+        faker.datatype.number()
       );
     }
 

@@ -4,9 +4,9 @@ export class Servicio extends Producto {
     duracion: number;
     restricciones: string;
     disponible: boolean;
-    horaInicio: string;
+    horaInicio: number;
 
-    constructor(id: number, nombre: string, descripcion: string, precio: number, imagen: string, duracion: number, restricciones: string, disponible: boolean, horaInicio: string) {
+    constructor(id: number, nombre: string, descripcion: string, precio: number, imagen: string, duracion: number, restricciones: string, disponible: boolean, horaInicio: number) {
         super(id, nombre, descripcion, precio, imagen);
         this.duracion = duracion;
         this.restricciones = restricciones;

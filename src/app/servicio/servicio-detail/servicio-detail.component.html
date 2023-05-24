@@ -46,4 +46,20 @@
     </ng-container>
 </main>
 
-<!--- Sede en la que está disponible-->
+
+<div class="mt-5"></div>
+
+<!--- boton que implemente el metodo de updatePacks -->
+<div class="text-center">
+    <a routerLink="/servicios/update/{{servicioDetail.id}}" class="btn btn-primary">Editar Paquete</a>
+</div>
+
+<!-- Crea un margen superior de 4 unidades|-->
+
+<div class="mt-5"></div>
+
+
+<!--- boton que implemente el metodo de deleteServicio -->
+<div class="text-center">
+    <a routerLink="/servicios/list" (click)="deleteServicio()" class="btn-danger btn">Eliminar Servicio</a>
+</div>

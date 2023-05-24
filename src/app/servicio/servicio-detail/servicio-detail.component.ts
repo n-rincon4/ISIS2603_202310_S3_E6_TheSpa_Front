@@ -34,4 +34,22 @@ export class ServicioDetailComponent implements OnInit {
     }
 
   }
+
+  deleteServicio() {
+    // Muestra un mensaje diciendo 'antes de borrar un servicio, asegurese de haber borrado todos los paquetes que contengan este servicio'
+
+    let mgs: string = 'Antes de borrar un servicio, asegurese de haber borrado todos los paquetes que contengan este servicio';
+    alert(mgs);
+
+
+    const confirmacion = confirm('¿Estás seguro de que deseas eliminar?');
+    if (confirmacion === true) {
+      this.servicioService.deleteService(this.servicioId).subscribe(() => {
+        this.ngOnInit();
+      });
+    }
+    else {
+      alert('No se eliminó el servicio');
+    }
+  }
 }

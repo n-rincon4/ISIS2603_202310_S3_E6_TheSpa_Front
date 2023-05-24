@@ -49,7 +49,7 @@ describe('TrabajadorComponent', () => {
         faker.datatype.number(),
         faker.lorem.paragraph(),
         faker.datatype.boolean(),
-        faker.lorem.sentence()
+        faker.datatype.number()
       );
 
       for (let i = 0; i < 3; i++) {

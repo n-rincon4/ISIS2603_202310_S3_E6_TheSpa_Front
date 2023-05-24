@@ -1,6 +1,6 @@
 <div class="container mt-4">
-  <h2 class="text-center">Crear un nuevo paquete</h2>
-  <form class="pack-form" [formGroup]="packForm" (ngSubmit)="!packForm.invalid && createPack(packForm.value)">
+  <h2 class="text-center">Actualizar paquete</h2>
+  <form class="pack-form" [formGroup]="packForm" (ngSubmit)="!packForm.invalid && updatePack(packForm.value)">
     <!-- Name -->
     <div class="form-group mx-sm-3 mb-2">
       <label for="nombre">Name</label>
