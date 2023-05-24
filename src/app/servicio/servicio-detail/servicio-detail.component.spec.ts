@@ -58,7 +58,7 @@ describe('AuthorDetailComponent', () => {
       faker.datatype.number(),
       faker.lorem.paragraph(),
       faker.datatype.boolean(),
-      faker.datatype.string(),
+      faker.datatype.number(),
       sede,
       testTrabajadores,
       testPacks

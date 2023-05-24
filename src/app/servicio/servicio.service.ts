@@ -29,4 +29,8 @@ export class ServicioService {
     return this.http.delete(this.apiUrl + "/" + servicioID);
   }
 
+  updateService(servicio: Servicio, serID: string): Observable<ServicioDetail> {
+    return this.http.put<ServicioDetail>(this.apiUrl + "/" + serID, servicio)
+  }
+
 }

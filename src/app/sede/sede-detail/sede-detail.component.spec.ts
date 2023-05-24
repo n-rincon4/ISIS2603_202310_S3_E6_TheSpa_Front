@@ -78,7 +78,7 @@ describe('SedeDetailComponent', () => {
         faker.datatype.number(),
         faker.lorem.paragraph(),
         faker.datatype.boolean(),
-        faker.lorem.paragraph()
+        faker.datatype.number()
       );
     }
 
