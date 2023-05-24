@@ -25,4 +25,8 @@ export class PackService {
     return this.http.post<PackDetail>(this.apiUrl, servicio);
   }
 
+  deletPack(packID: string) {
+    return this.http.delete(this.apiUrl + "/" + packID);
+  }
+
 }

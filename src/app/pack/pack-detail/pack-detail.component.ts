@@ -28,4 +28,16 @@ export class PackDetailComponent implements OnInit {
     }
   }
 
+  deletePack() {
+    const confirmacion = confirm('¿Estás seguro de que deseas eliminar?');
+    if (confirmacion === true) {
+      this.packService.deletPack(this.pakId).subscribe(() => {
+        this.ngOnInit();
+      });
+    }
+    else {
+      alert('No se eliminó el paquete de servicios');
+    }
+  }
+
 }
