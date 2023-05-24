@@ -26,6 +26,7 @@ export class PackDetailComponent implements OnInit {
         this.getPack();
       }
     }
+
   }
 
   deletePack() {

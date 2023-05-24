@@ -21,12 +21,16 @@ export class PackService {
     return this.http.get<PackDetail>(this.apiUrl + "/" + id);
   }
 
-  createPack(servicio: Pack): Observable<PackDetail> {
-    return this.http.post<PackDetail>(this.apiUrl, servicio);
+  createPack(paquete: Pack): Observable<PackDetail> {
+    return this.http.post<PackDetail>(this.apiUrl, paquete);
   }
 
   deletPack(packID: string) {
     return this.http.delete(this.apiUrl + "/" + packID);
+  }
+
+  updatePack(paquete: Pack, pakId: string): Observable<PackDetail> {
+    return this.http.put<PackDetail>(this.apiUrl + "/" + pakId, paquete)
   }
 
 }
