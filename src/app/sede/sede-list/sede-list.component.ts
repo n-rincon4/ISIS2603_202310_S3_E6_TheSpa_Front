@@ -27,7 +27,6 @@ export class SedeListComponent implements OnInit {
     this.sedeService.getSedes().subscribe(sedes => {
       // Apply the filter based on the searchText property
       this.sedes = sedes.filter(sede => sede.nombre.toLowerCase().includes(this.searchNombre.toLowerCase()) && sede.ubicacion.ciudad.toLowerCase().includes(this.searchCiudad.toLowerCase()) && sede.ubicacion.direccion.toLowerCase().includes(this.searchDireccion.toLowerCase()));
-      console.log(this.sedes);
 
     });
   }
