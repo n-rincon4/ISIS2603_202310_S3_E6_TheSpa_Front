@@ -18,6 +18,7 @@ import { RouterModule } from '@angular/router';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FooterPanelComponent } from './footerPanel/footerPanel.component';
+
 @NgModule({
   declarations: [
     AppComponent,
