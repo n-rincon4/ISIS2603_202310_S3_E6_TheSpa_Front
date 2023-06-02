@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { SlideInterface } from '../imageSlider/types/slide.interface';
 import { TrabajadorService } from './trabajador.service';
 import { Trabajador } from './trabajador';
+import { TrabajadorDetail } from './trabajador-detail';
+import { newArray } from '@angular/compiler/src/util';
 
 @Component({
   selector: 'app-trabajador',
@@ -14,7 +16,7 @@ export class TrabajadorComponent implements OnInit {
 
   slides: SlideInterface[] = [];
 
-  selectedTrabajador!: Trabajador;
+  selectedTrabajador!: TrabajadorDetail;
   selected = false;
   arrayT = new Array();
   arrayF = new Array();
@@ -47,7 +49,7 @@ export class TrabajadorComponent implements OnInit {
     );
   }
 
-  setSelect(trabajador: Trabajador): void{
+  setSelect(trabajador: TrabajadorDetail): void{
     this.selectedTrabajador = trabajador;
     this.selected = true;
     this.getStarArray();

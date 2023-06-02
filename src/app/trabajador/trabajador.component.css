@@ -12,7 +12,7 @@
 .slider-wrapper{
   position: relative;
   height: 250px;
-  width: 90%;
+  width: 70%;
   margin: auto;
   display: grid;
   place-items: center;
@@ -23,7 +23,7 @@
 .slider-track{
   display: flex;
   width: calc(250*6);
-  animation: slidescroll 50s linear infinite;
+  animation: slidescroll 70s linear infinite;
 }
 
 .slider-track:hover{
@@ -119,7 +119,7 @@ h6 {
     font-family: "Playfair Display", Georgia, "Times New Roman", serif
         /*rtl:Amiri, Georgia, "Times New Roman", serif*/
     ;
-    color: #e5e5e5;
+    color: #2B2929;
     ;
 }
 
@@ -137,6 +137,7 @@ h6 {
 .spaFont22 {
   font-family: 'Jost', sans-serif;
   font-style: normal;
+  font-weight: 400;
   color: #2B2929;
 }
 
@@ -150,3 +151,25 @@ h6 {
 
 }
 
+a:link {
+  text-decoration: none;
+  color:#2B2929
+
+}
+
+a:visited {
+  text-decoration: none;
+  color:#2B2929
+}
+
+a:hover {
+  text-decoration: none;
+  color:#2B2929
+
+}
+
+a:active {
+  text-decoration: none;
+  color:#2B2929
+
+}

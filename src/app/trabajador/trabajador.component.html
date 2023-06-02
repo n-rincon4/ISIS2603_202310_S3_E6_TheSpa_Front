@@ -14,7 +14,7 @@
         <img src="{{selectedTrabajador.foto}}" alt="">
       </div>
       <div class="col-7">
-        <h3 class="spaFont22">{{selectedTrabajador.nombre}}</h3>
+        <h3>{{selectedTrabajador.nombre}}</h3>
         <div class="stars">
           <div class="stars" *ngFor="let i of arrayT">
             <div *ngIf="i">
@@ -26,6 +26,16 @@
               <span class="fa fa-star"></span>
             </div>
           </div>
+        </div>
+        <p>&nbsp;</p>
+        <h4 class="spaFont22">Sedes disponibles:</h4>
+        <div *ngFor="let sede of selectedTrabajador.sedes">
+          <h4 class="spaFont22"><a class="link" routerLink="/sedes/{{sede.id}}">•  {{sede.nombre}} </a></h4>
+        </div>
+        <p>&nbsp;</p>
+        <h4 class="spaFont22">Servicios:</h4>
+        <div *ngFor="let servicio of selectedTrabajador.servicios">
+          <h4 class="spaFont22" style="text-transform: capitalize;"><a class="link" routerLink="/sedes/{{servicio.id}}">•  {{servicio.nombre}} </a></h4>
         </div>
       </div>
     </div>
