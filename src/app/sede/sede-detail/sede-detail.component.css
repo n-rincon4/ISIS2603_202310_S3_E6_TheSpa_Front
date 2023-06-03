@@ -158,6 +158,22 @@ a:active {
     margin-top: 50px;
 }
 
+.spa-bg {
+    background-image: url('https://londonrestaurantfestival.com/wp-content/uploads/2021/09/FS-Ten-Trinity-Square-Spa-Treatment-Room-2-scaled.jpg');
+    height: 500px !important;
+    border-bottom-left-radius: 160px;
+    /* shows only the bottom part of the image */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: absolute;
+}
+
+.texto {
+    text-align: justify;
+    margin-top: 80px;
+    margin-left: 120px;
+}
+
 .spaFont21 {
     font-family: 'Jost', sans-serif;
     font-style: normal;
@@ -182,7 +198,12 @@ a:active {
     color: #2B2929;
 }
 
-.roundedImg {
-    border-radius: 55px;
+.spaFont2 {
+    font-family: 'DM Serif Display', serif;
+    color: #e5e5e5;
+    font-size: 40px;
+}
 
+.spaFont3 {
+    font-size: 20px;
 }
