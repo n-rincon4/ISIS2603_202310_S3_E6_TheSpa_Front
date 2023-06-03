@@ -1,3 +1,14 @@
+.heading {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.heading h2 {
+  font-weight: bold;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+
 .gallery-block {
   padding: 20px
 }
@@ -226,7 +237,7 @@ p {
 
 .gallery-block.cards-gallery a {
   color: #212529;
-  text-decoration: none
+  text-decoration: none;
 }
 
 .gallery-block.cards-gallery .card {
@@ -303,4 +314,7 @@ a:active {
   text-decoration: none;
   color: #212529;
   font-size: 15px
+
+
+
 }

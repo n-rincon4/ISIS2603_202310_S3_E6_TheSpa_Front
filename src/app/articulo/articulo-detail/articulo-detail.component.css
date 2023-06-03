@@ -12,7 +12,7 @@ h6 {
     /*rtl:Amiri, Georgia, "Times New Roman", serif*/
   ;
   color: #e5e5e5;
-
+  ;
 }
 
 .display-4 {
@@ -27,13 +27,12 @@ h6 {
 
 
 
+
 @media (min-width: 768px) {
   .h-md-250 {
     height: 250px;
   }
 }
-
-
 
 .blog-footer p:last-child {
   margin-bottom: 0;
@@ -70,18 +69,24 @@ a:active {
 
 
 
-.gallery-block.cards-gallery h6 {
+
+.card h6 {
   font-size: 17px;
   font-weight: bold;
 }
 
-.gallery-block.cards-gallery .card {
+ .card {
   transition: 0.4s ease;
+  ;
+}
+
+.card img {
+  box-shadow: 0px 2px 10px #e5e5e5;
 
 }
 
-.gallery-block.cards-gallery .card img {
-  box-shadow: 0px 2px 10px #e5e5e5;
+.card h6 {
+  color: #212529;
 
 }
 
@@ -91,20 +96,23 @@ a:active {
   object-fit: cover;
 }
 
-.gallery-block.cards-gallery .card-body {
+ .card-body {
   text-align: center;
 }
 
-.gallery-block.cards-gallery .card-body p {
+.card-body p {
   font-size: 15px;
 }
 
 .gallery-block.cards-gallery a {
   color: #212529;
+}
+
+.gallery-block.cards-gallery a {
   text-decoration: none;
 }
 
-.gallery-block.cards-gallery .card {
+ .card {
   margin-bottom: 30px;
   margin-left: 30px;
   margin-right: 30px;
@@ -115,7 +123,7 @@ a:active {
 
 @media (min-width: 576px) {
 
-  .gallery-block .transform-on-hover:hover {
+   .transform-on-hover:hover {
     transform: translateY(-10px) scale(1.02);
     box-shadow: 0px 10px 10px #e5e5e5 !important;
 

@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { Observable } from 'rxjs';
 import { Trabajador } from './trabajador';
+import { TrabajadorDetail } from './trabajador-detail';
 
 
 @Injectable({
@@ -15,6 +16,10 @@ export class TrabajadorService {
 
   getTrabajadores(): Observable<Trabajador[]>{
     return this.http.get<Trabajador[]>(this.apiUrl);
+  }
+
+  getTrabajador(id: number): Observable<TrabajadorDetail>{
+    return this.http.get<TrabajadorDetail>(this.apiUrl + '/' + id);
   }
 
 }
