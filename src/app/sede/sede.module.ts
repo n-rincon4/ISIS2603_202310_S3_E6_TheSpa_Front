@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 import { SedeRoutingModule } from './sede-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SedeCreateComponent } from './sede-create/sede-create.component';
+import { SedeUpdateComponent } from './sede-update/sede-update.component';
 
 
 @NgModule({
@@ -16,7 +17,7 @@ import { SedeCreateComponent } from './sede-create/sede-create.component';
     FormsModule,
     ReactiveFormsModule
   ],
-  declarations: [SedeListComponent, SedeDetailComponent, SedeCreateComponent],
-  exports: [SedeListComponent, SedeDetailComponent, SedeCreateComponent]
+  declarations: [SedeListComponent, SedeDetailComponent, SedeCreateComponent, SedeUpdateComponent],
+  exports: [SedeListComponent, SedeDetailComponent, SedeCreateComponent, SedeUpdateComponent]
 })
 export class SedeModule { }
