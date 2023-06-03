@@ -35,5 +35,23 @@ export class SedeDetailComponent implements OnInit {
 
   }
 
+  deleteSede() {
+    // Muestra un mensaje diciendo 'antes de borrar un servicio, asegurese de haber borrado todos los paquetes que contengan este servicio'
+
+    let mgs: string = 'Antes de borrar una sede, asegurese de haber borrado todos los componentes que contengan esta sede. Considere que la aplicacion esta centralizada con base a este componente "Sede".';
+    alert(mgs);
+
+
+    const confirmacion = confirm('¿Estás seguro de que deseas eliminar?');
+    if (confirmacion === true) {
+      this.sedeService.deleteSede(this.sedeId).subscribe(() => {
+        this.ngOnInit();
+      });
+    }
+    else {
+      alert('No se eliminó el servicio');
+    }
+  }
+
 
 }

@@ -116,3 +116,20 @@
     </div>
   </main>
 </section>
+
+<div class="mt-5"></div>
+
+<!--- boton que implemente el metodo de updatePacks -->
+<div class="text-center">
+    <a routerLink="/sedes/update/{{sedeDetail.id}}" class="btn btn-primary">Editar Sede</a>
+</div>
+
+<!-- Crea un margen superior de 4 unidades|-->
+
+<div class="mt-5"></div>
+
+
+<!--- boton que implemente el metodo de deleteServicio -->
+<div class="text-center">
+    <a routerLink="/sedes/list" (click)="deleteSede()" class="btn-danger btn">Eliminar sede</a>
+</div>
