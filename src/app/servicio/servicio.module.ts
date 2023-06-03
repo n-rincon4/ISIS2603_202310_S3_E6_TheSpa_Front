@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ServicioListComponent } from './servicio-list/servicio-list.component';
 import { ServicioDetailComponent } from './servicio-detail/servicio-detail.component';
 import { ServicioCreateComponent } from './servicio-create/servicio-create.component';
+import { ServicioUpdateComponent } from './servicio-update/servicio-update.component';
 import { RouterModule } from '@angular/router';
 import { ServicioRoutingModule } from './servicio-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -14,7 +15,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FormsModule,
     ReactiveFormsModule
   ],
-  declarations: [ServicioListComponent, ServicioDetailComponent, ServicioCreateComponent],
-  exports: [ServicioListComponent, ServicioDetailComponent, ServicioCreateComponent]
+  declarations: [ServicioListComponent, ServicioDetailComponent, ServicioCreateComponent, ServicioUpdateComponent],
+  exports: [ServicioListComponent, ServicioDetailComponent, ServicioCreateComponent, ServicioUpdateComponent]
 })
 export class ServicioModule { }
