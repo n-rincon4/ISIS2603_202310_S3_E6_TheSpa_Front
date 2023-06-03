@@ -19,6 +19,9 @@
     "lib": [
       "es2020",
       "dom"
+    ],
+    "types": [
+      "googlemaps"
     ]
   },
   "angularCompilerOptions": {
