@@ -31,24 +31,11 @@ export class UbicacionComponent implements OnInit {
 
   getUbicaciones() {
     this.ubicacionService.getUbicaciones().subscribe(ubicaciones => {
-      this.ubicaciones = ubicaciones;
+      this.ubicaciones = ubicaciones.map(ubicacion => {
+        ubicacion.longitud = - ubicacion.longitud;
+        return ubicacion;
+      });
     });
-    // this.ubicaciones = [
-    //   {
-    //     id: 1,
-    //     ciudad: "Bogota",
-    //     direccion: "Carrera 1",
-    //     latitud: 4.603014,
-    //     longitud: -74.065227
-    //   },
-    //   {
-    //     id: 2,
-    //     ciudad: "Bogota",
-    //     direccion: "Carrera 2",
-    //     latitud: 4.6080,
-    //     longitud: -74.066409
-    //   }
-    // ];
   }
 
   selectUbicacion(ubicacion: Ubicacion) {
