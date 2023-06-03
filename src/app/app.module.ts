@@ -18,6 +18,7 @@ import { RouterModule } from '@angular/router';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FooterPanelComponent } from './footerPanel/footerPanel.component';
+import { UbicacionModule } from './ubicacion/ubicacion.module';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { FooterPanelComponent } from './footerPanel/footerPanel.component';
     PackModule,
     HttpClientModule,
     SedeModule,
-    ServicioExtraModule
+    ServicioExtraModule,
+    UbicacionModule
   ],
   providers: [],
   bootstrap: [AppComponent]
