@@ -12,6 +12,7 @@ export class ServicioExtraDetailComponent implements OnInit {
 
   servicioExtraId!: string;
   @Input() servicioExtraDetail!: ServicioExtraDetail;
+  disponible: String = "Si";
 
   constructor(private route: ActivatedRoute, private servicioExtraService: ServicioExtraService) { }
 
@@ -32,12 +33,12 @@ export class ServicioExtraDetailComponent implements OnInit {
 
   deleteServicioExtra() {
     const confirmacion = confirm('¿Estás seguro de que deseas eliminar?');
-    if (confirmacion === true){
+    if (confirmacion === true) {
       this.servicioExtraService.deleteService(this.servicioExtraId).subscribe(() => {
         this.ngOnInit();
       });
     }
-    else{
+    else {
       alert('No se eliminó el servicio extra');
     }
   }
