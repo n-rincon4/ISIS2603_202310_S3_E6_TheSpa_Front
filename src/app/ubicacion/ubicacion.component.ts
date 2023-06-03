@@ -9,7 +9,7 @@ import { Ubicacion } from './ubicacion';
 })
 export class UbicacionComponent implements OnInit {
 
-  center: google.maps.LatLngLiteral = {lat: 4.603014, lng: -74.065227};
+  center: google.maps.LatLngLiteral = { lat: 4.603014, lng: -74.065227 };
   zoom = 10;
 
   ubicaciones: Ubicacion[] = [];
@@ -40,7 +40,14 @@ export class UbicacionComponent implements OnInit {
 
   selectUbicacion(ubicacion: Ubicacion) {
     console.log("UBICACION:", ubicacion)
+    this.refreshUbicacionDetail();
     this.selectedUbicacion = ubicacion;
+  }
+
+  refreshUbicacionDetail() {
+    // Implement the logic to refresh or recall the `app-ubicacion-detail` component here
+    // For example, you can reset the `selectedUbicacion` variable to null
+    this.selectedUbicacion = undefined;
   }
 
 }
