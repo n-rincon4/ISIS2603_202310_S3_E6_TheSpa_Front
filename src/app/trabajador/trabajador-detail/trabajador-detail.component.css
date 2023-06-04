@@ -194,6 +194,11 @@ a:active {
     background-color: #b88e60;
 }
 
+.rating {
+    font-size: 20px;
+    color: gold
+}
+
 .spa-bg {
     background-image: url('https://londonrestaurantfestival.com/wp-content/uploads/2021/09/FS-Ten-Trinity-Square-Spa-Treatment-Room-2-scaled.jpg');
     height: 500px !important;
