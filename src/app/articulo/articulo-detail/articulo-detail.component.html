@@ -46,3 +46,20 @@
         </div>
     </section>
 </main>
+
+<div class="mt-5"></div>
+
+<!--- boton que implemente el metodo de updatePacks -->
+<div class="text-center">
+    <a routerLink="/articulos/update/{{articuloDetail.id}}" class="btn btn-primary">Editar Articulo</a>
+</div>
+
+<!-- Crea un margen superior de 4 unidades|-->
+
+<div class="mt-5"></div>
+
+
+<!--- boton que implemente el metodo de deleteServicio -->
+<div class="text-center">
+    <a routerLink="/articulos/list" (click)="deleteArticulo()" class="btn-danger btn">Eliminar Articulo</a>
+</div>
