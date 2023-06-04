@@ -22,6 +22,9 @@ export class ArticuloDetailComponent implements OnInit {
   }
 
   ngOnInit() {
+    window.scrollTo(0, 0);
+
+
     if (this.articuloDetail === undefined) {
       this.articuloId = this.route.snapshot.paramMap.get('id')!
       if (this.articuloId) {

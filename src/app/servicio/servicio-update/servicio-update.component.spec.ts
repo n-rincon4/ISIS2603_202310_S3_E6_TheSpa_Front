@@ -70,6 +70,13 @@ describe('ServicioUpdateComponent', () => {
   }
   );
 
+  it('should have an input with id restricciones and with formControlName restricciones ', () => {
+    expect(
+      debug.query(By.css('#restricciones')).attributes['formControlName']
+    ).toEqual('restricciones');
+  }
+  );
+
 
 
 
