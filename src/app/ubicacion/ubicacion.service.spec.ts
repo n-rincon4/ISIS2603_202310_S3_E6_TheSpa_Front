@@ -14,4 +14,15 @@ describe('Service: Sede', () => {
   it('should ...', inject([UbicacionService], (sede: UbicacionService) => {
     expect(sede).toBeTruthy();
   }));
+
+  it('should run #getUbicaciones()', inject([UbicacionService], (service: UbicacionService) => {
+    expect(service.getUbicaciones()).toBeTruthy();
+  }
+  ));
+
+  it('should run #getUbicacionDetail()', inject([UbicacionService], (service: UbicacionService) => {
+    expect(service.getUbicacionDetail(1)).toBeTruthy();
+  }
+  ));
+
 });
