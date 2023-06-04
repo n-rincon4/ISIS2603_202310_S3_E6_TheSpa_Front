@@ -6,6 +6,7 @@ import { UbicacionComponent } from './ubicacion.component';
   imports: [
     CommonModule
   ],
-  declarations: [UbicacionComponent]
+  declarations: [UbicacionComponent],
+  exports: [UbicacionComponent]
 })
 export class UbicacionModule { }

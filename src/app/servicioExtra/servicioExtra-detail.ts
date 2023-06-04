@@ -1,5 +1,6 @@
 import { ServicioExtra } from "./servicioExtra";
 import { Sede } from "../sede/sede";
+
 export class ServicioExtraDetail extends ServicioExtra {
     sede: Sede;
 
