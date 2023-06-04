@@ -43,7 +43,17 @@
     </section>
 </main>
 
-<!--- Sede en la que está disponible-->
+<div class="mt-5"></div>
+
+<!--- boton que implemente el metodo de updatePacks -->
+<div class="text-center">
+  <a routerLink="/serviciosExtra/update/{{servicioExtraDetail.id}}" class="btn btn-primary">Editar Servicio Extra</a>
+</div>
+
+<!-- Crea un margen superior de 4 unidades|-->
+
+<div class="mt-5"></div>
+
 <!--- boton que implemente el metodo de deleteServicioExtra -->
 <div class="text-center">
     <a routerLink="/serviciosExtra/list" (click)="deleteServicioExtra()" class="btn-danger btn">Eliminar Servicio

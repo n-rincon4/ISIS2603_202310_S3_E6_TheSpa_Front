@@ -17,7 +17,7 @@ export class ServicioExtraDetailComponent implements OnInit {
   constructor(private route: ActivatedRoute, private servicioExtraService: ServicioExtraService) { }
 
   getServicioExtra() {
-    this.servicioExtraService.getService(this.servicioExtraId).subscribe(servicioExtra => {
+    this.servicioExtraService.getServicioExtra(this.servicioExtraId).subscribe(servicioExtra => {
       this.servicioExtraDetail = servicioExtra;
     })
   }
@@ -34,7 +34,7 @@ export class ServicioExtraDetailComponent implements OnInit {
   deleteServicioExtra() {
     const confirmacion = confirm('¿Estás seguro de que deseas eliminar?');
     if (confirmacion === true) {
-      this.servicioExtraService.deleteService(this.servicioExtraId).subscribe(() => {
+      this.servicioExtraService.deleteServicioExtra(this.servicioExtraId).subscribe(() => {
         this.ngOnInit();
       });
     }

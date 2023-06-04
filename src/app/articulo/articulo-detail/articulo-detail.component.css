@@ -62,11 +62,6 @@ a:active {
 
 }
 
-.whiteColour {
-  color: #e5e5e5;
-}
-
-
 
 .gallery-block {
   padding-bottom: 20px;
@@ -146,6 +141,22 @@ a:active {
 }
 
 
+
+.btn-primary {
+  background-color: #CDA274;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
 .btn-danger {
   background-color: #c26b73;
   color: #fff;
@@ -160,6 +171,12 @@ a:active {
 .btn-danger:hover {
   background-color: #c82333;
 }
+
+.text-center {
+  text-align: center;
+}
+
+
 
 .btn-primary {
   background-color: #CDA274;

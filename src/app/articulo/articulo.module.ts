@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 import { ArticuloRoutingModule } from './articulo-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ArticuloCreateComponent } from './articulo-create/articulo-create.component';
+import { ArticuloUpdateComponent } from './articulo-update/articulo-update.component';
 
 @NgModule({
   imports: [
@@ -15,7 +16,7 @@ import { ArticuloCreateComponent } from './articulo-create/articulo-create.compo
     FormsModule,
     ReactiveFormsModule
   ],
-  exports: [ArticuloListComponent, ArticuloDetailComponent, ArticuloCreateComponent],
-  declarations: [ArticuloListComponent, ArticuloDetailComponent, ArticuloCreateComponent]
+  exports: [ArticuloListComponent, ArticuloDetailComponent, ArticuloCreateComponent, ArticuloUpdateComponent],
+  declarations: [ArticuloListComponent, ArticuloDetailComponent, ArticuloCreateComponent, ArticuloUpdateComponent]
 })
 export class ArticuloModule { }

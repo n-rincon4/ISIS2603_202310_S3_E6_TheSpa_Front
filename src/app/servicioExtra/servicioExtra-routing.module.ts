@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { ServicioExtraListComponent } from './servicioExtra-list/servicioExtra-list.component';
 import { ServicioExtraDetailComponent } from './servicioExtra-detail/servicioExtra-detail.component';
 import { ServicioExtraCreateComponent } from './servicioExtra-create/servicioExtra-create.component';
+import { ServicioExtraUpdateComponent } from './servicioExtra-update/servicioExtra-update.component';
 
 const routes: Routes = [{
     path: 'serviciosExtra',
@@ -18,6 +19,10 @@ const routes: Routes = [{
         {
             path: ':id',
             component: ServicioExtraDetailComponent
+        },
+        {
+            path: 'update/:id',
+            component: ServicioExtraUpdateComponent
         }
     ]
 }];

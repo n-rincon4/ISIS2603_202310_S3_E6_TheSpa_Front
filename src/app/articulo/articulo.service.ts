@@ -24,4 +24,12 @@ export class ArticuloService {
   createArticulo(articulo: ArticuloDetail): Observable<ArticuloDetail> {
     return this.http.post<ArticuloDetail>(this.apiUrl, articulo);
   }
+
+  deleteArticulo(articuloID: string) {
+    return this.http.delete(this.apiUrl + "/" + articuloID);
+  }
+
+  updateArticulo(articulo: Articulo, artID: string): Observable<ArticuloDetail> {
+    return this.http.put<ArticuloDetail>(this.apiUrl + "/" + artID, articulo)
+  }
 }
