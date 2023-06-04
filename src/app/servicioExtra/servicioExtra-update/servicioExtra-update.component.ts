@@ -1,74 +1,59 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ServicioExtraDetail } from '../servicioExtra-detail';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ServicioExtra } from '../servicioExtra';
-import { Router, ActivatedRoute } from '@angular/router';
-import { ToastrService } from 'ngx-toastr';
+import { ServicioExtraDetail } from '../servicioExtra-detail';
 import { ServicioExtraService } from '../servicioExtra.service';
+import { ActivatedRoute, Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
+import { Sede } from 'src/app/sede/sede';
+import { SedeService } from 'src/app/sede/sede.service';
 
 @Component({
   selector: 'app-servicioExtra-update',
   templateUrl: './servicioExtra-update.component.html',
   styleUrls: ['./servicioExtra-update.component.css']
 })
-export class ServicioExtraUpdateComponent implements OnInit {
 
-  servicioExtraId!: string;
-  @Input() servicioExtraDetail!: ServicioExtraDetail;
+export class ServicioExtraUpdateComponent implements OnInit {
   servicioExtraForm!: FormGroup;
-  servicioExtra!: FormGroup;
-  serviciosExtra!: ServicioExtra[]
+  servicioId!: string;
+
+  @Input() servicioDetail!: ServicioExtraDetail;
+  sede!: FormGroup;
+  sedes!: Sede[]
 
   constructor(
     private formBuilder: FormBuilder,
     private toastr: ToastrService,
     private servicioExtraService: ServicioExtraService,
+    private sedeService: SedeService,
     private router: Router,
     private route: ActivatedRoute,
   ) { }
 
-  getServicioExtra() {
-    this.servicioExtraService.getServicioExtra(this.servicioExtraId).subscribe(servicioExtra => {
-      this.servicioExtraDetail = servicioExtra;
-    })
-  }
-
-  ngOnInit() {
-
-
-    if (this.servicioExtraDetail === undefined) {
-      this.servicioExtraId = this.route.snapshot.paramMap.get('id')!
-      if (this.servicioExtraId) {
-        this.getServicioExtra();
-      }
-    }
-
-    this.getServiciosExtra();
-
-
-    this.servicioExtraForm = this.formBuilder.group({
-      precio: ['', [Validators.required, Validators.pattern('^[0-9]+(\.[0-9]{1,2})?$')]],
-      // imagen checks if the value is a valid URL, meaning it must start with http:// or https://
-      imagen: ['', [Validators.required, Validators.pattern('^(http|https)://.*$')]],
-
+  getSedes(): void {
+    this.sedeService.getSedes().subscribe(sedes => {
+      this.sedes = sedes;
+    }, err => {
+      this.toastr.error(err, 'Error');
     });
   }
 
   updateServicioExtra(servicioExtra: ServicioExtraDetail) {
     console.log(servicioExtra);
     if (!this.servicioExtraForm.valid) return;
-
-    servicioExtra.nombre = this.servicioExtraDetail.nombre;
-    servicioExtra.descripcion = this.servicioExtraDetail.descripcion;
-    // parsea el precio a un number
-    servicioExtra.precio = Number(servicioExtra.precio);
-    servicioExtra.imagen = servicioExtra.imagen;
+    // adds to the servicio extra a "disponible" property, which is true by default
     servicioExtra.disponible = true;
-    servicioExtra.sede = this.servicioExtraDetail.sede;
+    // convierte el atributo sede en un FormGroup, cuyo id será el id de la sede
+    this.sede = this.formBuilder.group({
+      id: [servicioExtra.sede, [Validators.required]]
+    });
+    servicioExtra.sede = this.sede.value;
 
-    this.servicioExtraService.updateServicioExtra(servicioExtra, this.servicioExtraId).subscribe((servicioExtra) => {
-      console.info('The extra service was updated: ', servicioExtra);
-      this.toastr.success('Confirmation', 'Servicio Extra updated');
+
+    this.servicioExtraService.updateServicioExtra(servicioExtra, this.servicioId).subscribe((servicioExtra) => {
+      console.info('The servicio extra was updated: ', servicioExtra);
+      this.toastr.success('Confirmation', 'Servicio extra updated');
       this.router.navigate(['/serviciosExtra/list']);
       this.servicioExtraForm.reset();
     }, err => {
@@ -78,17 +63,34 @@ export class ServicioExtraUpdateComponent implements OnInit {
   }
 
   cancelCreation() {
-    this.toastr.warning("The extra service wasn't updated", 'ServicioExtra update');
+    this.toastr.warning("The servicio extra wasn't updated", 'Servicio Extra creation');
     this.servicioExtraForm.reset();
   }
 
-  getServiciosExtra(): void {
-    this.servicioExtraService.getServiciosExtra().subscribe(serviciosExtra => {
-      this.serviciosExtra = serviciosExtra;
-    }, err => {
-      this.toastr.error(err, 'Error');
-    });
-    console.log(this.serviciosExtra);
+  getServicio() {
+    this.servicioExtraService.getServicioExtra(this.servicioId).subscribe(servicio => {
+      this.servicioDetail = servicio;
+    })
   }
 
+  ngOnInit() {
+
+    if (this.servicioDetail === undefined) {
+      this.servicioId = this.route.snapshot.paramMap.get('id')!
+      if (this.servicioId) {
+        this.getServicio();
+      }
+    }
+
+    this.getSedes();
+
+    this.servicioExtraForm = this.formBuilder.group({
+      nombre: ['', [Validators.required, Validators.minLength(2)]],
+      descripcion: ['', [Validators.required, Validators.maxLength(100)]],
+      sede: ['', [Validators.required]],
+      precio: ['', [Validators.required, Validators.pattern('^[0-9]+(\.[0-9]{1,2})?$')]],
+      // imagen checks if the value is a valid URL, meaning it must start with http:// or https://
+      imagen: ['', [Validators.required, Validators.pattern('^(http|https)://.*$')]],
+    });
+  }
 }
