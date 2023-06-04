@@ -29,7 +29,7 @@ export class ServicioExtraListComponent implements OnInit {
     }
 
     // Apply the filter based on the searchNombre property
-    this.servicioExtraService.getServices().subscribe(serviciosExtra =>
+    this.servicioExtraService.getServiciosExtra().subscribe(serviciosExtra =>
       { this.serviciosExtra = serviciosExtra.filter(servicioExtra => servicioExtra.nombre.toLowerCase().includes(this.searchNombre.toLowerCase()) &&
         servicioExtra.sede.nombre.toLowerCase().includes(this.searchSedeNombre.toLowerCase()) &&
         servicioExtra.descripcion.toLowerCase().includes(this.searchDescripcion.toLowerCase()) &&

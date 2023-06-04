@@ -1,21 +1,24 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ServicioExtra } from '../servicioExtra';
 import { ServicioExtraDetail } from '../servicioExtra-detail';
 import { ServicioExtraService } from '../servicioExtra.service';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { Sede } from 'src/app/sede/sede';
 import { SedeService } from 'src/app/sede/sede.service';
 
 @Component({
-  selector: 'app-servicioExtra-create',
-  templateUrl: './servicioExtra-create.component.html',
-  styleUrls: ['./servicioExtra-create.component.css']
+  selector: 'app-servicioExtra-update',
+  templateUrl: './servicioExtra-update.component.html',
+  styleUrls: ['./servicioExtra-update.component.css']
 })
 
-export class ServicioExtraCreateComponent implements OnInit {
+export class ServicioExtraUpdateComponent implements OnInit {
   servicioExtraForm!: FormGroup;
+  servicioId!: string;
+
+  @Input() servicioDetail!: ServicioExtraDetail;
   sede!: FormGroup;
   sedes!: Sede[]
 
@@ -24,7 +27,8 @@ export class ServicioExtraCreateComponent implements OnInit {
     private toastr: ToastrService,
     private servicioExtraService: ServicioExtraService,
     private sedeService: SedeService,
-    private router: Router
+    private router: Router,
+    private route: ActivatedRoute,
   ) { }
 
   getSedes(): void {
@@ -35,7 +39,7 @@ export class ServicioExtraCreateComponent implements OnInit {
     });
   }
 
-  createServicioExtra(servicioExtra: ServicioExtraDetail) {
+  updateServicioExtra(servicioExtra: ServicioExtraDetail) {
     console.log(servicioExtra);
     if (!this.servicioExtraForm.valid) return;
     // adds to the servicio extra a "disponible" property, which is true by default
@@ -47,9 +51,9 @@ export class ServicioExtraCreateComponent implements OnInit {
     servicioExtra.sede = this.sede.value;
 
 
-    this.servicioExtraService.createServicioExtra(servicioExtra).subscribe((servicioExtra) => {
-      console.info('The servicio extra was created: ', servicioExtra);
-      this.toastr.success('Confirmation', 'Servicio extra created');
+    this.servicioExtraService.updateServicioExtra(servicioExtra, this.servicioId).subscribe((servicioExtra) => {
+      console.info('The servicio extra was updated: ', servicioExtra);
+      this.toastr.success('Confirmation', 'Servicio extra updated');
       this.router.navigate(['/serviciosExtra/list']);
       this.servicioExtraForm.reset();
     }, err => {
@@ -59,11 +63,24 @@ export class ServicioExtraCreateComponent implements OnInit {
   }
 
   cancelCreation() {
-    this.toastr.warning("The servicio extra wasn't created", 'Servicio Extra creation');
+    this.toastr.warning("The servicio extra wasn't updated", 'Servicio Extra creation');
     this.servicioExtraForm.reset();
   }
 
+  getServicio() {
+    this.servicioExtraService.getServicioExtra(this.servicioId).subscribe(servicio => {
+      this.servicioDetail = servicio;
+    })
+  }
+
   ngOnInit() {
+
+    if (this.servicioDetail === undefined) {
+      this.servicioId = this.route.snapshot.paramMap.get('id')!
+      if (this.servicioId) {
+        this.getServicio();
+      }
+    }
 
     this.getSedes();
 
