@@ -16,7 +16,8 @@ export class SedeDetailComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private sedeService: SedeService) { }
+    private sedeService: SedeService,
+  ) { }
 
   getSede() {
 
@@ -26,6 +27,9 @@ export class SedeDetailComponent implements OnInit {
   }
 
   ngOnInit() {
+    window.scrollTo(0, 0);
+
+
     if (this.sedeDetail === undefined) {
       this.sedeId = this.route.snapshot.paramMap.get('id')!
       if (this.sedeId) {
