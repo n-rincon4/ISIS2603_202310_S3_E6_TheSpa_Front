@@ -14,16 +14,16 @@ const routes: Routes = [{
             component: ArticuloListComponent
         },
         {
+            path: 'update/:id',
+            component: ArticuloUpdateComponent
+        },
+        {
             path: 'create',
             component: ArticuloCreateComponent
         },
         {
             path: ':id',
             component: ArticuloDetailComponent
-        },
-        {
-          path: 'update/:id',
-          component: ArticuloUpdateComponent
         }
     ]
 }];
