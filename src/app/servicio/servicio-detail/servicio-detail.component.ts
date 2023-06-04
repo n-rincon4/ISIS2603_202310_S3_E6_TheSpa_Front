@@ -26,6 +26,7 @@ export class ServicioDetailComponent implements OnInit {
   }
 
   ngOnInit() {
+    window.scrollTo(0, 0);
     if (this.servicioDetail === undefined) {
       this.servicioId = this.route.snapshot.paramMap.get('id')!
       if (this.servicioId) {

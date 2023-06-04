@@ -64,6 +64,7 @@ export class ServicioExtraCreateComponent implements OnInit {
   }
 
   ngOnInit() {
+    window.scrollTo(0, 0);
 
     this.getSedes();
 

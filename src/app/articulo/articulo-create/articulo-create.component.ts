@@ -59,6 +59,7 @@ export class ArticuloCreateComponent implements OnInit {
   }
 
   ngOnInit() {
+    window.scrollTo(0, 0);
     this.getSedes();
 
     this.articuloForm = this.formBuilder.group({
