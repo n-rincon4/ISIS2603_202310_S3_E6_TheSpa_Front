@@ -14,12 +14,19 @@ export class TrabajadorService {
 
   constructor(private http: HttpClient) { }
 
-  getTrabajadores(): Observable<Trabajador[]>{
+  getTrabajadores(): Observable<Trabajador[]> {
     return this.http.get<Trabajador[]>(this.apiUrl);
   }
 
-  getTrabajador(id: number): Observable<TrabajadorDetail>{
+  getTrabajador(id: number): Observable<TrabajadorDetail> {
     return this.http.get<TrabajadorDetail>(this.apiUrl + '/' + id);
   }
 
+  updateTrabajador(trabajador: Trabajador, artID: string): Observable<TrabajadorDetail> {
+    return this.http.put<TrabajadorDetail>(this.apiUrl + "/" + artID, trabajador)
+  }
+
+  deleteTrabajador(trabajadorID: string) {
+    return this.http.delete(this.apiUrl + "/" + trabajadorID);
+  }
 }

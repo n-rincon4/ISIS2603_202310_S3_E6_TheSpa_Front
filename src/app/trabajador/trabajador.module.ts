@@ -4,6 +4,7 @@ import { TrabajadorComponent } from './trabajador.component';
 import { ImageSliderModule } from '../imageSlider/imageSlider.module';
 import { RouterModule } from '@angular/router';
 import { TrabajadorRoutingModule } from './trabajador-routing.module';
+import { TrabajadorDetailComponent } from './trabajador-detail/trabajador-detail.component';
 
 @NgModule({
   imports: [
@@ -12,7 +13,7 @@ import { TrabajadorRoutingModule } from './trabajador-routing.module';
     RouterModule,
     TrabajadorRoutingModule
   ],
-  declarations: [TrabajadorComponent],
-  exports: [TrabajadorComponent]
+  declarations: [TrabajadorComponent, TrabajadorDetailComponent],
+  exports: [TrabajadorComponent, TrabajadorDetailComponent],
 })
 export class TrabajadorModule { }

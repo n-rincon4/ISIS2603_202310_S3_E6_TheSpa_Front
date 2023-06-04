@@ -55,6 +55,14 @@ describe('PackCreateComponent', () => {
     ).toEqual('descuento');
   }
   );
+  it('should have an input with id imagen and with formControlName imagen ', () => {
+    expect(
+      debug.query(By.css('#imagen')).attributes['formControlName']
+    ).toEqual('imagen');
+  }
+  );
+}
+);
 
 
 
@@ -62,4 +70,3 @@ describe('PackCreateComponent', () => {
 
 
 
-});

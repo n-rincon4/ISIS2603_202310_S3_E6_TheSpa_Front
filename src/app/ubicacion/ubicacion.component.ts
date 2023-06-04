@@ -10,7 +10,7 @@ import { Ubicacion } from './ubicacion';
 export class UbicacionComponent implements OnInit {
 
   center: google.maps.LatLngLiteral = { lat: 4.603014, lng: -74.065227 };
-  zoom = 10;
+  zoom = 5;
 
   ubicaciones: Ubicacion[] = [];
 

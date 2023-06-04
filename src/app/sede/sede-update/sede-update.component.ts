@@ -35,7 +35,7 @@ export class SedeUpdateComponent implements OnInit {
   }
 
   ngOnInit() {
-
+    window.scrollTo(0, 0);
 
     if (this.sedeDetail === undefined) {
       this.sedeId = this.route.snapshot.paramMap.get('id')!
@@ -58,7 +58,7 @@ export class SedeUpdateComponent implements OnInit {
 
   }
 
-  updateSede(sede: SedeDetail){
+  updateSede(sede: SedeDetail) {
     if (!this.sedeForm.valid) return;
 
     this.sedeService.updateSede(sede, this.sedeId).subscribe((sede) => {

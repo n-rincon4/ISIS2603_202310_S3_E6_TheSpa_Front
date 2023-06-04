@@ -34,7 +34,19 @@ export class TrabajadorComponent implements OnInit {
   constructor(private trabajadorService: TrabajadorService) { }
 
   getTrabajadores(): void {
-    this.trabajadorService.getTrabajadores().subscribe(trabajadores => this.trabajadores = trabajadores);
+    // use the getTrajadores() method from the TrabajadorService to retrieve the trabajadores
+    // but only those that are in the Hall of Fame
+    this.trabajadorService.getTrabajadores().subscribe(trabajadores => {
+      let trabajadoresHallOfFame: Trabajador[] = [];
+      for (let i = 0; i < trabajadores.length; i++) {
+        if (trabajadores[i].enHallOfFame) {
+          trabajadoresHallOfFame.push(trabajadores[i]);
+        }
+      }
+      this.trabajadores = trabajadoresHallOfFame;
+    });
+    
+
 
   }
 

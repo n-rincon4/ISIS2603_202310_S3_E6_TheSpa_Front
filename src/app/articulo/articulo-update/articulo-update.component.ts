@@ -37,7 +37,7 @@ export class ArticuloUpdateComponent implements OnInit {
     });
   }
 
-// id, nombre, descripcion, precio, imagen, talla, color, numDisponible);
+  // id, nombre, descripcion, precio, imagen, talla, color, numDisponible);
 
   updateArticulo(articulo: ArticuloDetail) {
     console.log(articulo);
@@ -76,14 +76,15 @@ export class ArticuloUpdateComponent implements OnInit {
     this.articuloForm.reset();
   }
 
-  getArticulo(){
+  getArticulo() {
     this.articuloService.getArticuloxID(this.articuloID).subscribe(articulo => {
       this.articuloDetail = articulo;
     });
   }
 
   ngOnInit() {
-    if(this.articuloDetail == undefined){
+    window.scrollTo(0, 0);
+    if (this.articuloDetail == undefined) {
       this.articuloID = this.route.snapshot.paramMap.get('id')!;
       if (this.articuloID) {
         this.getArticulo();

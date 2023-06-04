@@ -104,6 +104,7 @@ export class SedeCreateComponent implements OnInit {
   }
 
   ngOnInit() {
+    window.scrollTo(0, 0);
 
     this.servicioForm = this.formBuilder.group({
       nombre: ['', [Validators.required, Validators.minLength(2)]],

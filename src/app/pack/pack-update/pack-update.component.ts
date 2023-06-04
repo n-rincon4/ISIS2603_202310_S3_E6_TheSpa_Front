@@ -94,6 +94,7 @@ export class PackUpdateComponent implements OnInit {
   }
 
   ngOnInit() {
+    window.scrollTo(0, 0);
 
     if (this.packDetail === undefined) {
       this.pakId = this.rout.snapshot.paramMap.get('id')!
