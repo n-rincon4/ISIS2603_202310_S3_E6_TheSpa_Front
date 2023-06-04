@@ -47,7 +47,7 @@ export class ServicioExtraCreateComponent implements OnInit {
     servicioExtra.sede = this.sede.value;
 
 
-    this.servicioExtraService.createService(servicioExtra).subscribe((servicioExtra) => {
+    this.servicioExtraService.createServicioExtra(servicioExtra).subscribe((servicioExtra) => {
       console.info('The servicio extra was created: ', servicioExtra);
       this.toastr.success('Confirmation', 'Servicio extra created');
       this.router.navigate(['/serviciosExtra/list']);

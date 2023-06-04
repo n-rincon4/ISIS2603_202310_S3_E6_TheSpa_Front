@@ -6,6 +6,7 @@ import { ServicioExtraListComponent } from './servicioExtra-list/servicioExtra-l
 import { ServicioExtraDetailComponent } from './servicioExtra-detail/servicioExtra-detail.component';
 import { ServicioExtraCreateComponent } from './servicioExtra-create/servicioExtra-create.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ServicioExtraUpdateComponent } from './servicioExtra-update/servicioExtra-update.component';
 
 @NgModule({
   imports: [
@@ -15,8 +16,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FormsModule,
     ReactiveFormsModule
   ],
-  declarations: [ServicioExtraListComponent, ServicioExtraDetailComponent, ServicioExtraCreateComponent],
-  exports: [ServicioExtraListComponent, ServicioExtraDetailComponent, ServicioExtraCreateComponent]
+  declarations: [ServicioExtraListComponent, ServicioExtraDetailComponent, ServicioExtraCreateComponent, ServicioExtraUpdateComponent],
+  exports: [ServicioExtraListComponent, ServicioExtraDetailComponent, ServicioExtraCreateComponent, ServicioExtraUpdateComponent]
 })
 
 export class ServicioExtraModule { }

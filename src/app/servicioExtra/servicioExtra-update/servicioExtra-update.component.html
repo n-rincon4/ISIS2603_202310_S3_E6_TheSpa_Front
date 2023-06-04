@@ -1,0 +1,51 @@
+<div class="container mt-4">
+  <h2 class="text-center">Actualizar un servicio extra</h2>
+  <form class="sede-form" [formGroup]= "servicioExtraForm"
+    (ngSubmit)="!servicioExtraForm.invalid && updateServicioExtra(servicioExtra.value)">
+  <!-- Precio -->
+      <div class="form-group mx-sm-3 mb-2">
+        <label for="precio">Precio en dolares</label>
+        <input novalidate id="precio" class="form-control" formControlName="precio"
+            placeholder="Servicio extra's short precio" />
+        <div class="alert alert-danger alert-dismissible fade show" *ngIf="
+              servicioExtraForm.get('precio')!.hasError('required') &&
+              servicioExtraForm.get('precio')!.touched
+              ">
+            precio required
+        </div>
+        <div class="alert alert-danger alert-dismissible fade show"
+            *ngIf="servicioExtraForm.get('precio')!.hasError('maxlength')">
+            precio too long
+        </div>
+        <!-- precio must be a valid time-->
+        <div class="alert alert-danger alert-dismissible fade show"
+            *ngIf="servicioExtraForm.get('precio')!.hasError('pattern')">
+            precio must be a valid precio
+        </div>
+    </div>
+
+  <!--Image, which must be a valid url-->
+  <div class="form-group mx-sm-3 mb-2">
+    <label for="imagen">Image</label>
+    <input novalidate id="imagen" class="form-control" formControlName="imagen" placeholder="ServicioExtra's imagen" />
+    <div class="alert alert-danger alert-dismissible fade show" *ngIf="
+                servicioExtraForm.get('imagen')!.hasError('required') &&
+                servicioExtraForm.get('imagen')!.touched
+              ">
+      Image required
+    </div>
+    <div class="alert alert-danger alert-dismissible fade show"
+      *ngIf="servicioExtraForm.get('imagen')!.hasError('pattern')">
+      Image must be a valid url
+    </div>
+  </div>
+
+  <button id="submit" type="submit" class="btn btn-primary" [disabled]="!servicioExtraForm.valid">
+    Update
+  </button>
+  <button type="button" class="btn btn-danger ml-3" (click)="cancelCreation()">
+    Cancel
+  </button>
+</form>
+</div>
+

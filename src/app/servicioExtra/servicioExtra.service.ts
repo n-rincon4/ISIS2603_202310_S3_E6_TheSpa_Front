@@ -15,19 +15,23 @@ export class ServicioExtraService {
 
   constructor(private http: HttpClient) { }
 
-  getServices(): Observable<ServicioExtraDetail[]> {
+  getServiciosExtra(): Observable<ServicioExtraDetail[]> {
     return this.http.get<ServicioExtraDetail[]>(this.apiUrl);
   }
 
-  getService(id: string): Observable<ServicioExtraDetail> {
+  getServicioExtra(id: string): Observable<ServicioExtraDetail> {
     return this.http.get<ServicioExtraDetail>(this.apiUrl + "/" + id);
   }
 
-  createService(servicioExtra: ServicioExtraDetail): Observable<ServicioExtraDetail> {
+  createServicioExtra(servicioExtra: ServicioExtraDetail): Observable<ServicioExtraDetail> {
     return this.http.post<ServicioExtraDetail>(this.apiUrl, servicioExtra);
   }
 
-  deleteService(servicioExtraId: string) {
+  deleteServicioExtra(servicioExtraId: string) {
     return this.http.delete(this.apiUrl + "/" + servicioExtraId);
+  }
+
+  updateServicioExtra(servicioExtra: ServicioExtraDetail, servicioExtraID: string): Observable<ServicioExtraDetail> {
+    return this.http.put<ServicioExtraDetail>(this.apiUrl + "/" + servicioExtraID, servicioExtra)
   }
 }
