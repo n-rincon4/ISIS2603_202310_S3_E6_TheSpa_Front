@@ -26,4 +26,12 @@ export class SedeService {
     return this.http.post<SedeDetail>(this.apiUrl, sede);
   }
 
+  deleteSede(sedeID: string) {
+    return this.http.delete(this.apiUrl + "/" + sedeID);
+  }
+
+  updateSede(servicio: Sede, serID: string): Observable<SedeDetail> {
+    return this.http.put<SedeDetail>(this.apiUrl + "/" + serID, servicio)
+  }
+
 }

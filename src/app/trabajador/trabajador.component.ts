@@ -35,21 +35,22 @@ export class TrabajadorComponent implements OnInit {
 
   getTrabajadores(): void {
     this.trabajadorService.getTrabajadores().subscribe(trabajadores => this.trabajadores = trabajadores);
+
   }
 
   setSlides(): void {
     this.slides = [];
     this.trabajadorService.getTrabajadores().subscribe(trabajadores => {
       for (let i = 0; i < trabajadores.length; i++) {
-        if (trabajadores[i].enHallOfFame){
-          this.slides.push({url: trabajadores[i].foto, title: trabajadores[i].nombre});
+        if (trabajadores[i].enHallOfFame) {
+          this.slides.push({ url: trabajadores[i].foto, title: trabajadores[i].nombre });
         }
       }
     }
     );
   }
 
-  setSelect(trabajador: TrabajadorDetail): void{
+  setSelect(trabajador: TrabajadorDetail): void {
     this.selectedTrabajador = trabajador;
     this.selected = true;
     this.getStarArray();
@@ -58,10 +59,10 @@ export class TrabajadorComponent implements OnInit {
   getStarArray(): void {
     this.arrayT = new Array();
     this.arrayF = new Array();
-    for(let i = 0; i < Math.round(this.selectedTrabajador.calificacion/2); i++){
+    for (let i = 0; i < Math.round(this.selectedTrabajador.calificacion / 2); i++) {
       this.arrayT.push(1);
     }
-    for(let i = 0; i < 5 - Math.round(this.selectedTrabajador.calificacion/2); i++){
+    for (let i = 0; i < 5 - Math.round(this.selectedTrabajador.calificacion / 2); i++) {
       this.arrayF.push(1);
     }
   }

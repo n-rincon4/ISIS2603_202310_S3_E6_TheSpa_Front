@@ -1,19 +1,31 @@
 <main class="container">
-  <div class="col-8 offset-2">
-    <div class="row">
 
-      <div class="d-flex justify-content-left">
-        <h1 class="spaFont">{{sedeDetail.nombre}}</h1>
-      </div>
 
-      <img class="roundedImg" src={{sedeDetail.imagen}} alt="sede imagen">
+  <div class="p-4 p-md-5 mb-4 text-white spa-bg"
+    style="background-image: linear-gradient(rgba(0, 0, 0, 0.100),rgba(0, 0, 0, 0.5)) ,url('{{sedeDetail.imagen}}');">
 
-      <h3 class="spaFont22 margin1 justify-content-left">{{sedeDetail.ubicacion.ciudad}}</h3>
+    <div class="col-md-6 texto">
+      <h1 class="spaFont2">{{sedeDetail.nombre}}</h1>
+
+      <p class="spaFont3 margin1 justify-content-left">{{sedeDetail.ubicacion.direccion}}</p>
+
+      <h3 class="spaFont3 justify-content-left">{{sedeDetail.ubicacion.ciudad}}</h3>
+
       <p class="rating">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
-      <p class="spaFont21 justify-content-left">{{sedeDetail.ubicacion.direccion}}</p>
 
+      <!-- Crea un margen superior de 4 unidades|-->
+
+      <div class="mt-5"></div>
+
+
+      <div class="mt-3"></div>
     </div>
   </div>
+
+
+
+
+
 </main>
 
 <!-- RELACIONES DE LA SEDE -->
@@ -40,8 +52,8 @@
 <section class="gallery-block cards-gallery">
   <main class="container">
 
-      <h2 class="spaFont">Servicios</h2>
-      <hr>
+    <h2 class="spaFont">Servicios</h2>
+    <hr>
     <div class="row">
       <div class="col-4" *ngFor="let servicio of sedeDetail.servicios; let i = index">
         <div class="card border-0 transform-on-hover">
@@ -60,8 +72,8 @@
 <section class="gallery-block cards-gallery">
   <main class="container">
 
-      <h2 class="spaFont">Paquetes de servicios</h2>
-      <hr>
+    <h2 class="spaFont">Paquetes de servicios</h2>
+    <hr>
     <div class="row">
       <div class="col-4" *ngFor="let pack of sedeDetail.packsDeServicios; let i = index">
         <div class="card border-0 transform-on-hover">
@@ -80,8 +92,8 @@
 <section class="gallery-block cards-gallery">
   <main class="container">
 
-      <h2 class="spaFont">Trabajadores</h2>
-      <hr>
+    <h2 class="spaFont">Trabajadores</h2>
+    <hr>
     <div class="row">
       <div class="col-4" *ngFor="let trabajador of sedeDetail.trabajadores; let i = index">
         <div class="card border-0 transform-on-hover">
@@ -100,8 +112,8 @@
 <section class="gallery-block cards-gallery">
   <main class="container">
 
-      <h2 class="spaFont">Servicios Extra</h2>
-      <hr>
+    <h2 class="spaFont">Servicios Extra</h2>
+    <hr>
     <div class="row">
       <div class="col-4" *ngFor="let servicioExtra of sedeDetail.serviciosExtra; let i = index">
         <div class="card border-0 transform-on-hover">
@@ -116,3 +128,20 @@
     </div>
   </main>
 </section>
+
+<div class="mt-5"></div>
+
+<!--- boton que implemente el metodo de updatePacks -->
+<div class="text-center">
+  <a routerLink="/sedes/update/{{sedeDetail.id}}" class="btn btn-primary">Editar Sede</a>
+</div>
+
+<!-- Crea un margen superior de 4 unidades|-->
+
+<div class="mt-5"></div>
+
+
+<!--- boton que implemente el metodo de deleteServicio -->
+<div class="text-center">
+  <a routerLink="/sedes/list" (click)="deleteSede()" class="btn-danger btn">Eliminar sede</a>
+</div>

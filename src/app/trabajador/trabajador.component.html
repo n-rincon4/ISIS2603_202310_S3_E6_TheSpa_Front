@@ -30,18 +30,25 @@
         <p>&nbsp;</p>
         <h4 class="spaFont22">Sedes disponibles:</h4>
         <div *ngFor="let sede of selectedTrabajador.sedes">
-          <h4 class="spaFont22"><a class="link" routerLink="/sedes/{{sede.id}}">•  {{sede.nombre}} </a></h4>
+          <h4 class="spaFont22"><a class="link" routerLink="/sedes/{{sede.id}}">• {{sede.nombre}} </a></h4>
         </div>
         <p>&nbsp;</p>
         <h4 class="spaFont22">Servicios:</h4>
         <div *ngFor="let servicio of selectedTrabajador.servicios">
-          <h4 class="spaFont22" style="text-transform: capitalize;"><a class="link" routerLink="/sedes/{{servicio.id}}">•  {{servicio.nombre}} </a></h4>
+          <h4 class="spaFont22" style="text-transform: capitalize;"><a class="link"
+              routerLink="/sedes/{{servicio.id}}">• {{servicio.nombre}} </a></h4>
         </div>
       </div>
     </div>
 
   </div>
 </div>
+
+
+<!-- Crea un margen superior de 4 unidades|-->
+
+<div class="mt-5"></div>
+
 
 
 <section class="slider-wrapper">
