@@ -29,4 +29,16 @@ export class ArticuloDetailComponent implements OnInit {
       }
     }
   }
+
+  deleteArticulo() {
+    const confirmacion = confirm('¿Estás seguro de que deseas eliminar?');
+    if (confirmacion === true) {
+      this.articuloService.deleteArticulo(this.articuloId).subscribe(() => {
+        this.ngOnInit();
+      });
+    }
+    else {
+      alert('No se eliminó el articulo');
+    }
+  }
 }

@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { ArticuloListComponent } from './articulo-list/articulo-list.component';
 import { ArticuloDetailComponent } from './articulo-detail/articulo-detail.component';
 import { ArticuloCreateComponent } from './articulo-create/articulo-create.component';
+import { ArticuloUpdateComponent } from './articulo-update/articulo-update.component';
 
 
 const routes: Routes = [{
@@ -20,6 +21,10 @@ const routes: Routes = [{
             path: ':id',
             component: ArticuloDetailComponent
         },
+        {
+          path: 'update/:id',
+          component: ArticuloUpdateComponent
+        }
     ]
 }];
 
